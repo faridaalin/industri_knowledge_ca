@@ -50,5 +50,8 @@ The blog section can be manual, create html pages.
 
 Find a free HEADLESS CMS and connect to the API to render your blog posts.
 
-- Api driven blog section
-- WordPress API
+> Api driven blog section
+
+- [WordPress API](https://developer.wordpress.org/rest-api/)
+- [Sanity](http://www.sanity.io/blog/headless-cms-explained)
+- [List of more headless CMS](https://headlesscms.org/), choose one that gives you a JSON endpoint of posts so that you build with it.
