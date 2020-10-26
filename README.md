@@ -24,8 +24,8 @@ This project will be long living, and it is to be updated during the rest of you
 - https://nextjs.org/ for React
 - https://nuxtjs.org/ for VueJS
 - or choose from list: [https://scotch.io/tutorials/top-10-static-site-generators-in-2020](https://scotch.io/tutorials/top-10-static-site-generators-in-2020)
-- you will need to update the website design using your design system made in Design 2. (*MA 3)
-- if you do not have a design system, use your own imagination.
+- you will need to update the website design using your design system made in Design 2. (*MA 2)
+- if you have been following the Home Decor assignment and do not have a design system, you can use your own imagination.
 
 Must have (in order of requirement):
 
