@@ -1,4 +1,4 @@
-# JavaScript 2 Hackathon
+# JavaScript 2 & Design 2 Hackathon
 
 > As a developer it is important to have side projects.
 
