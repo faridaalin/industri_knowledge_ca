@@ -1,39 +1,32 @@
-import React from 'react';
-import {graphql} from 'gatsby'
+import React from "react"
+import { graphql } from "gatsby";
+import Layout from '../components/Layout';
+import SingleProject from '../components/SingleProject'
 
+const ProjectTemplate = props => {
+  const { data, errors } = props
+  const project = data && data.project
+ 
 
-const ProjectTemplate = (props) => {
-console.log("DATA:",props)
-const { data, errors } = props
-const project = data && data.project
+  return (
+    <Layout>
+       {errors && <p>Error</p>}
 
-   
-      return (
-        <div>
-          
-          {errors && <p>Error</p>}
-          {project && <h2 title={project.title || 'Untitled'}></h2>}
-    
-          {errors && console.log(errors)}
-          {project && console.log()}
-        </div>
-      )
+      {project && <SingleProject project={project} /> }    
+    </Layout>
+  )
+}
 
-     
-    
-  }
-  
-  export default ProjectTemplate
+export default ProjectTemplate;
 
-  export const query = graphql`
+export const query = graphql`
   query ProjectTemplateQuery($id: String!) {
     project: sanityProject(id: { eq: $id }) {
-        id
-        title
-        body {
-          _rawChildren
-        }
+      id
+      title
+      body {
+        _rawChildren
       }
     }
-  `
-  
+  }
+`;
