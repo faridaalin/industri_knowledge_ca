@@ -1,5 +1,5 @@
 import React from "react"
-import BaseBlockContent from '@sanity/block-content-to-react'
+import PortableText from '@sanity/block-content-to-react'
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
 import { xonokai } from "react-syntax-highlighter/dist/esm/styles/prism"
 
@@ -24,7 +24,7 @@ const serializers = {
   },
 }
 
-const BlockContent = ({ blocks }) => <BaseBlockContent blocks={blocks} serializers={serializers} />
+const BlockContent = ({ blocks }) => <PortableText blocks={blocks} serializers={serializers} />
 
 
 // const BlockContent = ({ blocks }) => (
