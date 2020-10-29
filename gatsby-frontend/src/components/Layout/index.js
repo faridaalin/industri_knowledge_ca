@@ -4,8 +4,6 @@ import {StyledLayout} from './layout.style'
 import Header from "../Header/"
 import Footer from "../Footer"
 
-
-
 const Layout = ({title, children}) => {
     return (
         <StyledLayout>

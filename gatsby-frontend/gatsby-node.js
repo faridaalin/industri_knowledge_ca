@@ -44,6 +44,7 @@ async function createBlogPages (graphql, actions, reporter) {
           edges {
             node {
               id
+              publishedAt
               slug {
                 current
               }

@@ -10,11 +10,9 @@ grid-template-rows: auto 1fr auto;
 grid-template-columns: 100%;
 overflow-x: hidden;
 
-.main-content {
-    width: 100%;
+main {
+    width: 90vw;
     max-width: 62.5rem;
     margin: 0 auto;
-    padding: 0 2.5rem;
-    background: pink
 }
 `

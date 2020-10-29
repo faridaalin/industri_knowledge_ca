@@ -3,6 +3,7 @@ import { graphql } from "gatsby";
 import Layout from '../components/Layout';
 import SinglePost from '../components/SinglePost'
 
+
 const BlogTemplate = props => {
   console.log(props)
   const { data, errors } = props
@@ -25,6 +26,7 @@ export const query = graphql`
      blog: sanityPost(id: { eq: $id }) {
         title
         _id
+        publishedAt(formatString: "DD MMMM YY")
         _rawBody
       }
     }

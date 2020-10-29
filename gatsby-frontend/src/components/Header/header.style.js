@@ -2,7 +2,7 @@ import styled from "styled-components/macro"
 
 export const StyledHeader = styled.header`
   width: 100%;
-  background: white;
+  padding: 16px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -43,19 +43,16 @@ export const StyledHeader = styled.header`
     position: absolute;
     right: 0;
     top: 2rem;
-    transform: translateX(91px);
+    padding: 1rem 1rem 0;
+    transform: translateX(120%);
+    transition: transform 0.7s ease;
   }
   .menu__items.show {
-      transform: translateX(0px);
-
+      transform: translateX(0);
     }
 
-  .menu__item a {
+  .menu__item  {
+    margin-bottom: 1rem;
   }
 
-
-
-  @media all and (min-width:600px) {
-    transform: translateX(91px);
-  }
 `
