@@ -35,10 +35,12 @@ export default {
     {
       name: 'mainImage',
       title: 'Main image',
-      type: 'image',
-      options: {
-        hotspot: true
-      }
+      type: 'mainImage'
+    },
+    {
+      name: 'description',
+      title: 'Description',
+      type: 'text'
     },
     {
       name: 'categories',

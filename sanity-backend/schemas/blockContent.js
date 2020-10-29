@@ -68,5 +68,6 @@ export default {
       description: 'Code editor',
       type: 'code'
     },
+    { type: 'mainImage' }, 
   ]
 }

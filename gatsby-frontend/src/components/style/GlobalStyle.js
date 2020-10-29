@@ -30,12 +30,12 @@ box-sizing: border-box;
         --whitesmoke--light: rgba(222,226,230,1);
         --whitesmoke--lighter: rgba(233,236,239,1);
         --whitesmoke--lightest: rgba(248,249,250,1);
-      
+     
         --grey: rgba(33,37,41,1);
         --grey--dark: rgba(52,58,64,1);
         --grey--light: rgba(73,80,87,1);
         --grey--lighter:  rgba(108,117,125,1);
-        --grey--lightest: rgba(173,181,189,1);
+        --grey--lightest: rgb(173 181 189 / 77%);
       
         /* --headings-font: "Roboto", sans-serif; */
         --headings-font: "Montserrat", sans-serif;
@@ -70,7 +70,6 @@ box-sizing: border-box;
 html {
     width: 100%;
     height: 100%;
-    background: var(--black);
 }
 
 
@@ -81,32 +80,27 @@ width: 100%;
 height: 100%;
 margin: 0;
 padding: 0;
-background-color: white;
-color: black;
+background: var(--black);
+color: var(--whitesmoke--light);
 font-size: 1.125rem;
 font-family: 'Work Sans', sans-serif;
 line-height: 1.5rem;
 font-weight: 400;
 overflow-x: hidden;
 }
-h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 2rem;
-    line-height: 2.375rem;
-    color: black;
-    @media (min-width: 1200px) {
-        font-size: 2.625rem;
-        line-height: 4rem;
-    }
+body.light {
+background: var(--whitesmoke--light);
+color:  var(--black); 
 }
-h2 {
-    font-weight: 700;
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-    color: black;
 
+h1, h2, h3, h4, h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
 }
+h1 {
+    font-size:  calc(1.5rem + 0.3vw);
+}
+
 a {
     display: inline-block;
     text-decoration: none;

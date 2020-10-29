@@ -1,6 +1,6 @@
 import React from 'react';
-import BlockContent from '@sanity/block-content-to-react';
-import serializers from '../block-content';
+import BlockContent from '../block-content';
+
 
 
 
@@ -12,7 +12,7 @@ function SinglePost({blogPost}) {
             <p>Published at: {blogPost.publishedAt}</p>
             <div>
 
-            <BlockContent blocks={blogPost._rawBody}  serializers={serializers} />
+            <BlockContent blocks={blogPost._rawBody}  />
             </div>
         </div>
     )

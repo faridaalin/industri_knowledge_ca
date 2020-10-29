@@ -9,8 +9,8 @@ const Layout = ({title, children}) => {
         <StyledLayout>
             <GlobalStyle />
             <Header />
-            <main id="main-content">
-            <h1>{title}</h1>
+            <main className="main">
+            <h1 className="main__title">{title}</h1>
                 {children}</main>
             <Footer />
         </StyledLayout>

@@ -13,8 +13,10 @@ const Header = () => {
   return (
     <StyledHeader>
       <nav className="menu">
-        <Link to="/" className="activeClassName logo" aria-label="home">
-          Fa.
+        <Link to="/" 
+        className="logo" 
+        aria-label="home">
+          Farida Alin.
         </Link>
         <div
           className="menu_hamburger"
@@ -29,27 +31,33 @@ const Header = () => {
         </div>
         <ul className={`menu__items ${showMenu ? "show" : ""}`}>
           <li className="menu__item">
-            <Link to="/work" className="activeClassName" aria-label="work">
+            <Link to="/work" 
+            activeClassName="active" 
+            aria-label="work">
               Work
             </Link>
           </li>
           <li className="menu__item">
             <Link
               to="/writing"
-              className="activeClassName"
+              activeClassName="active"
               aria-label="writing"
             >
               Writing
             </Link>
           </li>
           <li className="menu__item">
-            <Link to="/about" className="activeClassName" aria-label="about">
+            <Link to="/about" 
+            className="activeClassName" 
+            activeClassName="active"
+            aria-label="about">
               About
             </Link>
           </li>
           <li className="menu__item">
             <Link
               to="/contact"
+              activeClassName="active"
               className="activeClassName"
               aria-label="contact"
             >

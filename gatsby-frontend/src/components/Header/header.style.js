@@ -18,6 +18,7 @@ export const StyledHeader = styled.header`
 
   .logo {
     grid-row: 1 / 1;
+    color: var(--tangeringe);
   }
 
   .menu_hamburger {
@@ -35,7 +36,7 @@ export const StyledHeader = styled.header`
 
   .menu_hamburger span {
     transition: 0.3s;
-    background-color: black;
+    background-color: var(--whitesmoke--light);
   }
 
   .menu__items {
@@ -54,5 +55,10 @@ export const StyledHeader = styled.header`
   .menu__item  {
     margin-bottom: 1rem;
   }
-
+  .menu__item a  {
+    color: var(--grey--lightest);
+  }
+  .menu__item a.active  {
+    color: var(--whitesmoke--lightt);
+  }
 `

@@ -1,15 +1,27 @@
 import React from "react";
 import Layout from "../components/Layout/"
 import {graphql, Link} from 'gatsby';
+import Img from 'gatsby-image'
 
 
 
-const Writing = ({data}) => {
+const Writing = ({data}) => {  
   return (
     <Layout title="Writing">
+   
+  {data.allSanityPost.nodes.map((item) => 
+
+  <div key={item.id}>
     <div>
-  {data.allSanityPost.edges.map(({node}) => <Link key={node.id} to={node.slug.current}>{node.title}</Link>)}
+    <Img fluid={item.mainImage.asset.fluid} alt ={item.mainImage.alt} />
     </div>
+    <h3>{item.title}</h3>
+    <p>{item.description}</p>
+    <p><time>{item.publishedAt}</time></p>
+    <Link to={item.slug.current}>Read more</Link>
+  </div>
+  
+  )}
     </Layout>
   )
 }
@@ -18,15 +30,27 @@ export default Writing
 export const query = graphql`
 {
   allSanityPost {
-    edges {
-      node {
-        id
-        title
-        slug {
-          current
+    nodes {
+      _id
+      mainImage {
+        asset {
+          url
+          fluid(maxWidth: 700) {
+            ...GatsbySanityImageFluid
+            src
+          }
         }
+        alt
+      }
+      title
+      description
+      publishedAt(formatString: "DD MMMM YY")
+      slug {
+        current
       }
     }
   }
 }
 `
+
+

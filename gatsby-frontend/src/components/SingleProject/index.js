@@ -1,5 +1,4 @@
 import React from 'react';
-import BaseBlockContent from '@sanity/block-content-to-react'
 
 function SingleProject({project}) {
     console.log(project)
