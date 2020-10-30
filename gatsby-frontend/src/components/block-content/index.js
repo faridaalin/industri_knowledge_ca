@@ -17,14 +17,34 @@ export const H4 = styled.h4`
 
 `;
 
-export const UL = styled.ul`
-padding: 0 2rem;
-`;
-
 export const P = styled.p`
 font-weight: 100;
 font-size: 1rem;
 padding: 1rem 0;
+
+a {
+  padding: 0 1px;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 0 8px;
+  color: var(--grey);
+  outline: none;
+
+  :hover {
+  color: var(--grey--lighter);
+}
+
+  :focus {
+  color: var(--grey);
+  outline: 1px solid var(--grey);
+  border-radius: 2px;
+}
+
+:active {
+  color: var(--whitesmoke);
+}
+}
 `;
 
 
@@ -40,9 +60,6 @@ const serializers = {
 
         case 'h4':
           return <H4 className="h4">{props.children}</H4>
-
-          case 'ul':
-            return <UL className="ul">{props.children}</UL>
 
         case 'p':
           return <P className="p">{props.children}</P>

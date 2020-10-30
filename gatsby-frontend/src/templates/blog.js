@@ -15,8 +15,27 @@ padding: 2rem 1rem;
   margin-top: 2rem;
   max-width: 45rem;
     margin: 0 auto;
+
+    ul {
+      padding: 0 2rem;
+    }
 }
 `;
+
+export const HeroContainer = styled.div`
+min-height: 100%;
+
+.hero-img {
+  background:  url(${({image}) => image});
+    background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  min-height: calc(200px + 15vw);
+
+}
+
+ 
+`
 
 
 const BlogTemplate = props => {
@@ -24,15 +43,13 @@ const BlogTemplate = props => {
   const { data, errors } = props;
   const blogPost = data && data.blog;
 
+
   return (
     <Layout>
       <Section className="post-container">
-      <div className="">
-            <Img 
-                style={{ maxHeight: "100%" }}
-            fluid={blogPost.mainImage.asset.fluid} 
-            alt={blogPost.mainImage.alt} />
-       </div>
+      <HeroContainer className="hero-container" image={blogPost.mainImage.asset.fluid.src}>
+        <div className="hero-img"  ></div>
+       </HeroContainer>
        <div className="content">
        {blogPost && <SinglePost blogPost={blogPost} /> }  
        </div>  
