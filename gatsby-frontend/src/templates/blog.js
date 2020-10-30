@@ -2,20 +2,41 @@ import React from "react"
 import { graphql } from "gatsby";
 import Layout from '../components/Layout';
 import SinglePost from '../components/SinglePost'
+import Img from "gatsby-image"
+import styled from "styled-components/macro"
 
+export const Section = styled.section`
+padding: 2.5rem 0;
+background: var(--whitesmoke--light);
+color: var(--black);
+padding: 2rem 1rem;
+
+.content {
+  margin-top: 2rem;
+  max-width: 45rem;
+    margin: 0 auto;
+}
+`;
 
 
 const BlogTemplate = props => {
-  console.log(props)
-  const { data, errors } = props
-  const blogPost = data && data.blog
- 
+
+  const { data, errors } = props;
+  const blogPost = data && data.blog;
 
   return (
     <Layout>
-       {errors && <p>Error</p>}
-
-      {blogPost && <SinglePost blogPost={blogPost} /> }    
+      <Section className="post-container">
+      <div className="">
+            <Img 
+                style={{ maxHeight: "100%" }}
+            fluid={blogPost.mainImage.asset.fluid} 
+            alt={blogPost.mainImage.alt} />
+       </div>
+       <div className="content">
+       {blogPost && <SinglePost blogPost={blogPost} /> }  
+       </div>  
+      </Section>
     </Layout>
   )
 }
@@ -30,7 +51,7 @@ export const query = graphql`
         mainImage {
           asset {
             url
-            fluid(maxWidth: 700) {
+            fluid{
               ...GatsbySanityImageFluid
               src
             }

@@ -47,6 +47,11 @@ export const StyledHeader = styled.header`
     padding: 1rem 1rem 0;
     transform: translateX(120%);
     transition: transform 0.7s ease;
+    background: rgb(25 29 37);
+    z-index: 100;
+    height: 100vh;
+    width: 50vw;
+    text-align: right;
   }
   .menu__items.show {
       transform: translateX(0);

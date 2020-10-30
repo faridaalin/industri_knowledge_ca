@@ -8,6 +8,7 @@ import styled from "styled-components/macro"
 export const Thumbnail = styled(Link)`
   margin-bottom: 2rem;
   width: 100%;
+  min-height: 200px;
 
   :hover {
     color: var(--whitesmoke--lightest);
@@ -17,8 +18,14 @@ export const Thumbnail = styled(Link)`
     }
   }
 
+  .gatsby-image-wrapper {
+      height: 100%;
+      
+    }
+
   .thumbnail__content {
     padding-top: 1rem;
+
 
     .title {
       padding: 0.5rem 0;
