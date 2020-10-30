@@ -61,7 +61,7 @@ async function createBlogPages (graphql, actions, reporter) {
     projectEdges.forEach(edge => {
       const id = edge.node.id
       const slug = edge.node.slug.current
-      const path = `/writing/${slug}/`
+      const path = `/blog/${slug}/`
   
       reporter.info(`Creating blog page: ${path}`)
   

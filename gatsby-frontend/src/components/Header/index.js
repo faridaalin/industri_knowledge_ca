@@ -39,11 +39,11 @@ const Header = () => {
           </li>
           <li className="menu__item">
             <Link
-              to="/writing"
+              to="/blog"
               activeClassName="active"
-              aria-label="writing"
+              aria-label="blog"
             >
-              Writing
+              Blog
             </Link>
           </li>
           <li className="menu__item">

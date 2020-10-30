@@ -3,6 +3,8 @@ import { createGlobalStyle } from "styled-components/macro"
 const GlobalStyle = createGlobalStyle`
 * {
 box-sizing: border-box;
+margin: 0;
+padding: 0;
 }
 :root {
         /* Base color 1 */
@@ -73,19 +75,14 @@ html {
 }
 
 
-
-
 body {
 width: 100%;
 height: 100%;
-margin: 0;
-padding: 0;
 background: var(--black);
-color: var(--whitesmoke--light);
+color: var(--whitesmoke);
 font-size: 1.125rem;
 font-family: 'Work Sans', sans-serif;
-line-height: 1.5rem;
-font-weight: 400;
+line-height: 1.5;
 overflow-x: hidden;
 }
 body.light {
