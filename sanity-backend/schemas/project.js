@@ -26,15 +26,7 @@ export default {
           calendarTodayLabel: 'Today'
         }
       },
-      {
-        name: 'tags',
-        title: 'Tags',
-        type: 'array',
-        of: [{      
-          type: 'reference',
-          to: [{type: "tag"}]
-        }]
-      },
+
       {
         name: 'mainImage',
         title: 'Main image',
@@ -42,6 +34,12 @@ export default {
         options: {
           hotspot: true
         }
+      },
+      {
+        name: 'categories',
+        title: 'Categories',
+        type: 'array',
+        of: [{ type: 'reference', to: { type: 'category' } }]
       },
       {
         name: 'body',

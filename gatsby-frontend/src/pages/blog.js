@@ -110,6 +110,10 @@ export const query = graphql`
     allSanityPost {
       nodes {
         _id
+        categories {
+          title
+          _id
+        }
         mainImage {
           asset {
             url

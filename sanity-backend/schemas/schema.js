@@ -9,7 +9,6 @@ import blockContent from './blockContent'
 import category from './category'
 import post from './post'
 import author from './author'
-import tag from './tag'
 import project from './project'
 import mainImage from './mainImage'
 
@@ -26,7 +25,6 @@ export default createSchema({
     author,
     category,
     project,
-    tag,
     mainImage,
     blockContent
     // When added to this list, object types can be used as

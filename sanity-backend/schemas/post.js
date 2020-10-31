@@ -18,15 +18,6 @@ export default {
       }
     },
     {
-      name: 'tags',
-      title: 'Tags',
-      type: 'array',
-      of: [{      
-        type: 'reference',
-        to: [{type: "tag"}]
-      }]
-    },
-    {
       name: 'author',
       title: 'Author',
       type: 'reference',
@@ -46,7 +37,7 @@ export default {
       name: 'categories',
       title: 'Categories',
       type: 'array',
-      of: [{type: 'reference', to: {type: 'category'}}]
+      of: [{ type: 'reference', to: { type: 'category' } }]
     },
     {
       name: 'publishedAt',

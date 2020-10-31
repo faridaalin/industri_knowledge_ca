@@ -1,28 +1,26 @@
-import React from 'react';
-import BlockContent from '../block-content';
-
-import styled from "styled-components/macro"
-
-export const Date = styled.p`
-padding: 1rem;
-background: var(--whitesmoke--lightest);
-color: var(--grey);
-font-size: 0.7rem;
-width: 30vw;
-white-space:nowrap;
-`;
+import React from "react"
+import BlockContent from "../BlockContent"
+import {DetailSection} from './DetailSection.style'
 
 
 
-function SinglePost({blogPost}) {
-    console.log(blogPost)
-    return (
-        <div>
-            <Date>{blogPost.publishedAt}</Date>
-            <BlockContent blocks={blogPost._rawBody}  />
-            
-        </div>
-    )
+function SinglePost(props) {
+  const { _rawBody, categories, publishedAt } = props.post
+
+  return (
+    <>
+      <DetailSection>
+        {publishedAt && <span className="date">{publishedAt}</span>}
+        {categories &&
+          categories.map(category => (
+            <span className="category" key={category._id}>
+              {category.title}
+            </span>
+          ))}
+      </DetailSection>
+      <BlockContent blocks={_rawBody} />
+    </>
+  )
 }
 
-export default SinglePost;
+export default SinglePost

@@ -22,29 +22,6 @@ font-weight: 100;
 font-size: 1rem;
 padding: 1rem 0;
 
-a {
-  padding: 0 1px;
-  text-decoration: none;
-  cursor: pointer;
-  font-size: 18px;
-  padding: 0 8px;
-  color: var(--grey);
-  outline: none;
-
-  :hover {
-  color: var(--grey--lighter);
-}
-
-  :focus {
-  color: var(--grey);
-  outline: 1px solid var(--grey);
-  border-radius: 2px;
-}
-
-:active {
-  color: var(--whitesmoke);
-}
-}
 `;
 
 
@@ -84,9 +61,5 @@ const serializers = {
 
 const BlockContent = ({ blocks }) => <PortableText blocks={blocks} serializers={serializers} />
 
-
-// const BlockContent = ({ blocks }) => (
-//   <BaseBlockContent blocks={blocks} serializers={serializers} />
-// )
 
 export default BlockContent

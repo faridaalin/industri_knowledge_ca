@@ -2,9 +2,9 @@ require('dotenv').config()
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Portfolio site`,
+    description: ``,
+    author: `Farida Alin`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -45,16 +45,17 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: `Montserrat`,
-            variants: [`400`, `600`, `900`]
+            family: `Open Sans`,
+            variants: [`300`, `400`, `600`, `700`]
           },
           {
-            family: `Work Sans`,
-            variants: [`100`, `300`, `400`]
+            family: `Montserrat`,
+            variants: [`400`, `600`, `900`]
           },
         ],
       },
       
-    }
-  ],
+    },
+ 
+    ]
 }

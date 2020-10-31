@@ -92,10 +92,15 @@ color:  var(--black);
 
 h1, h2, h3, h4, h5 {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 900;
+    
 }
 h1 {
     font-size:  calc(1.5rem + 0.3vw);
+    font-weight: 900;
+}
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
 }
 
 a {
