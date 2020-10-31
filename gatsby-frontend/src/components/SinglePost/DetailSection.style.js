@@ -1,26 +1,25 @@
 import styled from "styled-components/macro"
 
 export const DetailSection = styled.div`
-  margin: 1rem 0;
-  width: 50%;
-  margin-left: auto;
+  margin: 1.5rem 0 2rem;
+
     display: flex;
   justify-content: flex-end;
 
   span {
     padding: 0.4rem 0.8rem;
     font-size: 0.7rem;
-    font-size: 10px;
+    font-size: 0.9rem;
     white-space: nowrap;
   }
 
   .date {
-    background: var(--whitesmoke--lightest);
+    background: rgb(248 249 250 / 48%);
     color: var(--grey);
     margin-right: 1rem;
   }
   .category {
-    background: var(--tangeringe--lighter);
+    background: rgb(255 121 0 / 51%);
     color: var(--black);
   }
 `

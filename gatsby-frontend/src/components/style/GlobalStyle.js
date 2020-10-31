@@ -84,6 +84,7 @@ font-size: 1.125rem;
 font-family: 'Work Sans', sans-serif;
 line-height: 1.5;
 overflow-x: hidden;
+font-size: 16px;
 }
 body.light {
 background: var(--whitesmoke--light);
@@ -92,10 +93,12 @@ color:  var(--black);
 
 h1, h2, h3, h4, h5 {
     font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+}
     
 }
 h1 {
-    font-size:  calc(1.5rem + 0.3vw);
+    font-size:  calc(1.3rem + 0.3vw);
     font-weight: 900;
 }
 p {

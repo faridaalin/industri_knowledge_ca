@@ -18,5 +18,21 @@ overflow-x: hidden;
 
 .main__title {
     color: var(--whitesmoke--light);
+    padding-top: calc(2rem + 1vw);
+    padding-bottom: calc(4rem + 1vw);
+    position: relative;
+    
+
+}
+
+.main__title:before {
+  content: "";
+  display: block;
+  width: 1rem;
+height: 4px;
+  background: var(--tangeringe);
+  left: 0;
+  top: 50%;
+  position: absolute;
 }
 `

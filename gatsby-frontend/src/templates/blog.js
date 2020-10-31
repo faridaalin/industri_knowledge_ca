@@ -65,7 +65,7 @@ const BlogTemplate = props => {
   const post = data && data.blog
 
   return (
-    <Layout>
+    <Layout title="Blog">
       <Article className="post-container">
         <HeroContainer
           className="hero-container"

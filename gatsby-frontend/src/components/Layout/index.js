@@ -11,6 +11,7 @@ const Layout = ({title, children}) => {
             <Header />
             <main className="main">
             <h1 className="main__title">{title}</h1>
+            
                 {children}</main>
             <Footer />
         </StyledLayout>
