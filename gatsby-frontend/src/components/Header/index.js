@@ -6,7 +6,6 @@ const Header = () => {
   const [showMenu, setShowMenu] = useState(false)
 
   const handleMenu = () => {
-    console.log("clicked")
     setShowMenu(!showMenu)
   }
 

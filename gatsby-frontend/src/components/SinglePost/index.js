@@ -6,6 +6,7 @@ import {DetailSection} from './DetailSection.style'
 
 function SinglePost(props) {
   const { _rawBody, categories, publishedAt } = props.post
+  
 
   return (
     <>

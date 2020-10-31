@@ -60,7 +60,7 @@ export const HeroContainer = styled.section`
 `
 
 const BlogTemplate = props => {
-  console.log(props)
+
   const { data, errors } = props
   const post = data && data.blog
 

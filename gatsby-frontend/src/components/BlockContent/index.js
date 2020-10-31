@@ -3,6 +3,7 @@ import PortableText from '@sanity/block-content-to-react'
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
 import { xonokai } from "react-syntax-highlighter/dist/esm/styles/prism"
 import styled from "styled-components/macro"
+import Figure from '../Figure/Figure'
 
 
 export const H2 = styled.h2`
@@ -55,6 +56,9 @@ const serializers = {
           {code}
         </SyntaxHighlighter>
       )
+    },
+    mainImage (props) {
+      return <Figure {...props.node} />
     },
   },
 }

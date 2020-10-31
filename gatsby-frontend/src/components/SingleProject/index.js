@@ -1,7 +1,6 @@
 import React from 'react';
-
+//YYYY/MM
 function SingleProject({project}) {
-    console.log(project)
     return (
         <div>
             <p>Title: {project.title}</p>

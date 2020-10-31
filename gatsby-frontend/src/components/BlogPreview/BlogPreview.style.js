@@ -51,8 +51,7 @@ export const Thumbnail = styled(GatsbyLink)`
   
 `
 export const Section = styled.section`
-  max-width: 45rem;
-  margin: 0 auto;
+ 
 
   @media all and (min-width: 521px) {
     display: grid;
