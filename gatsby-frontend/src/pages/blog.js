@@ -1,8 +1,9 @@
 import React from "react"
 import Layout from "../components/Layout/"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import { Section, Thumbnail} from '../components/BlogPreview/BlogPreview.style'
+
 
 const Blog = ({ data }) => {
   return (

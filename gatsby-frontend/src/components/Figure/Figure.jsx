@@ -1,33 +1,33 @@
 import React from "react"
-import Img from "gatsby-image"
-import UrlBuilder from '@sanity/image-url';
-
-// const builder = imageUrlBuilder(myConfiguredSanityClient)
-
-
-const urlFor = (source) => UrlBuilder({projectId: '9wdbtffm', dataset: 'production'}).image(source)
+import Img from 'gatsby-image'
+import {getFluidGatsbyImage} from 'gatsby-source-sanity'
+import styled from 'styled-components'
 
 
-// function urlFor(source) {
-//   return builder.image(source)
-// }
+const StyledFigure = styled.figure`
+margin-bottom: 1rem;
+
+`
 
 
 function Figure(props) {
-    console.log("IMG PROPS:", props)
+  console.log("IMG PROPS:", props.asset._ref)
+  const sanityConfig = {projectId: '9wdbtffm', dataset: 'production'}
+  const imageAssetId = `${props.asset._ref}`
+  
+  const fluidProps = getFluidGatsbyImage(imageAssetId, {maxWidth: 500}, sanityConfig)
+  
   return (
-    <figure>
+    <div>
+          <StyledFigure>
       {props.asset && (
-        <div className="">
-          <img
-            
-            src={urlFor(props.asset)}
-            alt={props.alt}
-          />
-        </div>
+      
+      <Img fluid={fluidProps} />
       )}
-      <figcaption className="">Write something here</figcaption>
-    </figure>
+
+    </StyledFigure>
+    </div>
+
   )
 }
 

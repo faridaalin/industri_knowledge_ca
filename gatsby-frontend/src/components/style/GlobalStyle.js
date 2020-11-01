@@ -86,6 +86,9 @@ line-height: 1.5;
 overflow-x: hidden;
 font-size: 16px;
 }
+img {
+   width: 100%;
+}
 body.light {
 background: var(--whitesmoke--light);
 color:  var(--black); 
