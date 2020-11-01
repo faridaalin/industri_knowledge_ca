@@ -2,28 +2,8 @@ import React from "react"
 import PortableText from '@sanity/block-content-to-react'
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
 import { xonokai } from "react-syntax-highlighter/dist/esm/styles/prism"
-import styled from "styled-components/macro"
 import Figure from '../Figure/Figure'
-
-
-export const H2 = styled.h2`
-color: var(--black--grey);
-font-size: 1.8rem;
-padding: 0.5rem 0;
-`;
-export const H3 = styled.h3`
-font-size: 1.2rem;
-`;
-export const H4 = styled.h4`
-
-`;
-
-export const P = styled.p`
-font-weight: 100;
-font-size: 1rem;
-padding: 1rem 0;
-
-`;
+import {H2, H3, H4, P} from './typography.style'
 
 
 const serializers = {

@@ -3,8 +3,10 @@ require('dotenv').config()
 module.exports = {
   siteMetadata: {
     title: `Portfolio site`,
-    description: ``,
+    description: `Frontend developer based in Oslo, Norway. Love creating and building design-focused websites.`,
     author: `Farida Alin`,
+    url: `www.faridaalin.com`,
+    image: "/initials.png"
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

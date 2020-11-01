@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import SinglePost from "../components/SinglePost"
 import styled from "styled-components/macro"
+import SEO from '../components/seo'
 
 export const Article = styled.article`
   padding: 2.5rem 0;
@@ -66,6 +67,7 @@ const BlogTemplate = props => {
 
   return (
     <Layout title="Blog">
+      <SEO />
       <Article className="post-container">
         <HeroContainer
           className="hero-container"

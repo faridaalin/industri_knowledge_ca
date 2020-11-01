@@ -30,16 +30,18 @@ const Header = () => {
         </div>
         <ul className={`menu__items ${showMenu ? "show" : ""}`}>
           <li className="menu__item">
-            <Link to="/work" 
+            <Link to="/projects" 
             activeClassName="active" 
-            aria-label="work">
-              Work
+            partiallyActive={true}
+            aria-label="projects">
+              Projects
             </Link>
           </li>
           <li className="menu__item">
             <Link
               to="/blog"
               activeClassName="active"
+              partiallyActive={true}
               aria-label="blog"
             >
               Blog

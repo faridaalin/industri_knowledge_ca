@@ -1,12 +1,9 @@
 import React from "react"
 import BlockContent from "../BlockContent"
-import {DetailSection} from './DetailSection.style'
-
-
+import { DetailSection } from "./DetailSection.style"
 
 function SinglePost(props) {
   const { _rawBody, categories, publishedAt } = props.post
-  
 
   return (
     <>
