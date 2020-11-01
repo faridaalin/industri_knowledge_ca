@@ -23,9 +23,9 @@ export default createSchema({
     // in the studio.
     post,
     author,
+    mainImage,
     category,
     project,
-    mainImage,
     blockContent
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas

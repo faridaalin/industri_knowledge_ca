@@ -26,15 +26,11 @@ export default {
           calendarTodayLabel: 'Today'
         }
       },
-
       {
         name: 'mainImage',
         title: 'Main image',
-        type: 'image',
-        options: {
-          hotspot: true
-        }
-      },
+        type: 'mainImage'
+      },      
       {
         name: 'categories',
         title: 'Categories',

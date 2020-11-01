@@ -5,10 +5,11 @@ import {graphql, Link} from 'gatsby';
 
 
 const Projects = ({data}) => {
+  console.log(data.allSanityProject.nodes)
   return (
     <Layout title="Projects">
     <div>
-  {data.allSanityProject.edges.map(({node}) => <Link key={node.id} to={node.slug.current}>{node.title}</Link>)}
+  {data.allSanityProject.nodes.map((item) => <Link key={item._id} to={item.slug.current}>{item.title}</Link>)}
     </div>
     </Layout>
   )
@@ -18,13 +19,21 @@ export default Projects
 export const query = graphql`
 {
   allSanityProject {
-    edges {
-      node {
-        id
-        title
-        slug {
-          current
-        }
+    nodes {
+      title
+      _id
+      slug {
+        current
+      }
+        mainImage {
+          asset {
+            url
+            fluid {
+              ...GatsbySanityImageFluid
+              src
+            }
+          }
+          alt
       }
     }
   }
