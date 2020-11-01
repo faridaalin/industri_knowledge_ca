@@ -1,21 +1,32 @@
 import React from "react"
 import Img from "gatsby-image"
+import UrlBuilder from '@sanity/image-url';
+
+// const builder = imageUrlBuilder(myConfiguredSanityClient)
+
+
+const urlFor = (source) => UrlBuilder({projectId: '9wdbtffm', dataset: 'production'}).image(source)
+
+
+// function urlFor(source) {
+//   return builder.image(source)
+// }
 
 
 function Figure(props) {
-    console.log("IMG PROPS:", props.asset)
+    console.log("IMG PROPS:", props)
   return (
     <figure>
-      {/* {props.asset && (
+      {props.asset && (
         <div className="">
-          <Img
-            style={{ maxHeight: "100%" }}
-            fluid={props.asset.mainImage.asset.fluid}
-            alt={props.asset.mainImage.alt}
+          <img
+            
+            src={urlFor(props.asset)}
+            alt={props.alt}
           />
         </div>
       )}
-      <figcaption className="">Write something here</figcaption> */}
+      <figcaption className="">Write something here</figcaption>
     </figure>
   )
 }

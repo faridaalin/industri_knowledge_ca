@@ -57,8 +57,10 @@ const serializers = {
         </SyntaxHighlighter>
       )
     },
-    mainImage (props) {
-      return <Figure {...props.node} />
+    mainImage: (props) => {
+       
+        return <Figure {...props.node} />
+      
     },
   },
 }
