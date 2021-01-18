@@ -47,9 +47,27 @@ module.exports = {
       options: {
         custom: {
           families: ["Montserrat"],
-          urls: ["/fonts/fonts.css"],
+          urls: ["src/fonts/fonts.css"],
         },
       },
     },
+    // {
+    //   resolve: `gatsby-plugin-google-fonts`,
+    //   options: {
+    //     fonts: [`Montserrat: 400, 900`],
+    //     display: `swap`,
+    //   },
+    // },
+    // {
+    //   resolve: `gatsby-plugin-prefetch-google-fonts`,
+    //   options: {
+    //     fonts: [
+    //       {
+    //         family: `Montserrat`,
+    //         variants: [`400`, `600`, `900`],
+    //       },
+    //     ],
+    //   },
+    // },
   ],
 }
