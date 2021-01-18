@@ -1,6 +1,8 @@
 import { createGlobalStyle } from "styled-components/macro"
 
 const GlobalStyle = createGlobalStyle`
+
+
 * {
 box-sizing: border-box;
 margin: 0;
@@ -12,12 +14,12 @@ padding: 0;
 
         --pink: rgba(231, 61, 87, 1)
         --pink--gradient: linear-gradient(90deg, rgba(243, 80, 105, 1) 0%, rgba(250, 106, 184, 1) 100%);
-
+/* 
         --tangeringe: rgba(255,84,0,1);
         --tangeringe--dark: rgba(255,96,0,1);
         --tangeringe--light: rgba(255,109,0,1);
         --tangeringe--lighter: rgba(255,121,0,1);
-        --tangeringe--lightest: rgba(255,133,0,1);
+        --tangeringe--lightest: rgba(255,133,0,1); */
       
         /* Base color 2 */
       
