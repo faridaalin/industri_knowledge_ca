@@ -6,9 +6,13 @@ box-sizing: border-box;
 margin: 0;
 padding: 0;
 }
+
 :root {
         /* Base color 1 */
-      
+
+        --pink: rgba(231, 61, 87, 1)
+        --pink--gradient: linear-gradient(90deg, rgba(243, 80, 105, 1) 0%, rgba(250, 106, 184, 1) 100%);
+
         --tangeringe: rgba(255,84,0,1);
         --tangeringe--dark: rgba(255,96,0,1);
         --tangeringe--light: rgba(255,109,0,1);
@@ -40,15 +44,15 @@ padding: 0;
         --grey--lightest: rgb(173 181 189 / 77%);
       
         /* --headings-font: "Roboto", sans-serif; */
-        --headings-font: "Montserrat", sans-serif;
-        --text-font: "Work Sans", sans-serif;
+        /* --headings-font: "Montserrat", sans-serif;
+        --text-font: "Work Sans", sans-serif; */
         /* Font weight*/
-        --thin: 200;
+        /* --thin: 200;
         --light: 300;
         --regular: 400;
         --medium: 500;
         --bold: 700;
-        --bold-black: 900;
+        --bold-black: 900; */
       
         --heading-xl: 64px;
         --heading-l: 48px;
@@ -65,60 +69,47 @@ padding: 0;
       box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.2);
       box-shadow: 2px 10px 20px rgba(0, 0, 0, 0.1);
       box-shadow: 1px 5px 14px rgba(0, 0, 0, 0.1);
-      
-      
+
       }
 
-html {
+
+    html {
+        width: 100%;
+        height: 100%;
+    }
+
+    body {
     width: 100%;
     height: 100%;
-}
-
-
-body {
-width: 100%;
-height: 100%;
-background: var(--black);
-color: var(--whitesmoke);
-font-size: 1.125rem;
-font-family: 'Work Sans', sans-serif;
-line-height: 1.5;
-overflow-x: hidden;
-font-size: 16px;
-}
-img {
-   width: 100%;
-}
-body.light {
-background: var(--whitesmoke--light);
-color:  var(--black); 
-}
-
-h1, h2, h3, h4, h5 {
+    background: var(--black);
+    color: var(--whitesmoke);
+    font-size: 1.125rem;
     font-family: 'Montserrat', sans-serif;
-    letter-spacing: 1px;
-}
-    
-}
-h1 {
-    font-size:  calc(1.3rem + 0.3vw);
-    font-weight: 900;
-}
-p {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-}
-
-a {
-    display: inline-block;
-    text-decoration: none;
-    text-decoration-skip-ink: auto;
-    color: inherit;
-    cursor: pointer;
-    &:hover,
-    &:focus {
-        outline: 0;
+    /* font-family: 'Roboto', sans-serif; */
+    line-height: 1.5;
+    overflow-x: hidden;
+    font-size: 16px;
     }
-}
-`
+
+    img {
+    width: 100%;
+    }
+
+    body.light {
+    background: var(--whitesmoke--light);
+    color:  var(--black); 
+    }
+
+    a {
+        display: inline-block;
+        text-decoration: none;
+        text-decoration-skip-ink: auto;
+        color: inherit;
+        cursor: pointer;
+        &:hover,
+        &:focus {
+            outline: 0;
+        }
+    }
+    `
 export default GlobalStyle

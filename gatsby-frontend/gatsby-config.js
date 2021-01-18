@@ -1,12 +1,12 @@
-require('dotenv').config()
+require("dotenv").config()
 
 module.exports = {
   siteMetadata: {
     title: `Portfolio site`,
     description: `Frontend developer based in Oslo, Norway. Love creating and building design-focused websites.`,
     author: `Farida Alin`,
-    url: `www.faridaalin.com`,
-    image: "/initials.png"
+    url: `https:///www.faridaalin.com`,
+    image: "/initials.png",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -43,21 +43,13 @@ module.exports = {
     },
     `gatsby-plugin-styled-components`,
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: "gatsby-plugin-web-font-loader",
       options: {
-        fonts: [
-          {
-            family: `Open Sans`,
-            variants: [`300`, `400`, `600`, `700`]
-          },
-          {
-            family: `Montserrat`,
-            variants: [`400`, `600`, `900`]
-          },
-        ],
+        custom: {
+          families: ["Montserrat"],
+          urls: ["/fonts/fonts.css"],
+        },
       },
-      
     },
- 
-    ]
+  ],
 }
