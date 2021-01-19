@@ -21,7 +21,7 @@ export const StyledHeader = styled.header`
 
   .logo {
     grid-row: 1 / 1;
-    width: 30%;
+    width: 60px;
   }
 
   .menu_hamburger {

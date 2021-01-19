@@ -1,7 +1,6 @@
 export const basePink = {
   pink: "rgba(231, 61, 87, 1)",
-  pinkGradient:
-    "linear-gradient(90deg, rgba(243, 80, 105, 1) 0%, rgba(250, 106, 184, 1) 100%)",
+  pinkGradient: "90deg, rgba(243, 80, 105, 1) 0%, rgba(250, 106, 184, 1) 100%",
 }
 export const baseBlack = {
   black: "rgba(13,16,23,1)",

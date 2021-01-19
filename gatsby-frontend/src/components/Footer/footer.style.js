@@ -1,18 +1,31 @@
 import styled from "styled-components"
+import { colors } from "../style/base/variables"
+
 
 export const StyledFooter = styled.footer`
-  width: 100%;
-  height: 6.25rem;
-  margin: 0 auto;
-  padding: 0 2.5rem;
-  background: rgb(25 29 37);
-  color: white;
   display: flex;
-  justify-content: center;
   align-items: center;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: +1px;
-  font-weight: 700;
-  margin-top: 6rem;
+  justify-content: center;
+  flex-direction: column;
+  padding: 48px;
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  svg {
+    color: ${colors.baseWhite.whitesmokeDark};
+    margin-right: 16px;
+    width: 16px;
+    height: 16px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  p {
+    padding-top: 16px;
+    font-size: 12px;
+    color: ${colors.baseWhite.whitesmoke};
+  }
 `

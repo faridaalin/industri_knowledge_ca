@@ -5,16 +5,16 @@ import Navigation from "../Navigation/"
 import Footer from "../Footer"
 import SEO from "../seo"
 
-const Layout = ({ title, children }) => {
+const Layout = ({ title, children, home }) => {
   const { pathname } = window.location
+  console.log("title:", title)
   return (
-    <StyledLayout>
+    <StyledLayout home={home}>
       <SEO title={title} pathname={pathname} />
       <GlobalStyle />
       <Navigation />
       <main className="main">
-        <h1 className="main__title">{title}</h1>
-
+        {title && <h1 className="main__title">{title}</h1>}
         {children}
       </main>
       <Footer />

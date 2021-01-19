@@ -11,8 +11,12 @@ export const StyledLayout = styled.div`
 
   .main {
     width: 90vw;
+    height: 100vh;
     max-width: 62.5rem;
     margin: 0 auto;
+    ${props =>
+      props.home &&
+      `display: flex; align-items: center; justify-content: center; height: 100%;`}
   }
 
   .main__title {

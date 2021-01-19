@@ -35,7 +35,7 @@ html {
 body {
     width: 100%;
     height: 100%;
-    background: rgba(13,16,23,1);
+    background: #10141D; 
     color: rgba(173,181,189,1);
     font-size: 1.125rem;
     font-family: 'Montserrat', sans-serif;

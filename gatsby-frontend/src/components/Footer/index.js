@@ -1,10 +1,16 @@
-import React from "react";
-import {StyledFooter} from './footer.style';
+import React from "react"
+import { StyledFooter } from "./footer.style"
+import { GitHub, Linkedin, Send } from "react-feather"
 
 const Footer = () => (
-  <StyledFooter>
-      <p>Footer</p>
+  <StyledFooter className="footer">
+    <div>
+      <GitHub />
+      <Linkedin />
+      <Send />
+    </div>
+    <p>Created and designed by Farida Alin</p>
   </StyledFooter>
 )
 
-export default Footer;
+export default Footer

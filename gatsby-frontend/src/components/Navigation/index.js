@@ -11,7 +11,7 @@ const Navigation = () => {
   }
 
   return (
-    <StyledHeader>
+    <StyledHeader className="navigation">
       <nav className="menu">
         <Link to="/" className="logo" aria-label="home">
           <img src={Logo} alt="Farida Alin logo" />
