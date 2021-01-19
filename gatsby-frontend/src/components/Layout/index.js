@@ -7,14 +7,18 @@ import SEO from "../seo"
 
 const Layout = ({ title, children, home }) => {
   const { pathname } = window.location
-  console.log("title:", title)
   return (
     <StyledLayout home={home}>
       <SEO title={title} pathname={pathname} />
       <GlobalStyle />
       <Navigation />
       <main className="main">
-        {title && <h1 className="main__title">{title}</h1>}
+        <p className="overlay-title">{title}</p>
+        {title && (
+          <h1 className="main__title" data-before={title}>
+            {title}
+          </h1>
+        )}
         {children}
       </main>
       <Footer />

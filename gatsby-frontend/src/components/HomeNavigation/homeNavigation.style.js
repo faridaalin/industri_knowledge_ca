@@ -1,6 +1,6 @@
 import styled from "styled-components/macro"
 import { colors } from "../style/base/variables"
-console.log(colors)
+
 
 export const StyledHomeNav = styled.h1`
   display: flex;

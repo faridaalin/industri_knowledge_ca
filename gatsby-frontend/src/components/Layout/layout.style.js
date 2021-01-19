@@ -1,7 +1,9 @@
 import styled from "styled-components/macro"
+import { colors } from "../style/base/variables"
 
 export const StyledLayout = styled.div`
   width: 100%;
+  height: 100%;
   min-height: 100vh;
   margin: 0 auto;
   display: grid;
@@ -11,7 +13,6 @@ export const StyledLayout = styled.div`
 
   .main {
     width: 90vw;
-    height: 100vh;
     max-width: 62.5rem;
     margin: 0 auto;
     ${props =>
@@ -40,14 +41,20 @@ export const StyledLayout = styled.div`
     text-transform: uppercase;
   }
 
-  .main__title:before {
-    content: "";
-    display: block;
-    width: 1rem;
-    height: 4px;
-    background: var(--tangeringe);
-    left: 0;
-    top: 50%;
+  .overlay-title {
+    background-color: rgba(231, 61, 87, 1);
+    background-image: linear-gradient(${colors.basePink.pinkGradient});
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 2px transparent;
+    color: #10141d;
+    opacity: 0.3;
+    text-transform: uppercase;
+    font-size: 5rem;
     position: absolute;
+    left: 48px;
+    top: 100px;
+    font-weight: 900;
   }
 `
