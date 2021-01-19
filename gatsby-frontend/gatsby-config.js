@@ -3,9 +3,10 @@ require("dotenv").config()
 module.exports = {
   siteMetadata: {
     title: `Portfolio site`,
+    titleTemplate: "%s · The Real Hero",
     description: `Frontend developer based in Oslo, Norway. Love creating and building design-focused websites.`,
     author: `Farida Alin`,
-    url: `https:///www.faridaalin.com`,
+    siteUrl: `https:///www.faridaalin.com`,
     image: "/initials.png",
   },
   plugins: [
@@ -42,32 +43,5 @@ module.exports = {
       },
     },
     `gatsby-plugin-styled-components`,
-    {
-      resolve: "gatsby-plugin-web-font-loader",
-      options: {
-        custom: {
-          families: ["Montserrat"],
-          urls: ["src/fonts/fonts.css"],
-        },
-      },
-    },
-    // {
-    //   resolve: `gatsby-plugin-google-fonts`,
-    //   options: {
-    //     fonts: [`Montserrat: 400, 900`],
-    //     display: `swap`,
-    //   },
-    // },
-    // {
-    //   resolve: `gatsby-plugin-prefetch-google-fonts`,
-    //   options: {
-    //     fonts: [
-    //       {
-    //         family: `Montserrat`,
-    //         variants: [`400`, `600`, `900`],
-    //       },
-    //     ],
-    //   },
-    // },
   ],
 }

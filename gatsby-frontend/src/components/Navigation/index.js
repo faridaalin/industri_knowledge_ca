@@ -45,7 +45,7 @@ const Navigation = () => {
               partiallyActive={true}
               aria-label="blog"
             >
-              Writing
+              Blog
             </Link>
           </li>
           <li className="menu__item">

@@ -16,9 +16,21 @@ export const StyledLayout = styled.div`
   }
 
   .main__title {
-    color: var(--whitesmoke--light);
-    padding-top: calc(2rem + 1vw);
-    padding-bottom: calc(4rem + 1vw);
+    text-shadow: 5px 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: rgba(231, 61, 87, 1);
+    background-image: linear-gradient(
+      95deg,
+      rgba(243, 80, 105, 1) 0%,
+      rgba(250, 106, 184, 1) 20%
+    );
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    margin-top: calc(2rem + 1vw);
+    margin-bottom: calc(4rem + 1vw);
     position: relative;
     font-weight: 900;
     text-transform: uppercase;

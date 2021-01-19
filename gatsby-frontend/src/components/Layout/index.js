@@ -3,12 +3,13 @@ import GlobalStyle from "../style/GlobalStyle"
 import { StyledLayout } from "./layout.style"
 import Navigation from "../Navigation/"
 import Footer from "../Footer"
-import Head from "../theme/Head"
+import SEO from "../seo"
 
 const Layout = ({ title, children }) => {
+  const { pathname } = window.location
   return (
     <StyledLayout>
-      <Head />
+      <SEO title={title} pathname={pathname} />
       <GlobalStyle />
       <Navigation />
       <main className="main">

@@ -1,4 +1,5 @@
 import styled from "styled-components/macro"
+//import { colors } from "../style/base/variables"
 
 export const StyledHeader = styled.header`
   width: 100%;
@@ -20,7 +21,7 @@ export const StyledHeader = styled.header`
 
   .logo {
     grid-row: 1 / 1;
-    width: 70%;
+    width: 30%;
   }
 
   .menu_hamburger {
@@ -38,7 +39,7 @@ export const StyledHeader = styled.header`
 
   .menu_hamburger span {
     transition: 0.3s;
-    background-color: var(--whitesmoke--light);
+    background-color: white;
   }
 
   .menu__items {
@@ -65,8 +66,20 @@ export const StyledHeader = styled.header`
     font-weight: 900;
   }
   .menu__item a {
-    color: var(--grey--lightest);
-    transition: 0.25s color;
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: rgba(231, 61, 87, 1);
+    background-image: linear-gradient(
+      95deg,
+      rgba(243, 80, 105, 1) 0%,
+      rgba(250, 106, 184, 1) 100%
+    );
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    transition: 0.25s background;
     :hover {
       color: var(--whitesmoke--light);
     }
@@ -76,6 +89,9 @@ export const StyledHeader = styled.header`
   }
 
   @media all and (min-width: 821px) {
+    .logo {
+      width: 70%;
+    }
     .menu {
       display: grid;
       grid-auto-flow: column;
@@ -102,8 +118,6 @@ export const StyledHeader = styled.header`
         margin-right: 1rem;
         margin-bottom: 0;
         font-size: 1.2rem;
-        //letter-spacing: 1.1px;
-
         :last-child {
           margin-right: 0;
         }

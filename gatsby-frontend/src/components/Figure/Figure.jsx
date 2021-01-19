@@ -4,7 +4,7 @@ import { getFluidGatsbyImage } from "gatsby-source-sanity"
 import { StyledFigure } from "./figure.style"
 
 function Figure(props) {
-  console.log("IMG PROPS:", props.asset._ref)
+  //console.log("IMG PROPS:", props.asset._ref)
   const sanityConfig = { projectId: "9wdbtffm", dataset: "production" }
   const imageAssetId = `${props.asset._ref}`
 
