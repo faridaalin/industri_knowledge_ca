@@ -7,6 +7,8 @@ function SinglePost(props) {
   const { _rawBody, categories, publishedAt } = props.post
   const { pathname } = window.location
 
+  console.log("_rawBody:", _rawBody)
+
   return (
     <>
       <SEO title={props.post.title} pathname={pathname} />

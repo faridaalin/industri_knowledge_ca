@@ -1,5 +1,4 @@
 import styled from "styled-components/macro"
-import { colors } from "../style/base/variables"
 
 export const StyledLayout = styled.div`
   width: 100%;
@@ -66,39 +65,39 @@ export const StyledLayout = styled.div`
       text-transform: uppercase;
       opacity: 0.1;
     }
-  }
 
-  .title {
-    position: relative;
-    text-shadow: 5px 10px 20px rgba(0, 0, 0, 0.2);
-    background-color: rgba(231, 61, 87, 1);
-    background-image: linear-gradient(
-      95deg,
-      rgba(243, 80, 105, 1) 0%,
-      rgba(250, 106, 184, 1) 20%
-    );
-    background-size: 100%;
-    background-repeat: repeat;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
-    padding: 40px 0 48px;
-    font-weight: 900;
-    text-transform: uppercase;
-  }
+    .title {
+      position: relative;
+      text-shadow: 5px 10px 20px rgba(0, 0, 0, 0.2);
+      background-color: rgba(231, 61, 87, 1);
+      background-image: linear-gradient(
+        95deg,
+        rgba(243, 80, 105, 1) 0%,
+        rgba(250, 106, 184, 1) 20%
+      );
+      background-size: 100%;
+      background-repeat: repeat;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -moz-background-clip: text;
+      -moz-text-fill-color: transparent;
+      padding: 40px 0 48px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
 
-  .title-overlay {
-    position: absolute;
-    left: 0;
-    top: 0;
-    font-size: clamp(4rem, 20vw, 9rem);
-    font-weight: 900;
-    width: 100%;
-    -webkit-text-stroke: 2px white;
-    opacity: 0.3;
-    text-transform: uppercase;
-    color: #10141d;
+    .title-overlay {
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: clamp(4rem, 20vw, 9rem);
+      font-weight: 900;
+      width: 100%;
+      -webkit-text-stroke: 2px white;
+      opacity: 0.3;
+      text-transform: uppercase;
+      color: #10141d;
+    }
   }
 
   @media only screen and (min-width: 576px) {
@@ -108,14 +107,16 @@ export const StyledLayout = styled.div`
         bottom: 21px;
         font-size: 120px;
       }
-    }
-    .title {
-      padding: 48px 0 120px;
+      .title {
+        padding: 48px 0 120px;
+      }
     }
   }
   @media only screen and (min-width: 768px) {
-    .title {
-      padding: 120px 0 120px;
+    .main__heading {
+      .title {
+        padding: 120px 0 120px;
+      }
     }
   }
 `

@@ -1,13 +1,32 @@
 import React from "react"
 import Layout from "../components/Layout"
-import { Link } from "gatsby"
-import me from "../images/me.png"
-import { StyledAbout } from "./about.style"
+// import { Link } from "gatsby"
+// import me from "../images/me.png"
+// import { StyledAbout } from "./about.style"
+import Aboutpage from "../components/about"
 
-const About = () => {
+export const query = graphql`
+  {
+    page: sanityPage(slug: { current: { eq: "about" } }) {
+      title
+      _rawBody
+      mainImage {
+        asset {
+          url
+        }
+      }
+    }
+  }
+`
+
+const About = props => {
+  const { data, errors } = props
+  const page = data && data.page
+
   return (
-    <Layout title="About" about>
-      <StyledAbout className="about">
+    <Layout title={data.page.title} about>
+      {errors && <p>Error</p>}
+      {/* <StyledAbout className="about">
         <div className="about__img">
           <img src={me} alt="Farida Alin" />
         </div>
@@ -31,7 +50,9 @@ const About = () => {
             <Link to="/contact">contact</Link> me if you have questions.
           </p>
         </div>
-      </StyledAbout>
+      </StyledAbout> */}
+
+      <Aboutpage page={page._rawBody} />
     </Layout>
   )
 }
