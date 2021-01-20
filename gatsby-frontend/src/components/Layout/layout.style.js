@@ -14,6 +14,9 @@ export const StyledLayout = styled.div`
   .main {
     padding-bottom: 120px;
     position: relative;
+    width: 100vw;
+    max-width: 1385px;
+    margin: 0 auto;
 
     ::after {
       ${({ about }) =>
@@ -26,12 +29,10 @@ export const StyledLayout = styled.div`
       top: 0;
       left: 0;
       z-index: -1;`}
-       @media all and (min-width: 768px)  {
-        ${({ about }) => about && `width: 80%;`}
-       }
+      @media all and (min-width: 768px) {
+        ${({ about }) => about && `width: 80%; max-width: 901px;`}
+      }
     }
-
- 
   }
 
   .main__body {
@@ -40,13 +41,11 @@ export const StyledLayout = styled.div`
       `display: flex; align-items: center; justify-content: center; height: 100%;`};
     margin: 0 auto;
     width: 90vw;
+    max-width: 995px;
     grid-row: 2 / 3;
-  }
-
-  .main__body.about {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 120px 2fr;
+    grid-template-rows: auto 2fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
   }
@@ -54,6 +53,19 @@ export const StyledLayout = styled.div`
   .main__heading {
     grid-row: 1 / 2;
     position: relative;
+    font-weight: 900;
+
+    ::after {
+      content: attr(data-title);
+      position: absolute;
+      top: -15px;
+      left: 0;
+      font-size: 90px;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke: 1.2px white;
+      text-transform: uppercase;
+      opacity: 0.1;
+    }
   }
 
   .title {
@@ -71,8 +83,7 @@ export const StyledLayout = styled.div`
     -webkit-text-fill-color: transparent;
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
-    margin-top: calc(2rem + 1vw);
-    margin-bottom: calc(4rem + 1vw);
+    padding: 40px 0 48px;
     font-weight: 900;
     text-transform: uppercase;
   }
@@ -90,12 +101,21 @@ export const StyledLayout = styled.div`
     color: #10141d;
   }
 
-  @media only screen and (min-width: 463px) {
-    .main.home {
-      grid-template-rows: 220px 2fr;
-   
+  @media only screen and (min-width: 576px) {
+    .main__heading {
+      ::after {
+        top: auto;
+        bottom: 21px;
+        font-size: 120px;
+      }
     }
-    .title-overlay {
-      top: calc(3px + -5vw);
+    .title {
+      padding: 48px 0 120px;
     }
+  }
+  @media only screen and (min-width: 768px) {
+    .title {
+      padding: 120px 0 120px;
+    }
+  }
 `
