@@ -13,6 +13,10 @@ export const query = graphql`
       mainImage {
         asset {
           url
+          fluid {
+            ...GatsbySanityImageFluid
+            src
+          }
         }
       }
     }
@@ -22,6 +26,7 @@ export const query = graphql`
 const About = props => {
   const { data, errors } = props
   const page = data && data.page
+  console.log("page:", page)
 
   return (
     <Layout title={data.page.title} about>
@@ -52,7 +57,7 @@ const About = props => {
         </div>
       </StyledAbout> */}
 
-      <Aboutpage page={page._rawBody} />
+      <Aboutpage page={page} />
     </Layout>
   )
 }

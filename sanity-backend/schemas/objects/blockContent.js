@@ -45,31 +45,34 @@ export default {
         // Annotations can be any object structure – e.g. a link or a footnote.
         annotations: [
           {
-            name: 'internalLink',
+            name: 'link',
             type: 'object',
-            title: 'Internal Link',
+            title: 'External link',
             fields: [
               {
-                name: 'item',
-                type: 'reference',
-                to: [{ type: 'page' }, { type: 'post' }, { type: 'project' }],
+                name: 'href',
+                type: 'url',
+                title: 'URL',
+              },
+              {
+                title: 'Open in new tab',
+                name: 'blank',
+                description: 'Read https://css-tricks.com/use-target_blank/',
+                type: 'boolean',
               },
             ],
           },
           {
-            title: 'URL',
-            name: 'link',
+            name: 'internalLink',
             type: 'object',
+            title: 'Internal link',
             fields: [
               {
-                title: 'URL',
-                name: 'href',
-                type: 'url',
-              },
-              {
-                title: 'Open in new window',
-                name: 'blank',
-                type: 'boolean',
+                name: 'reference',
+                type: 'reference',
+                title: 'Reference',
+                to: [{ type: 'page' }, { type: 'post' }, { type: 'project' }],
+                // other types you may want to link to
               },
             ],
           },

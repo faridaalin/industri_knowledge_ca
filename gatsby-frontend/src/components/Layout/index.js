@@ -7,8 +7,6 @@ import SEO from "../seo"
 
 const Layout = ({ title, children, home, about }) => {
   const { pathname } = window.location
-  console.log("about:", about)
-
   return (
     <StyledLayout home={home} about={about}>
       <SEO title={title} pathname={pathname} />
@@ -17,9 +15,9 @@ const Layout = ({ title, children, home, about }) => {
       <main className={home ? "main home" : "main"}>
         <section className={about ? "main__body about" : "main__body"}>
           {title && (
-            <heading className="main__heading" data-title={title}>
+            <header className="main__heading" data-title={title}>
               <h1 className="title">{title}</h1>
-            </heading>
+            </header>
           )}
           {children}
         </section>
