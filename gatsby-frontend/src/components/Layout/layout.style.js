@@ -12,15 +12,52 @@ export const StyledLayout = styled.div`
   overflow-x: hidden;
 
   .main {
-    width: 90vw;
-    max-width: 62.5rem;
-    margin: 0 auto;
-    ${props =>
-      props.home &&
-      `display: flex; align-items: center; justify-content: center; height: 100%;`}
+    padding-bottom: 120px;
+    position: relative;
+
+    ::after {
+      ${({ about }) =>
+        about &&
+        `content: "";
+      background: linear-gradient(180deg, rgba(29, 36, 52, 0) 0%, #1d2434 100%);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;`}
+       @media all and (min-width: 768px)  {
+        ${({ about }) => about && `width: 80%;`}
+       }
+    }
+
+ 
   }
 
-  .main__title {
+  .main__body {
+    ${props =>
+      props.home &&
+      `display: flex; align-items: center; justify-content: center; height: 100%;`};
+    margin: 0 auto;
+    width: 90vw;
+    grid-row: 2 / 3;
+  }
+
+  .main__body.about {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 120px 2fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+
+  .main__heading {
+    grid-row: 1 / 2;
+    position: relative;
+  }
+
+  .title {
+    position: relative;
     text-shadow: 5px 10px 20px rgba(0, 0, 0, 0.2);
     background-color: rgba(231, 61, 87, 1);
     background-image: linear-gradient(
@@ -36,25 +73,29 @@ export const StyledLayout = styled.div`
     -moz-text-fill-color: transparent;
     margin-top: calc(2rem + 1vw);
     margin-bottom: calc(4rem + 1vw);
-    position: relative;
     font-weight: 900;
     text-transform: uppercase;
   }
 
-  .overlay-title {
-    background-color: rgba(231, 61, 87, 1);
-    background-image: linear-gradient(${colors.basePink.pinkGradient});
-    background-size: 100%;
-    background-repeat: repeat;
-    -webkit-background-clip: text;
-    -webkit-text-stroke: 2px transparent;
-    color: #10141d;
+  .title-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: clamp(4rem, 20vw, 9rem);
+    font-weight: 900;
+    width: 100%;
+    -webkit-text-stroke: 2px white;
     opacity: 0.3;
     text-transform: uppercase;
-    font-size: 5rem;
-    position: absolute;
-    left: 48px;
-    top: 100px;
-    font-weight: 900;
+    color: #10141d;
   }
+
+  @media only screen and (min-width: 463px) {
+    .main.home {
+      grid-template-rows: 220px 2fr;
+   
+    }
+    .title-overlay {
+      top: calc(3px + -5vw);
+    }
 `

@@ -1,13 +1,13 @@
 import styled from "styled-components"
 import { colors } from "../style/base/variables"
 
-
 export const StyledFooter = styled.footer`
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   padding: 48px;
+  margin-top: 120px;
   div {
     display: flex;
     align-items: center;

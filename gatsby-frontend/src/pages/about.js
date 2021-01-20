@@ -6,12 +6,12 @@ import { StyledAbout } from "./about.style"
 
 const About = () => {
   return (
-    <Layout title="About">
-      <StyledAbout className="bg-box">
-        <div>
+    <Layout title="About" about>
+      <StyledAbout className="about">
+        <div className="about__img">
           <img src={me} alt="Farida Alin" />
         </div>
-        <div>
+        <div className="about__content">
           <h2>Hi there</h2>
           <p>
             My name is Farida and I am a front-end development student,
