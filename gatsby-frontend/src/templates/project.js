@@ -3,8 +3,6 @@ import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import SingleProject from "../components/SingleProject"
-import { ButtonDefault } from "../components/Buttons/index"
-import Pagination from "../components/Pagination"
 
 const ProjectTemplate = props => {
   const project = props.data && props.data.project
@@ -12,28 +10,9 @@ const ProjectTemplate = props => {
   const prev = props.pageContext.prev
 
   return (
-    <Layout>
-      <SEO />
-      {project && <SingleProject project={project} />}
-      <Pagination next={next} prev={prev} />
-      {/* <div>
-        {prev ? (
-          <ButtonDefault
-            icon="left"
-            linkHref={`/projects/${prev.slug.current}`}
-          >
-            {prev.slug.current.toUpperCase()}
-          </ButtonDefault>
-        ) : null}
-        {next ? (
-          <ButtonDefault
-            icon="right"
-            linkHref={`/projects/${next.slug.current}`}
-          >
-            {next.slug.current.toUpperCase()}
-          </ButtonDefault>
-        ) : null}
-      </div> */}
+    <Layout title={project.title}>
+      <SEO title={project.title} />
+      {project && <SingleProject project={project} next={next} prev={prev} />}
     </Layout>
   )
 }
@@ -57,7 +36,7 @@ export const query = graphql`
       slug {
         current
       }
-      date(formatString: "DD MMMM YYYY")
+      date(formatString: "YYYY")
       mainImage {
         alt
         asset {
