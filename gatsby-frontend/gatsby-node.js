@@ -5,7 +5,10 @@ async function createProjectPages(graphql, actions, reporter) {
   const { createPage } = actions
   const result = await graphql(`
     {
-      allSanityProject(filter: { slug: { current: { ne: null } } }) {
+      allSanityProject(
+        filter: { slug: { current: { ne: null } } }
+        sort: { order: DESC, fields: date }
+      ) {
         edges {
           node {
             id

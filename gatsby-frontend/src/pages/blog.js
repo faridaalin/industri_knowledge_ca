@@ -33,8 +33,6 @@ const Blog = ({ data }) => {
        
               <p className="description">{item.description}</p>
               <span className="date">{item.publishedAt}</span>
-        
-        
           </Thumbnail>
         ))}
       </Section>

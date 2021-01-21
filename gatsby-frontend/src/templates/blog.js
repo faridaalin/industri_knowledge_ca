@@ -8,8 +8,6 @@ import {
 } from "../components/Blog-template/BlogTemplate.style"
 import SEO from "../components/seo"
 
-console.log(Article)
-
 export const query = graphql`
   query BlogTemplateQuery($id: String!) {
     blog: sanityPost(id: { eq: $id }) {
@@ -36,6 +34,7 @@ export const query = graphql`
 `
 
 const BlogTemplate = props => {
+  console.log("BLOG TEMPLATE PROPS:", props)
   const { data } = props
   const post = data && data.blog
 
