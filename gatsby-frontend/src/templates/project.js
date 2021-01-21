@@ -3,9 +3,12 @@ import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import SingleProject from "../components/SingleProject"
 
-const ProjectTemplate = props => {
-  const { data, errors } = props
+const ProjectTemplate = ({ data, errors, pageContext }) => {
+  console.log("pageContext:", pageContext)
+  console.log("DATA:", data)
   const project = data && data.project
+  const next = pageContext.next
+  const prev = pageContext.prev
 
   return (
     <Layout>

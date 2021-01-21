@@ -20,9 +20,9 @@ async function createProjectPages(graphql, actions, reporter) {
 
   if (result.errors) throw result.errors
 
-  const projectEdges = (result.data.allSanityProject || {}).edges || []
+  const projects = (result.data.allSanityProject || {}).edges || []
 
-  projectEdges.forEach(edge => {
+  projects.forEach((edge, index) => {
     const id = edge.node.id
     const slug = edge.node.slug.current
     const path = `/projects/${slug}/`
@@ -32,7 +32,11 @@ async function createProjectPages(graphql, actions, reporter) {
     createPage({
       path,
       component: require.resolve("./src/templates/project.js"),
-      context: { id },
+      context: {
+        id,
+        prev: index === 0 ? null : projects[index - 1].node,
+        next: index === projects.length - 1 ? null : projects[index + 1].node,
+      },
     })
   })
 }
@@ -56,9 +60,9 @@ async function createBlogPages(graphql, actions, reporter) {
 
   if (result.errors) throw result.errors
 
-  const projectEdges = (result.data.allSanityPost || {}).edges || []
+  const posts = (result.data.allSanityPost || {}).edges || []
 
-  projectEdges.forEach(edge => {
+  posts.forEach(edge => {
     const id = edge.node.id
     const slug = edge.node.slug.current
     const path = `/blog/${slug}/`
@@ -90,9 +94,9 @@ async function createPages(graphql, actions, reporter) {
 
   if (result.errors) throw result.errors
 
-  const pageEdges = (result.data.allSanityPage || {}).edges || []
+  const pages = (result.data.allSanityPage || {}).edges || []
 
-  pageEdges.forEach(edge => {
+  pages.forEach(edge => {
     const id = edge.node.id
     const slug = edge.node.slug.current
     const path = `/${slug}/`
