@@ -2,8 +2,7 @@ import styled from "styled-components/macro"
 
 export const DetailSection = styled.div`
   margin: 1.5rem 0 2rem;
-
-    display: flex;
+  display: flex;
   justify-content: flex-end;
 
   span {

@@ -44,8 +44,6 @@ export const Article = styled.article`
 `
 
 export const HeroContainer = styled.section`
-  min-height: 100%;
-
   .hero-img {
     background: url(${({ image }) => image});
     background-position: center;
