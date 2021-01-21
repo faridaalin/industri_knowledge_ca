@@ -1,8 +1,10 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import SingleProject from "../components/SingleProject"
+import { ButtonDefault } from "../components/Buttons/index"
+import Pagination from "../components/Pagination"
 
 const ProjectTemplate = props => {
   const project = props.data && props.data.project
@@ -13,16 +15,25 @@ const ProjectTemplate = props => {
     <Layout>
       <SEO />
       {project && <SingleProject project={project} />}
-      {prev ? (
-        <Link to={`/projects/${prev.slug.current}`}>
-          prev.slug.current.toUpperCase()
-        </Link>
-      ) : null}
-      {next ? (
-        <Link to={`/projects/${next.slug.current}`}>
-          {next.slug.current.toUpperCase()}
-        </Link>
-      ) : null}
+      <Pagination next={next} prev={prev} />
+      {/* <div>
+        {prev ? (
+          <ButtonDefault
+            icon="left"
+            linkHref={`/projects/${prev.slug.current}`}
+          >
+            {prev.slug.current.toUpperCase()}
+          </ButtonDefault>
+        ) : null}
+        {next ? (
+          <ButtonDefault
+            icon="right"
+            linkHref={`/projects/${next.slug.current}`}
+          >
+            {next.slug.current.toUpperCase()}
+          </ButtonDefault>
+        ) : null}
+      </div> */}
     </Layout>
   )
 }

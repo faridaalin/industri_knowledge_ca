@@ -3,7 +3,7 @@ import { Link as GatsbyLink } from "gatsby"
 import { colors } from "../style/base/variables"
 
 export const StyledLink = styled(GatsbyLink)`
-  background-image: url(${props => props.imgUrl});
+  background-image: url(${props => props.imgurl});
   background-color: grey;
   background-position: center;
   background-repeat: no-repeat;

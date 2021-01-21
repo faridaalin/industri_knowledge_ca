@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../components/Layout"
 import { graphql } from "gatsby"
 import { StyledLink } from "../components/ProjectPreview/ProjectPreview.style"
-import ButtonOutline from "../components/Buttons"
+import { ButtonOutline } from "../components/Buttons"
 import { ChevronRight } from "react-feather"
 
 const Projects = ({ data }) => {
@@ -15,7 +15,7 @@ const Projects = ({ data }) => {
           <StyledLink
             to={project.slug.current}
             key={project._id}
-            imgUrl={project.mainImage.asset.url}
+            imgurl={project.mainImage.asset.url}
           >
             <div className="project">
               <p className="project__title">{project.title}</p>
