@@ -59,11 +59,16 @@ export const StyledLayout = styled.div`
       position: absolute;
       top: -15px;
       left: 0;
-      font-size: 90px;
+      /* font-size: 90px; */
       -webkit-text-fill-color: transparent;
       -webkit-text-stroke: 1.2px white;
       text-transform: uppercase;
       opacity: 0.1;
+      width: 100%;
+      height: auto;
+      min-height: 100%;
+      font-size: 16vw;
+      /* display: inline; */
     }
 
     .title {
@@ -105,7 +110,6 @@ export const StyledLayout = styled.div`
       ::after {
         top: auto;
         bottom: 21px;
-        font-size: 120px;
       }
       .title {
         padding: 48px 0 120px;
@@ -114,6 +118,11 @@ export const StyledLayout = styled.div`
   }
   @media only screen and (min-width: 768px) {
     .main__heading {
+      ::after {
+        top: auto;
+        bottom: 21px;
+        font-size: 177px;
+      }
       .title {
         padding: 120px 0 120px;
       }

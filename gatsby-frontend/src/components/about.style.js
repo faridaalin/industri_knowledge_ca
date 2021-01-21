@@ -3,7 +3,6 @@ import styled from "styled-components/macro"
 export const StyledAbout = styled.div`
   .about__content {
     h2 {
-      /* font-size: 65px; */
       font-size: clamp(2.6rem, -0.875rem + 8.333333vw, 4rem);
     }
   }

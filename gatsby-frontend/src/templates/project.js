@@ -8,7 +8,6 @@ const ProjectTemplate = props => {
   const project = props.data && props.data.project
   const next = props.pageContext.next
   const prev = props.pageContext.prev
-  console.log("project:", project)
 
   return (
     <Layout>

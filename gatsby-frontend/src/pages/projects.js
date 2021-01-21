@@ -1,7 +1,9 @@
 import React from "react"
 import Layout from "../components/Layout"
-import { graphql, Link } from "gatsby"
-import Img from "gatsby-image"
+import { graphql } from "gatsby"
+import { StyledLink } from "../components/ProjectPreview/ProjectPreview.style"
+import ButtonOutline from "../components/Buttons"
+import { ChevronRight } from "react-feather"
 
 const Projects = ({ data }) => {
   const projects = data.allSanityProject.nodes
@@ -10,14 +12,19 @@ const Projects = ({ data }) => {
     <Layout title="Projects">
       <section>
         {projects.map(project => (
-          <Link key={project._id} to={project.slug.current}>
-            {project.title}
-            <Img
-              style={{ maxHeight: "100%" }}
-              fluid={project.mainImage.asset.fluid}
-              alt={project.mainImage.alt}
-            />
-          </Link>
+          <StyledLink
+            to={project.slug.current}
+            key={project._id}
+            imgUrl={project.mainImage.asset.url}
+          >
+            <div className="project">
+              <p className="project__title">{project.title}</p>
+              <ButtonOutline>
+                View Project
+                <ChevronRight />
+              </ButtonOutline>
+            </div>
+          </StyledLink>
         ))}
       </section>
     </Layout>
