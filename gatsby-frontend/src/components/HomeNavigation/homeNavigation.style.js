@@ -1,7 +1,6 @@
 import styled from "styled-components/macro"
 import { colors } from "../style/base/variables"
 
-
 export const StyledHomeNav = styled.h1`
   display: flex;
   flex-direction: column;
@@ -9,7 +8,7 @@ export const StyledHomeNav = styled.h1`
   align-items: center;
   height: 100%;
   text-transform: uppercase;
-  font-size: 2.3rem;
+  font-size: clamp(2.5rem, 9vw, 4rem);
   width: 100%;
 
   a,
@@ -19,13 +18,12 @@ export const StyledHomeNav = styled.h1`
 
   a {
     padding: 0.8rem 0;
-    background-color: rgba(231, 61, 87, 1);
     background-image: linear-gradient(${colors.basePink.pinkGradient});
-    background-size: 100%;
-    background-repeat: repeat;
+    background-image: -webkit-linear-gradient(${colors.basePink.pinkGradient});
     -webkit-background-clip: text;
-    -webkit-text-stroke: 2px transparent;
+    -webkit-text-stroke: 3.5px transparent;
     color: #10141d;
+    text-transform: uppercase;
     text-align: center;
     letter-spacing: 4px;
     background-size: 200% 200%;

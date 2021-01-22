@@ -22,7 +22,6 @@ export const StyledLayout = styled.div`
   .main {
     position: relative;
     width: 100vw;
-    padding-bottom: 120px;
     padding: 10vh 10% 120px 10%;
 
     ::after {
@@ -35,16 +34,22 @@ export const StyledLayout = styled.div`
     }
   }
 
+  .main.home {
+    padding-bottom: 0;
+    height: 80vh;
+  }
+
   .main__body {
     ${props =>
-      props.home &&
-      `display: flex; align-items: center; justify-content: center; height: 100%;`};
-    grid-row: 2 / 3;
+      props.home
+        ? `display: flex; align-items: center; justify-content: center; height: 100%;`
+        : `grid-row: 2 / 3;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto 2fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+      `};
 
     .small-section {
       margin: 0 auto;

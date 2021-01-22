@@ -7,7 +7,6 @@ export const StyledFooter = styled.footer`
   justify-content: center;
   flex-direction: column;
   padding: 48px;
-  margin-top: 120px;
   div {
     display: grid;
     grid-auto-flow: column;

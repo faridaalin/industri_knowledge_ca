@@ -99,6 +99,7 @@ export const StyledHeader = styled.header`
 
     .menu__items {
       padding: 0;
+      width: auto;
       position: initial;
       transform: translateX(0);
       height: 100%;

@@ -11,7 +11,7 @@ const Layout = ({ title, children, home, about, contact }) => {
     <StyledLayout home={home} about={about} contact={contact}>
       <SEO title={title} pathname={pathname} />
       <GlobalStyle />
-      <Navigation />
+      <Navigation home={home} />
       <main className={home ? "main home" : "main"}>
         <section className={about ? "main__body about" : "main__body"}>
           {title && (
