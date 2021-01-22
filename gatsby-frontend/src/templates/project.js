@@ -36,7 +36,7 @@ export const query = graphql`
       slug {
         current
       }
-      date(formatString: "YYYY")
+      date(formatString: "DD MM YYYY")
       mainImage {
         alt
         asset {

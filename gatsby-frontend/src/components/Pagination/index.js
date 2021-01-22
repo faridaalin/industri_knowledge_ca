@@ -5,16 +5,16 @@ import { StyledPagination } from "./Pagination.style"
 const Pagination = (...props) => {
   const [{ next }] = props
   const [{ prev }] = props
-  console.log("next PAG:", next.slug.current)
+  // console.log("SLUG:", prev.slug.current)
   return (
     <StyledPagination>
       {prev ? (
-        <ButtonDefault icon="left" linkHref={prev.slug.current}>
+        <ButtonDefault icon="left" linkHref={`/projects/${prev.slug.current}`}>
           {prev.slug.current.toUpperCase()}
         </ButtonDefault>
       ) : null}
       {next ? (
-        <ButtonDefault icon="right" linkHref={next.slug.current}>
+        <ButtonDefault icon="right" linkHref={`/projects/${next.slug.current}`}>
           {next.slug.current.toUpperCase()}
         </ButtonDefault>
       ) : null}

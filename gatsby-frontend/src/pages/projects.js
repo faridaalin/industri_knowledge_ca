@@ -6,7 +6,10 @@ import { ButtonOutline } from "../components/Buttons"
 import { ChevronRight } from "react-feather"
 
 const Projects = ({ data }) => {
-  const projects = data.allSanityProject.nodes
+  const projects = data.allSanityProject.nodes.sort(
+    (a, b) => +new Date(b.date) - +new Date(a.date)
+  )
+  console.log("PROJECTS:", projects)
 
   return (
     <Layout title="Projects">
@@ -37,6 +40,7 @@ export const query = graphql`
     allSanityProject {
       nodes {
         title
+        date
         _id
         slug {
           current

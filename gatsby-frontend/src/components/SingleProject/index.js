@@ -54,8 +54,7 @@ const StyledSingleProject = styled.div`
 
 function SingleProject({ project, next, prev }) {
   console.log("SINGLE PROJECT:", project)
-  console.log("next:", next)
-  console.log("prev:", prev)
+
   const githubSrc = project.githubLink
     ? project.githubLink
     : "https://github.com/faridaalin"
@@ -75,7 +74,7 @@ function SingleProject({ project, next, prev }) {
               Github <GitHub />
             </a>
             <p>
-              Year <span>{project.date}</span>
+              Year <span>{project.date.split(" ")[2]}</span>
             </p>
             <p>
               Category <span>{project.projectOrigin}</span>
