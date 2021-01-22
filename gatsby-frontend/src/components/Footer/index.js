@@ -12,10 +12,10 @@ const Footer = () => (
       </linearGradient>
     </svg>
     <div>
-      <a href="https://github.com/faridaalin">
+      <a href="https://github.com/faridaalin" target="_blank">
         <GitHub />
       </a>
-      <a href="https://www.linkedin.com/in/farida-a-">
+      <a href="https://www.linkedin.com/in/farida-a-" target="_blank">
         <Linkedin />
       </a>
       <Link to="/contact">

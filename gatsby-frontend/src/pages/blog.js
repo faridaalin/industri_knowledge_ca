@@ -7,7 +7,7 @@ import { Section, Thumbnail } from "../components/BlogPreview/BlogPreview.style"
 const Blog = ({ data }) => {
   return (
     <Layout title="Blog">
-      <Section className="container small-section ">
+      <Section className="container small-section">
         {data.allSanityPost.nodes.map(item => (
           <Thumbnail
             key={item.title}
