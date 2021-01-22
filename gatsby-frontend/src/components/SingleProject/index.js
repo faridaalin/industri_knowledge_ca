@@ -11,6 +11,10 @@ const StyledSingleProject = styled.div`
     min-height: 50vh;
     max-height: 100vh;
   }
+
+  .project-img-container {
+    padding: 0 10%;
+  }
   .project {
     position: relative;
   }
@@ -20,8 +24,8 @@ const StyledSingleProject = styled.div`
     right: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-        to bottom,
+    background-image: linear-gradient(
+        to right,
         rgba(16, 20, 29, 0.95) 0%,
         rgba(16, 20, 29, 0.95) 100%
       ),
@@ -35,8 +39,6 @@ const StyledSingleProject = styled.div`
 
   .project-intro {
     position: relative;
-    max-width: 60ch;
-    min-height: 50vh;
 
     .project__links {
       display: flex;
@@ -62,6 +64,10 @@ const StyledSingleProject = styled.div`
         width: 16px;
         height: 16px;
       }
+    }
+
+    .project__content {
+      max-width: 60ch;
     }
   }
 
@@ -93,7 +99,12 @@ const StyledSingleProject = styled.div`
     }
     .project-overlay {
       width: 60%;
-      height: 50vh;
+      background-image: linear-gradient(
+          to right,
+          rgba(16, 20, 29, 0.95) 25%,
+          rgba(16, 20, 29, 0.2) 100%
+        ),
+        url(${props => props.imgurl});
     }
   }
 `
@@ -123,9 +134,6 @@ function SingleProject({ project, next, prev }) {
             <p>
               Year: <span>{project.date.split(" ")[2]}</span>
             </p>
-            <p>
-              Category: <span>{project.projectOrigin}</span>
-            </p>
           </div>
           <div className="project__content">
             <h3>Goal</h3>
@@ -136,10 +144,10 @@ function SingleProject({ project, next, prev }) {
               ))}
             </div>
           </div>
+          <div className="project-overlay"></div>
         </div>
-        <div className="project-overlay"></div>
       </section>
-      <section>
+      <section className="project-img-container">
         <div className="project__img">
           <Img
             fluid={project.projectImage.asset.fluid}
