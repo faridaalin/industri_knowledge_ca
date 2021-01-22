@@ -1,5 +1,14 @@
 import styled from "styled-components/macro"
 
+const overlayBackground = `content: "";
+background: linear-gradient(180deg, rgba(29, 36, 52, 0) 0%, #1d2434 100%);
+width: 100%;
+height: 100%;
+position: absolute;
+top: 0;
+left: 0;
+z-index: -1;`
+
 export const StyledLayout = styled.div`
   width: 100%;
   height: 100%;
@@ -17,18 +26,12 @@ export const StyledLayout = styled.div`
     padding-top: 10vh;
 
     ::after {
-      ${({ about }) =>
-        about &&
-        `content: "";
-      background: linear-gradient(180deg, rgba(29, 36, 52, 0) 0%, #1d2434 100%);
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: -1;`}
+      ${({ contact }) => console.log("STYLLE PROPS CONTACT:", contact)};
+      ${({ about }) => about && `${overlayBackground}`}
+      ${({ contact }) => contact && `${overlayBackground}`}
       @media all and (min-width: 768px) {
-        ${({ about }) => about && `width: 80%; max-width: 901px;`}
+        ${({ about }) => about && `max-width: 65vw`}
+        ${({ contact }) => contact && ` max-width: 70vw; right: 0; left: auto;`}
       }
     }
   }

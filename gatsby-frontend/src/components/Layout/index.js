@@ -5,10 +5,10 @@ import Navigation from "../Navigation/"
 import Footer from "../Footer"
 import SEO from "../seo"
 
-const Layout = ({ title, children, home, about }) => {
+const Layout = ({ title, children, home, about, contact }) => {
   const { pathname } = window.location
   return (
-    <StyledLayout home={home} about={about}>
+    <StyledLayout home={home} about={about} contact={contact}>
       <SEO title={title} pathname={pathname} />
       <GlobalStyle />
       <Navigation />

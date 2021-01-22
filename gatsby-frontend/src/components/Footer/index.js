@@ -12,10 +12,18 @@ const Footer = () => (
       </linearGradient>
     </svg>
     <div>
-      <a href="https://github.com/faridaalin" target="_blank">
+      <a
+        href="https://github.com/faridaalin"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <GitHub />
       </a>
-      <a href="https://www.linkedin.com/in/farida-a-" target="_blank">
+      <a
+        href="https://www.linkedin.com/in/farida-a-"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <Linkedin />
       </a>
       <Link to="/contact">

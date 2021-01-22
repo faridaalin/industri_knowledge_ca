@@ -1,87 +1,10 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import { useForm } from "react-hook-form"
 import emailjs from "emailjs-com"
 import Layout from "../components/Layout"
-import styled from "styled-components"
 import { ButtonOutline } from "../components/Buttons"
-import { colors } from "../components/style/base/variables"
 import { emailjsUser } from "../components/../config"
-
-const StyledContactSection = styled.section`
-  button {
-    font-size: 16px;
-    padding-top: 16px;
-    padding-bottom: 16px;
-  }
-  .contact-intro,
-  .contact-form {
-    min-height: 50vh;
-  }
-
-  .contact-form {
-    display: grid;
-    align-items: flex-start;
-  }
-
-  label {
-    color: ${colors.baseGrey.greyLightest};
-    font-weight: 300;
-    margin-bottom: -8px;
-    -webkit-transition: all 0.2s ease;
-    -o-transition: all 0.2s ease;
-    transition: all 0.2s ease;
-    font-size: 18px;
-  }
-
-  .input {
-    color: rgb(248 249 250 / 0.5);
-    border: none;
-    outline: none;
-    border-bottom: 2px solid rgb(248 249 250 / 0.5);
-    background: none;
-    resize: none;
-    border-radius: 0;
-    appearance: none;
-  }
-
-  .input:focus,
-  .isValid input,
-  .isValid textarea {
-    color: ${colors.baseWhite.whitesmokeLightest};
-    font-size: 16px;
-    border-bottom-color: ${colors.baseWhite.whitesmokeLightest};
-  }
-
-  .input-container {
-    display: flex;
-    flex-direction: column;
-  }
-  .input-container:focus-within label {
-    color: ${colors.baseWhite.whitesmokeLightest};
-    margin-bottom: 0px;
-    padding-bottom: 16px;
-    font-size: 14px;
-    transition: all 0.2s ease;
-  }
-  .isValid label {
-    padding-bottom: 16px;
-    margin-bottom: 0px;
-    font-size: 14px;
-    -webkit-transition: all 0.2s ease;
-    -o-transition: all 0.2s ease;
-    transition: all 0.2s ease;
-  }
-  .error {
-    color: #e91e63;
-    padding-top: 8px;
-    font-family: "Nunito Sans", sans-serif;
-    font-size: 14px;
-  }
-
-  .success-message {
-    font-style: italic;
-  }
-`
+import { StyledContactSection } from "../components/Contact-form/contact-form.style"
 
 const Contact = () => {
   const [inputNameLength, setInputNameLength] = useState(0)
@@ -124,9 +47,10 @@ const Contact = () => {
   }
 
   return (
-    <Layout title="Contact">
+    <Layout title="Contact" contact>
       <StyledContactSection className="small-section">
         <div className="contact-intro">
+          <h2>Let's get in touch</h2>
           {formSuccess ? (
             <p className="success-message">
               Thanks for contacting me, I will get back to you as soon as
@@ -148,6 +72,7 @@ const Contact = () => {
           >
             <label htmlFor="name">Name</label>
             <input
+              autocomplete="off"
               className="input"
               type="text"
               name="name"
@@ -170,6 +95,7 @@ const Contact = () => {
           >
             <label htmlFor="email">Email</label>
             <input
+              autocomplete="off"
               className="input"
               type="email"
               name="email"
@@ -195,6 +121,7 @@ const Contact = () => {
           >
             <label htmlFor="message">Message</label>
             <textarea
+              autocomplete="off"
               className="input"
               name="message"
               id="message"

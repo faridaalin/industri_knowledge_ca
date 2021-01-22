@@ -39,7 +39,7 @@ body {
     color: rgba(173,181,189,1);
     font-size: 1.125rem;
     font-family: 'Montserrat', sans-serif;
-    line-height: 1.5;
+    line-height: 1.6;
     overflow-x: hidden;
     font-size: 16px;
 }
