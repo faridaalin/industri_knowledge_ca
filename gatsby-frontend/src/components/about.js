@@ -1,7 +1,12 @@
 import React from "react"
 import PortableText from "@sanity/block-content-to-react"
 import Img from "gatsby-image"
-// import { StyledAbout } from "./about.style"
+import {
+  StyledAbout,
+  AboutHeading,
+  AboutSubHeading,
+  AboutParagraph,
+} from "./about.style"
 import { Link } from "gatsby"
 
 const serializers = {
@@ -18,43 +23,57 @@ const serializers = {
         <a href={mark.href}>{children}</a>
       ),
   },
+  types: {
+    block(props) {
+      switch (props.node.style) {
+        case "h2":
+          return (
+            <AboutHeading className="about-h2">{props.children}</AboutHeading>
+          )
+        case "h4":
+          return (
+            <AboutSubHeading className="about-h2">
+              {props.children}
+            </AboutSubHeading>
+          )
+        case "p":
+          return (
+            <AboutParagraph className="about-p">
+              {props.children}
+            </AboutParagraph>
+          )
+
+        default:
+          return (
+            <AboutParagraph className="about-p">
+              {props.children}
+            </AboutParagraph>
+          )
+      }
+    },
+  },
 }
 
 function Aboutpage(props) {
   const blocks = props.page._rawBody
   const img = props.page.mainImage.asset.fluid
   return (
-    <div className="small-section">
-      <Img fluid={img} alt="Farida Alin" />
-      <PortableText blocks={blocks} serializers={serializers} />
-    </div>
+    <StyledAbout>
+      <div className="about__img">
+        <Img fluid={img} alt="Farida Alin" />
+      </div>
+      <div className="about__content">
+        <PortableText blocks={blocks} serializers={serializers} />
+      </div>
+    </StyledAbout>
   )
 }
 
 export default Aboutpage
 
-/* <StyledAbout className="about">
-        <div className="about__img">
-          <img src={me} alt="Farida Alin" />
-        </div>
-        <div className="about__content">
-          <h2>Hi there</h2>
-          <p className="text-m">
-            My name is Farida and I am a front-end development student,
-            currently located in Oslo, Norway. I'm at my second and last year of
-            my studies at
-            <a href="https://www.noroff.no/">Noroff</a> - School of technology
-            and digital media.
-          </p>
-          <p className="text-s">
-            So far it has been a steep learning curve and I've enjoyed all
-            aspects of it. Looking forward to soon pursue and begin my career in
-            the web development industry.
-          </p>
-          <p className="text-m">
-            Feel free to view some of the <Link to="/projects">projects</Link>{" "}
-            I've worked on and don't hesitate to{" "}
-            <Link to="/contact">contact</Link> me if you have questions.
-          </p>
-        </div>
-      </StyledAbout> */
+/*
+        .about-p:first-child {
+    color: #f8f9fa;
+    font-weight: 500;
+  }
+      */

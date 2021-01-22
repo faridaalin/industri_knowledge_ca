@@ -26,7 +26,6 @@ export const StyledLayout = styled.div`
     padding: 10vh 10% 120px 10%;
 
     ::after {
-      ${({ contact }) => console.log("STYLLE PROPS CONTACT:", contact)};
       ${({ about }) => about && `${overlayBackground}`}
       ${({ contact }) => contact && `${overlayBackground}`}
       @media all and (min-width: 768px) {
