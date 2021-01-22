@@ -1,7 +1,8 @@
 import styled from "styled-components/macro"
 
 export const StyledPagination = styled.div`
-  display: flex;
   width: 100%;
-  justify-content: space-between;
+  padding-top: 120px;
+  display: flex;
+  justify-content: ${({ prev }) => (!prev ? "flex-end" : "space-between")};
 `

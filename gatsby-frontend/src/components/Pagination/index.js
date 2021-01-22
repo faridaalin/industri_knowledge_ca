@@ -6,7 +6,7 @@ const Pagination = (...props) => {
   const [{ next }] = props
   const [{ prev }] = props
   return (
-    <StyledPagination>
+    <StyledPagination prev={prev}>
       {prev ? (
         <ButtonDefault icon="left" linkHref={`/projects/${prev.slug.current}`}>
           {prev.slug.current.toUpperCase()}

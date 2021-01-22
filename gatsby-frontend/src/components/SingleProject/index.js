@@ -12,9 +12,6 @@ const StyledSingleProject = styled.div`
     max-height: 100vh;
   }
 
-  .project-img-container {
-    padding: 0 10%;
-  }
   .project {
     position: relative;
   }
@@ -24,21 +21,13 @@ const StyledSingleProject = styled.div`
     right: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(
-        to right,
-        rgba(16, 20, 29, 0.95) 0%,
-        rgba(16, 20, 29, 0.95) 100%
-      ),
-      url(${props => props.imgurl});
-    background-color: grey;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+
     z-index: -1;
   }
 
   .project-intro {
     position: relative;
+    background-color: rgb(16 20 29 / 0.8);
 
     .project__links {
       display: flex;
@@ -99,12 +88,11 @@ const StyledSingleProject = styled.div`
     }
     .project-overlay {
       width: 60%;
-      background-image: linear-gradient(
-          to right,
-          rgba(16, 20, 29, 0.95) 25%,
-          rgba(16, 20, 29, 0.2) 100%
-        ),
-        url(${props => props.imgurl});
+      background-image: url(${props => props.imgurl});
+      background-color: grey;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
     }
   }
 `

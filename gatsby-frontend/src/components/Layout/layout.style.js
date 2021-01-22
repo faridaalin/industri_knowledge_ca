@@ -23,7 +23,7 @@ export const StyledLayout = styled.div`
     position: relative;
     width: 100vw;
     padding-bottom: 120px;
-    padding-top: 10vh;
+    padding: 10vh 10% 120px 10%;
 
     ::after {
       ${({ contact }) => console.log("STYLLE PROPS CONTACT:", contact)};
@@ -49,7 +49,7 @@ export const StyledLayout = styled.div`
 
     .small-section {
       margin: 0 auto;
-      width: 90vw;
+      width: 100%;
       max-width: 995px;
     }
   }
@@ -74,11 +74,11 @@ export const StyledLayout = styled.div`
       -webkit-text-stroke: 3.5px transparent;
       color: #10141d;
       text-transform: uppercase;
-      opacity: 0.1;
+      opacity: 0.08;
       width: 100%;
       height: auto;
       min-height: 100%;
-      font-size: clamp(5vh, 10rem, 15vw);
+      font-size: clamp(5vh, 10rem, 14vw);
       display: flex;
       flex-direction: row;
       align-items: center;

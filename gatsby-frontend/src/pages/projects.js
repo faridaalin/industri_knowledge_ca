@@ -5,6 +5,16 @@ import { StyledLink } from "../components/ProjectPreview/ProjectPreview.style"
 import { ButtonOutline } from "../components/Buttons"
 import { ChevronRight } from "react-feather"
 
+import styled from "styled-components/macro"
+
+export const StyledProjectSection = styled.section`
+  display: grid;
+  grid-gap: 16px;
+  @media only screen and (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+`
+
 const Projects = ({ data }) => {
   const projects = data.allSanityProject.nodes.sort(
     (a, b) => +new Date(b.date) - +new Date(a.date)
@@ -13,7 +23,7 @@ const Projects = ({ data }) => {
 
   return (
     <Layout title="Projects">
-      <section className="small-section">
+      <StyledProjectSection className="small-section">
         {projects.map(project => (
           <StyledLink
             to={project.slug.current}
@@ -29,7 +39,7 @@ const Projects = ({ data }) => {
             </div>
           </StyledLink>
         ))}
-      </section>
+      </StyledProjectSection>
     </Layout>
   )
 }
