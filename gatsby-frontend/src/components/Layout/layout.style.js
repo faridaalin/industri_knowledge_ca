@@ -11,12 +11,10 @@ export const StyledLayout = styled.div`
   overflow-x: hidden;
 
   .main {
-    padding-bottom: 120px;
     position: relative;
     width: 100vw;
-    padding: 0 10%;
-    /* max-width: 1385px;
-    margin: 0 auto; */
+    padding-bottom: 120px;
+    padding-top: 10vh;
 
     ::after {
       ${({ about }) =>
@@ -57,27 +55,41 @@ export const StyledLayout = styled.div`
     grid-row: 1 / 2;
     position: relative;
     font-weight: 900;
+    height: 20vh;
 
     ::after {
       content: attr(data-title);
       position: absolute;
-      top: -15px;
-      left: 0;
-      /* font-size: 90px; */
-      -webkit-text-fill-color: transparent;
-      -webkit-text-stroke: 1.2px white;
+      top: 0;
+      left: -5px;
+      background: -webkit-linear-gradient(
+        95deg,
+        rgba(243, 80, 105, 1) 0%,
+        rgba(250, 106, 184, 1) 20%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-stroke: 3.5px transparent;
+      color: #10141d;
       text-transform: uppercase;
       opacity: 0.1;
       width: 100%;
       height: auto;
       min-height: 100%;
-      font-size: 16vw;
-      /* display: inline; */
+      font-size: clamp(5vh, 10rem, 15vw);
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: end;
     }
 
     .title {
-      position: relative;
-      text-shadow: 5px 10px 20px rgba(0, 0, 0, 0.2);
+      font-size: 32px;
+      font-weight: 900;
+      text-transform: uppercase;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      height: 100%;
       background-color: rgba(231, 61, 87, 1);
       background-image: linear-gradient(
         95deg,
@@ -90,9 +102,7 @@ export const StyledLayout = styled.div`
       -webkit-text-fill-color: transparent;
       -moz-background-clip: text;
       -moz-text-fill-color: transparent;
-      padding: 40px 0 48px;
-      font-weight: 900;
-      text-transform: uppercase;
+      text-shadow: 2px 2px 10px rgb(0 0 0 / 0.16);
     }
 
     .title-overlay {
@@ -111,25 +121,12 @@ export const StyledLayout = styled.div`
 
   @media only screen and (min-width: 576px) {
     .main__heading {
-      ::after {
-        top: auto;
-        bottom: 21px;
-      }
-      .title {
-        padding: 48px 0 120px;
-      }
+      height: 25vh;
     }
   }
   @media only screen and (min-width: 768px) {
     .main__heading {
-      ::after {
-        top: auto;
-        bottom: 21px;
-        font-size: 177px;
-      }
-      .title {
-        padding: 120px 0 120px;
-      }
+      height: 30vh;
     }
   }
 `

@@ -13,7 +13,7 @@ const Projects = ({ data }) => {
 
   return (
     <Layout title="Projects">
-      <section>
+      <section className="small-section">
         {projects.map(project => (
           <StyledLink
             to={project.slug.current}

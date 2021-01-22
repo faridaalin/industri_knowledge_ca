@@ -24,29 +24,14 @@ export const StyledHeader = styled.header`
     gap: 2rem;
   }
 
-  .menu {
-    /* display: grid;
-    grid-template-rows: 1fr; */
-    /* width: 100%; */
-    /* position: relative; */
-  }
-
   .logo {
     grid-row: 1 / 1;
     width: 60px;
   }
 
   .menu_hamburger {
-    display: grid;
-    grid-template-rows: 4px 4px 4px;
-    grid-row: 1 / 1;
-    height: 25px;
-    width: 30px;
-    display: grid;
-    grid-template-rows: 4px 4px 4px;
-    align-content: space-around;
-    cursor: pointer;
-    margin-left: auto;
+    font-weight: 500;
+    letter-spacing: 2px;
   }
 
   .menu_hamburger span {
