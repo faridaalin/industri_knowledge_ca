@@ -9,15 +9,21 @@ export const StyledFooter = styled.footer`
   padding: 48px;
   margin-top: 120px;
   div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 16px;
   }
   svg {
+    display: grid;
+    align-items: center;
     color: ${colors.baseWhite.whitesmokeDark};
-    margin-right: 16px;
     width: 16px;
     height: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    :hover {
+      stroke: url(#pink-gradient);
+    }
     &:last-child {
       margin-right: 0;
     }
