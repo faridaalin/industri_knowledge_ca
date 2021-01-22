@@ -64,7 +64,7 @@ function SingleProject({ project, next, prev }) {
 
   return (
     <StyledSingleProject imgurl={project.mainImage.asset.url}>
-      <section className="project">
+      <section className="project small-section">
         <div className="project-intro">
           <div className="project__links">
             <a href={website}>

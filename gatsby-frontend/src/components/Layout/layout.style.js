@@ -14,8 +14,9 @@ export const StyledLayout = styled.div`
     padding-bottom: 120px;
     position: relative;
     width: 100vw;
-    max-width: 1385px;
-    margin: 0 auto;
+    padding: 0 10%;
+    /* max-width: 1385px;
+    margin: 0 auto; */
 
     ::after {
       ${({ about }) =>
@@ -38,15 +39,18 @@ export const StyledLayout = styled.div`
     ${props =>
       props.home &&
       `display: flex; align-items: center; justify-content: center; height: 100%;`};
-    margin: 0 auto;
-    width: 90vw;
-    max-width: 995px;
     grid-row: 2 / 3;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto 2fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+
+    .small-section {
+      margin: 0 auto;
+      width: 90vw;
+      max-width: 995px;
+    }
   }
 
   .main__heading {

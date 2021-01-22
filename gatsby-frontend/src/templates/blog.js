@@ -41,7 +41,7 @@ const BlogTemplate = props => {
   return (
     <Layout title="Blog">
       <SEO />
-      <Article className="post-container">
+      <Article className="post-container small-section">
         <HeroContainer
           className="hero-container"
           image={post.mainImage.asset.fluid.src}

@@ -5,7 +5,6 @@ import { StyledPagination } from "./Pagination.style"
 const Pagination = (...props) => {
   const [{ next }] = props
   const [{ prev }] = props
-  // console.log("SLUG:", prev.slug.current)
   return (
     <StyledPagination>
       {prev ? (

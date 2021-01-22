@@ -2,18 +2,17 @@ import React from "react"
 import Layout from "../components/Layout/"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
-import { Section, Thumbnail} from '../components/BlogPreview/BlogPreview.style'
-
+import { Section, Thumbnail } from "../components/BlogPreview/BlogPreview.style"
 
 const Blog = ({ data }) => {
   return (
     <Layout title="Blog">
-      <Section className="container">
+      <Section className="container small-section ">
         {data.allSanityPost.nodes.map(item => (
           <Thumbnail
             key={item.title}
             to={item.slug.current}
-            activeClassName="active" 
+            activeClassName="active"
             className="thumbnail"
           >
             <div className="thumbnail__img">
@@ -23,16 +22,17 @@ const Blog = ({ data }) => {
                 alt={item.mainImage.alt}
               />
             </div>
-        
-             
-                {item.categories.map(category => (
-                  <span className="category" key={category.title}>{category.title}</span>
-                ))}
-        
-              <h3 className="title">{item.title}</h3>
-       
-              <p className="description">{item.description}</p>
-              <span className="date">{item.publishedAt}</span>
+
+            {item.categories.map(category => (
+              <span className="category" key={category.title}>
+                {category.title}
+              </span>
+            ))}
+
+            <h3 className="title">{item.title}</h3>
+
+            <p className="description">{item.description}</p>
+            <span className="date">{item.publishedAt}</span>
           </Thumbnail>
         ))}
       </Section>

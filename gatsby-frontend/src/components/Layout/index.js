@@ -15,7 +15,7 @@ const Layout = ({ title, children, home, about }) => {
       <main className={home ? "main home" : "main"}>
         <section className={about ? "main__body about" : "main__body"}>
           {title && (
-            <header className="main__heading" data-title={title}>
+            <header className="main__heading small-section" data-title={title}>
               <h1 className="title">{title}</h1>
             </header>
           )}

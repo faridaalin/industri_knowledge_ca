@@ -12,10 +12,10 @@ const Navigation = () => {
 
   return (
     <StyledHeader className="navigation">
+      <Link to="/" className="logo" aria-label="home">
+        <img src={Logo} alt="Farida Alin logo" />
+      </Link>
       <nav className="menu">
-        <Link to="/" className="logo" aria-label="home">
-          <img src={Logo} alt="Farida Alin logo" />
-        </Link>
         <div
           className="menu_hamburger"
           onClick={handleMenu}
@@ -23,9 +23,7 @@ const Navigation = () => {
           role="button"
           tabIndex="0"
         >
-          <span></span>
-          <span></span>
-          <span></span>
+          MENU
         </div>
         <ul className={`menu__items ${showMenu ? "show" : ""}`}>
           <li className="menu__item">

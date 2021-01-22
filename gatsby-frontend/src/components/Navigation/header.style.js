@@ -2,21 +2,33 @@ import styled from "styled-components/macro"
 //import { colors } from "../style/base/variables"
 
 export const StyledHeader = styled.header`
-  width: 100%;
-  padding: 32px 0;
-  display: flex;
-  justify-content: flex-start;
+  display: grid;
+  grid-auto-flow: column;
   align-items: center;
-  font-weight: 900;
-  width: 90vw;
-  max-width: 62.5rem;
-  margin: 0 auto;
+  justify-content: space-between;
+  width: 100vw;
+  height: 10vh;
+  padding: 0 10%;
+  position: fixed;
+  z-index: 20000;
+  background: #10141d;
+
+  a,
+  nav {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    grid-gap: 2rem;
+    gap: 2rem;
+  }
 
   .menu {
-    display: grid;
-    grid-template-rows: 1fr;
-    width: 100%;
-    position: relative;
+    /* display: grid;
+    grid-template-rows: 1fr; */
+    /* width: 100%; */
+    /* position: relative; */
   }
 
   .logo {
@@ -46,9 +58,9 @@ export const StyledHeader = styled.header`
     list-style: none;
     position: absolute;
     right: 0;
-    top: 2rem;
+    top: 10vh;
     padding: 1rem 1rem 0;
-    transform: translateX(120%);
+    transform: translateX(50vw);
     transition: transform 0.7s ease;
     background: rgb(25 29 37);
     z-index: 100;
@@ -66,7 +78,6 @@ export const StyledHeader = styled.header`
     font-weight: 900;
   }
   .menu__item a {
-    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.2);
     background-color: rgba(231, 61, 87, 1);
     background-image: linear-gradient(
       95deg,
@@ -89,9 +100,9 @@ export const StyledHeader = styled.header`
   }
 
   @media all and (min-width: 821px) {
-    .logo {
+    /* .logo {
       width: 70%;
-    }
+    } */
     .menu {
       display: grid;
       grid-auto-flow: column;

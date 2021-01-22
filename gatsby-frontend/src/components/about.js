@@ -24,7 +24,7 @@ function Aboutpage(props) {
   const blocks = props.page._rawBody
   const img = props.page.mainImage.asset.fluid
   return (
-    <div>
+    <div className="small-section">
       <Img fluid={img} alt="Farida Alin" />
       <PortableText blocks={blocks} serializers={serializers} />
     </div>
