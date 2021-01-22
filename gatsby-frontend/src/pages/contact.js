@@ -1,9 +1,11 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { useForm } from "react-hook-form"
+import emailjs from "emailjs-com"
 import Layout from "../components/Layout"
 import styled from "styled-components"
 import { ButtonOutline } from "../components/Buttons"
 import { colors } from "../components/style/base/variables"
+import { emailjsUser } from "../components/../config"
 
 const StyledContactSection = styled.section`
   button {
@@ -69,15 +71,24 @@ const StyledContactSection = styled.section`
     -o-transition: all 0.2s ease;
     transition: all 0.2s ease;
   }
+  .error {
+    color: #e91e63;
+    padding-top: 8px;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 14px;
+  }
+
+  .success-message {
+    font-style: italic;
+  }
 `
 
 const Contact = () => {
   const [inputNameLength, setInputNameLength] = useState(0)
   const [inputEmailLength, setInputEmailLength] = useState(0)
   const [inputMessageLength, setInputMessageLength] = useState(0)
+  const [formSuccess, setformSuccess] = useState(false)
   const { register, handleSubmit, errors } = useForm()
-  const onSubmit = data => console.log(data.name.length)
-
   const nameHandler = e => {
     setInputNameLength(e.target.value.trim().length)
   }
@@ -88,21 +99,48 @@ const Contact = () => {
     setInputMessageLength(e.target.value.trim().length)
   }
 
+  const onSubmit = (data, e) => {
+    console.dir(e.target)
+    const templateParams = {
+      name: data.name,
+      email: data.email,
+      message: data.message,
+    }
+
+    emailjs
+      .send(
+        "gmail",
+        "contact_form_portfolio_site",
+        templateParams,
+        emailjsUser.id
+      )
+      .then(
+        response => {
+          setformSuccess(true)
+          e.target.reset()
+        },
+        error => setformSuccess(false)
+      )
+  }
+
   return (
     <Layout title="Contact">
       <StyledContactSection className="small-section">
         <div className="contact-intro">
-          <p>
-            Whether you have questions regarding some of my projects or just
-            want to get in touch with me. I´m only an inbox away.
-          </p>
-          <p className="success-message">
-            Thanks for contacting me, I will get back to you as soon as
-            possible.
-            <br></br>
-            <br></br>
-            Meantime, have a nice day!
-          </p>
+          {formSuccess ? (
+            <p className="success-message">
+              Thanks for contacting me, I will get back to you as soon as
+              possible.
+              <br></br>
+              <br></br>
+              Meantime, have a nice day!
+            </p>
+          ) : (
+            <p>
+              Whether you have questions regarding some of my projects or just
+              want to get in touch with me. I´m only an inbox away.
+            </p>
+          )}
         </div>
         <form className="contact-form" onSubmit={handleSubmit(onSubmit)}>
           <div
@@ -120,9 +158,15 @@ const Contact = () => {
               })}
               onBlur={nameHandler}
             />
+            {errors.name && errors.name.type === "required" && (
+              <p className="error">Required</p>
+            )}
+            {errors.name && errors.name.type === "minLength" && (
+              <p className="error">Must be more than two characters</p>
+            )}
           </div>
           <div
-            className={`input-container ${inputNameLength > 0 && "isValid"}`}
+            className={`input-container ${inputEmailLength > 0 && "isValid"}`}
           >
             <label htmlFor="email">Email</label>
             <input
@@ -139,9 +183,15 @@ const Contact = () => {
               })}
               onBlur={emailHandler}
             />
+            {errors.email && errors.email.type === "required" && (
+              <p className="error">Required</p>
+            )}
+            {errors.email && errors.email.type === "pattern" && (
+              <p className="error">Invalid email</p>
+            )}
           </div>
           <div
-            className={`input-container ${inputNameLength > 0 && "isValid"}`}
+            className={`input-container ${inputMessageLength > 0 && "isValid"}`}
           >
             <label htmlFor="message">Message</label>
             <textarea
@@ -156,6 +206,12 @@ const Contact = () => {
               })}
               onBlur={messageHandler}
             ></textarea>
+            {errors.message && errors.message.type === "required" && (
+              <p className="error">Required</p>
+            )}
+            {errors.message && errors.message.type === "minLength" && (
+              <p className="error">Must more than 20 characters.</p>
+            )}
           </div>
           <ButtonOutline type="submit">Send</ButtonOutline>
         </form>
