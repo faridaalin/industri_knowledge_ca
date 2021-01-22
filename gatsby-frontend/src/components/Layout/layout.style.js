@@ -1,7 +1,7 @@
 import styled from "styled-components/macro"
 
 const overlayBackground = `content: "";
-background: linear-gradient(180deg, rgba(29, 36, 52, 0) 0%, #1d2434 100%);
+background: linear-gradient(180deg, rgba(29, 36, 52, 0) 30%, #1d2434 100%);
 width: 100%;
 height: 100%;
 position: absolute;

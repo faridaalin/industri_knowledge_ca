@@ -45,12 +45,13 @@ export const StyledHeader = styled.header`
     right: 0;
     top: 10vh;
     padding: 1rem 1rem 0;
-    transform: translateX(50vw);
+    transform: translateX(100vw);
     transition: transform 0.7s ease;
     background: rgb(25 29 37);
     z-index: 100;
     height: 100vh;
-    width: 50vw;
+    width: 100vw;
+    background-color: #10141d;
     text-align: right;
   }
   .menu__items.show {
@@ -85,9 +86,6 @@ export const StyledHeader = styled.header`
   }
 
   @media all and (min-width: 821px) {
-    /* .logo {
-      width: 70%;
-    } */
     .menu {
       display: grid;
       grid-auto-flow: column;
