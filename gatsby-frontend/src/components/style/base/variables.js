@@ -22,7 +22,7 @@ export const baseGrey = {
   greyDark: "rgba(52,58,64,1)",
   greyLight: "rgba(73,80,87,1)",
   greyLighter: "rgba(108,117,125,1)",
-  greyLightest: "rgb(173 181 189 / 0.77)",
+  greyLightest: "rgb(173 181 189 / 1)",
 }
 
 export const colors = {

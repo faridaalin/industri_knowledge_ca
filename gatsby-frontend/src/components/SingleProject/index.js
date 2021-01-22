@@ -4,6 +4,7 @@ import { GitHub, ExternalLink } from "react-feather"
 import BlockContent from "../BlockContent"
 import Pagination from "../Pagination"
 import styled from "styled-components/macro"
+import { colors } from "../style/base/variables"
 
 const StyledSingleProject = styled.div`
   section {
@@ -36,10 +37,55 @@ const StyledSingleProject = styled.div`
     position: relative;
     max-width: 60ch;
     min-height: 50vh;
+
+    .project__links {
+      display: flex;
+      flex-wrap: wrap;
+      grid-gap: 8px;
+      color: ${colors.baseGrey.greyLightest};
+      font-weight: 700;
+      text-transform: uppercase;
+
+      a,
+      p {
+        white-space: nowrap;
+        margin-right: 8px;
+        font-size: 15px;
+      }
+
+      span {
+        font-size: 14px;
+        font-weight: 400;
+      }
+
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+
+  .project__content {
+    padding-top: 32px;
+
+    h3 {
+      font-weight: 700;
+      font-size: 24px;
+    }
   }
 
   .categories {
     padding-top: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 16px;
+
+    .category {
+      padding: 8px 16px;
+      background-color: rgba(231, 61, 87, 0.07);
+      color: rgba(231, 61, 87, 1);
+      text-transform: uppercase;
+    }
   }
   @media only screen and (min-width: 768px) {
     section {
@@ -73,18 +119,21 @@ function SingleProject({ project, next, prev }) {
             <a href={githubSrc}>
               Github <GitHub />
             </a>
+
             <p>
-              Year <span>{project.date.split(" ")[2]}</span>
+              Year: <span>{project.date.split(" ")[2]}</span>
             </p>
             <p>
-              Category <span>{project.projectOrigin}</span>
+              Category: <span>{project.projectOrigin}</span>
             </p>
           </div>
           <div className="project__content">
             <h3>Goal</h3>
             <BlockContent blocks={project._rawBody} />
             <div className="categories">
-              {project.categories.map(category => category.title)}
+              {project.categories.map(category => (
+                <span className="category">{category.title}</span>
+              ))}
             </div>
           </div>
         </div>
