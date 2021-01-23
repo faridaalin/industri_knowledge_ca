@@ -73,17 +73,18 @@ export const StyledHeader = styled.header`
   }
 
   .menu__item a {
-    background-color: rgba(231, 61, 87, 1);
     background-image: linear-gradient(
       95deg,
       rgba(243, 80, 105, 1) 0%,
       rgba(250, 106, 184, 1) 100%
     );
-    background-size: 100%;
+    background-clip: text;
+    color: transparent;
     background-repeat: repeat;
+    background-size: 100%;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
     transition: 0.25s background;
     opacity: 0.4;
