@@ -1,5 +1,4 @@
 import styled from "styled-components/macro"
-//import { colors } from "../style/base/variables"
 
 export const StyledHeader = styled.header`
   display: grid;
@@ -11,7 +10,10 @@ export const StyledHeader = styled.header`
   padding: 0 10%;
   position: fixed;
   z-index: 20000;
-  background: #10141d;
+  ${({ navbarColor }) =>
+    navbarColor &&
+    `background: #10141D;
+    box-shadow: 0px 10px 30px 10px rgb(13 17 27 / 0.9);`}
 
   a,
   nav {

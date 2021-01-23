@@ -94,8 +94,6 @@ const StyledSingleProject = styled.div`
 `
 
 function SingleProject({ project, next, prev }) {
-  console.log("SINGLE PROJECT:", project)
-
   const githubSrc = project.githubLink
     ? project.githubLink
     : "https://github.com/faridaalin"
@@ -124,7 +122,9 @@ function SingleProject({ project, next, prev }) {
             <BlockContent blocks={project._rawBody} />
             <div className="categories">
               {project.categories.map(category => (
-                <span className="category">{category.title}</span>
+                <span key={category.title} className="category">
+                  {category.title}
+                </span>
               ))}
             </div>
           </div>

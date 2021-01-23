@@ -19,7 +19,6 @@ const Projects = ({ data }) => {
   const projects = data.allSanityProject.nodes.sort(
     (a, b) => +new Date(b.date) - +new Date(a.date)
   )
-  console.log("PROJECTS:", projects)
 
   return (
     <Layout title="Projects">

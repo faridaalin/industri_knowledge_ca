@@ -1,17 +1,31 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
 import { StyledHeader } from "./header.style"
 import Logo from "../../images/logo4.svg"
 
 const Navigation = ({ home }) => {
   const [showMenu, setShowMenu] = useState(false)
-  console.log("HOME PROP:", home)
+  const [navbarColor, setNavbarColor] = useState(false)
+
   const handleMenu = () => {
     setShowMenu(!showMenu)
   }
 
+  const getWindowScrollY = () => {
+    if (window.pageYOffset >= 85) {
+      setNavbarColor(true)
+    } else {
+      setNavbarColor(false)
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", getWindowScrollY)
+    return () => window.removeEventListener("scroll", getWindowScrollY)
+  }, [])
+
   return (
-    <StyledHeader className="navigation">
+    <StyledHeader className="navigation" navbarColor={navbarColor}>
       {home ? (
         <Link to="/" className="logo" aria-label="home">
           <img src={Logo} alt="Farida Alin logo" />
