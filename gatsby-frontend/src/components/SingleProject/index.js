@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useRef, useEffect, useState } from "react"
 import Img from "gatsby-image"
 import { GitHub, ExternalLink } from "react-feather"
 import BlockContent from "../BlockContent"
@@ -26,7 +26,7 @@ const StyledSingleProject = styled.div`
 
   .project-intro {
     position: relative;
-    background-color: rgb(16 20 29 / 0.8);
+    background-color: rgb(16 20 29 / 0.85);
 
     .project__links {
       display: flex;
@@ -83,17 +83,20 @@ const StyledSingleProject = styled.div`
   }
   @media only screen and (min-width: 768px) {
     .project-overlay {
-      width: 60%;
+      width: ${({ dynamicWidth }) => dynamicWidth / 2 + "px"};
       background-image: url(${props => props.imgurl});
       background-color: grey;
       background-position: center;
       background-repeat: no-repeat;
-      background-size: cover;
+      background-size: contain;
+      background-color: #10141d;
     }
   }
 `
 
 function SingleProject({ project, next, prev }) {
+  const [width, setWidth] = useState(null)
+  const sectionRef = useRef()
   const githubSrc = project.githubLink
     ? project.githubLink
     : "https://github.com/faridaalin"
@@ -101,10 +104,17 @@ function SingleProject({ project, next, prev }) {
     ? project.websiteLink
     : "https://www.faridaalin.com"
 
+  useEffect(() => {
+    setWidth(sectionRef.current.clientWidth)
+  }, [])
+
   return (
-    <StyledSingleProject imgurl={project.mainImage.asset.url}>
+    <StyledSingleProject
+      imgurl={project.mainImage.asset.url}
+      dynamicWidth={width}
+    >
       <section className="project small-section">
-        <div className="project-intro">
+        <div className="project-intro" ref={sectionRef}>
           <div className="project__links">
             <a href={website}>
               Website <ExternalLink />
