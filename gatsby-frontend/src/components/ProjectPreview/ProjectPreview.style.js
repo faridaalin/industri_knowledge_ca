@@ -4,7 +4,7 @@ import { colors } from "../style/base/variables"
 
 export const StyledLink = styled(GatsbyLink)`
   background-image: url(${props => props.imgurl});
-  background-color: grey;
+  background-color: ${colors.baseBlack.blackLight};;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -22,6 +22,7 @@ export const StyledLink = styled(GatsbyLink)`
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    transition: background 0.3s ease;
 
     .project__title {
     color: ${colors.baseWhite.whitesmoke};
@@ -29,6 +30,7 @@ export const StyledLink = styled(GatsbyLink)`
     font-size: 39px;
     line-height: 47px;
     padding-bottom: 24px;
+    transition: all 0.3s ease;
 }
     }
   }
@@ -41,6 +43,7 @@ export const StyledLink = styled(GatsbyLink)`
   :hover {
     .project {
       background: ${colors.baseBlack.blackLight};
+      transition: background 0.3s ease;
     }
     .project__title,
     button {

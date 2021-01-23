@@ -6,6 +6,7 @@ export const StyledFooter = styled.footer`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-top: 120px;
   padding: 48px;
   div {
     display: grid;

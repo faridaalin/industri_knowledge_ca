@@ -30,7 +30,7 @@ const Footer = () => (
         <Send />
       </Link>
     </div>
-    <p>Created and designed by Farida Alin</p>
+    <p> © {new Date().getFullYear()} Created and designed by Farida Alin</p>
   </StyledFooter>
 )
 

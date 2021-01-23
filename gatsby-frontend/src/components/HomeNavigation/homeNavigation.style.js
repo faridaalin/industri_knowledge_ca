@@ -27,32 +27,11 @@ export const StyledHomeNav = styled.h1`
     text-align: center;
     letter-spacing: 4px;
     background-size: 200% 200%;
-    animation: fadeIn 0.5s ease forwards;
+    transition: color 0.5s ease;
 
     :hover {
-      background-image: -webkit-linear-gradient(
-        ${colors.basePink.pinkGradient}
-      );
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      -moz-background-clip: text;
-      -moz-text-fill-color: transparent;
       color: transparent;
-    }
-  }
-
-  @keyframes fadeIn {
-    0% {
-      background-size: 300%;
-      background-position: -9em 1em;
-    }
-    20% {
-      background-size: 57%;
-      background-position: 0 1em;
-    }
-    100% {
-      background-size: 57%;
-      background-position: 0 0;
+      transition: color 0.5s ease;
     }
   }
 `
