@@ -72,7 +72,7 @@ const Contact = () => {
           >
             <label htmlFor="name">Name</label>
             <input
-              autocomplete="off"
+              autoComplete="off"
               className="input"
               type="text"
               name="name"
@@ -95,7 +95,7 @@ const Contact = () => {
           >
             <label htmlFor="email">Email</label>
             <input
-              autocomplete="off"
+              autoComplete="off"
               className="input"
               type="email"
               name="email"
@@ -121,7 +121,7 @@ const Contact = () => {
           >
             <label htmlFor="message">Message</label>
             <textarea
-              autocomplete="off"
+              autoComplete="off"
               className="input"
               name="message"
               id="message"

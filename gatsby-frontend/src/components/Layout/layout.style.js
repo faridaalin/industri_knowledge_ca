@@ -25,10 +25,10 @@ export const StyledLayout = styled.div`
     padding: 70px 10% 120px 10%;
 
     ::after {
-      ${({ about }) => about && `${overlayBackground}`}
-      ${({ contact }) => contact && `${overlayBackground}`}
+      ${({ about }) => (about ? `${overlayBackground}` : "")}
+      ${({ contact }) => (contact ? `${overlayBackground}` : "")};
       @media all and (min-width: 768px) {
-        ${({ about }) => about && `max-width: 65vw`}
+        ${({ about }) => (about ? `max-width: 65vw` : "")}
         ${({ contact }) => contact && ` max-width: 70vw; right: 0; left: auto;`}
       }
     }

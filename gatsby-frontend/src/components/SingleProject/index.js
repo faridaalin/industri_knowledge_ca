@@ -130,6 +130,8 @@ function SingleProject({ project, next, prev }) {
     setWidth(sectionRef.current.clientWidth)
   }, [])
 
+  console.log("PROJECT:", project.projectImage.asset.url)
+
   return (
     <StyledSingleProject
       imgurl={project.mainImage.asset.url}
@@ -177,8 +179,8 @@ function SingleProject({ project, next, prev }) {
       </section>
       <section className="project-img-container">
         <div className="project__img">
-          <Img
-            fluid={project.projectImage.asset.fluid}
+          <img
+            src={project.projectImage.asset.url}
             alt={project.projectImage.alt}
           />
         </div>
