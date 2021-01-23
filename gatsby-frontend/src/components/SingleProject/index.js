@@ -9,11 +9,11 @@ import { colors } from "../style/base/variables"
 const StyledSingleProject = styled.div`
   section {
     min-height: 50vh;
-    max-height: 100vh;
   }
 
   .project {
     position: relative;
+    height: 100vh;
   }
   .project-overlay {
     position: absolute;
@@ -21,7 +21,6 @@ const StyledSingleProject = styled.div`
     right: 0;
     width: 100%;
     height: 100%;
-
     z-index: -1;
   }
 
@@ -83,9 +82,6 @@ const StyledSingleProject = styled.div`
     }
   }
   @media only screen and (min-width: 768px) {
-    section {
-      height: 100vh;
-    }
     .project-overlay {
       width: 60%;
       background-image: url(${props => props.imgurl});
