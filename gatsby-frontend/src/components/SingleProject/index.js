@@ -49,13 +49,35 @@ const StyledSingleProject = styled.div`
       }
 
       svg {
-        width: 16px;
-        height: 16px;
+        width: 14px;
+        height: 14px;
       }
     }
 
     .project__content {
       max-width: 60ch;
+    }
+
+    a {
+      :hover {
+        background-image: linear-gradient(
+          95deg,
+          rgba(243, 80, 105, 1) 0%,
+          rgba(250, 106, 184, 1) 100%
+        );
+        background-clip: text;
+        color: transparent;
+        background-repeat: repeat;
+        background-size: 100%;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        transition: 0.25s background;
+        svg {
+          stroke: url(#pink-gradient);
+        }
+      }
     }
   }
 
@@ -114,6 +136,18 @@ function SingleProject({ project, next, prev }) {
       dynamicWidth={width}
     >
       <section className="project small-section">
+        <svg width="0" height="0">
+          <linearGradient
+            id="pink-gradient"
+            x1="100%"
+            y1="100%"
+            x2="0%"
+            y2="0%"
+          >
+            <stop stopColor="#F35069" offset="0%" />
+            <stop stopColor="#FA6AB8" offset="100%" />
+          </linearGradient>
+        </svg>
         <div className="project-intro" ref={sectionRef}>
           <div className="project__links">
             <a href={website}>
