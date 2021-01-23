@@ -19,9 +19,10 @@ export const StyledFooter = styled.footer`
     width: 16px;
     height: 16px;
     cursor: pointer;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.4s ease-in-out;
     :hover {
       stroke: url(#pink-gradient);
+      transform: scale(1.2);
     }
     &:last-child {
       margin-right: 0;

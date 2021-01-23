@@ -8,7 +8,7 @@ export const StyledHomeNav = styled.h1`
   align-items: center;
   height: 100%;
   text-transform: uppercase;
-  font-size: clamp(2.5rem, 9vw, 4rem);
+  font-size: clamp(1.3rem, 9vw, 4rem);
   width: 100%;
 
   a,

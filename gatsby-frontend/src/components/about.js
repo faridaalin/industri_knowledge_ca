@@ -1,5 +1,6 @@
 import React from "react"
 import PortableText from "@sanity/block-content-to-react"
+import { Link } from "gatsby"
 import Img from "gatsby-image"
 import {
   StyledAbout,
@@ -7,20 +8,30 @@ import {
   AboutSubHeading,
   AboutParagraph,
 } from "./about.style"
-import { Link } from "gatsby"
 
 const serializers = {
   marks: {
     internalLink: ({ children, mark }) => {
-      return <Link to={`/${children[0]}`}>{children}</Link>
+      return (
+        <Link to={`/${children[0]}`} className="customLink">
+          {children}
+        </Link>
+      )
     },
     link: ({ children, mark }) =>
       mark.blank ? (
-        <a href={mark.href} target="blank" rel="noopener noreferer">
+        <a
+          href={mark.href}
+          target="blank"
+          rel="noopener noreferer"
+          className="customLink"
+        >
           {children}
         </a>
       ) : (
-        <a href={mark.href}>{children}</a>
+        <a className="customLink" href={mark.href}>
+          {children}
+        </a>
       ),
   },
   types: {
@@ -70,10 +81,3 @@ function Aboutpage(props) {
 }
 
 export default Aboutpage
-
-/*
-        .about-p:first-child {
-    color: #f8f9fa;
-    font-weight: 500;
-  }
-      */

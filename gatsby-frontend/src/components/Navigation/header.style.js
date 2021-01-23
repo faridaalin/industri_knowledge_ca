@@ -6,10 +6,11 @@ export const StyledHeader = styled.header`
   align-items: center;
   justify-content: space-between;
   width: 100vw;
-  height: 10vh;
+  height: 70px;
   padding: 0 10%;
   position: fixed;
   z-index: 20000;
+  min-height: 85px;
   ${({ navbarColor }) =>
     navbarColor &&
     `background: #10141D;
@@ -20,6 +21,7 @@ export const StyledHeader = styled.header`
     display: grid;
     grid-auto-flow: column;
     align-items: center;
+    justify-content: center;
     height: 100%;
     width: 100%;
     grid-gap: 2rem;
@@ -27,7 +29,7 @@ export const StyledHeader = styled.header`
   }
 
   .logo {
-    grid-row: 1 / 1;
+    /* grid-row: 1 / 1; */
     width: 60px;
   }
 
@@ -45,8 +47,8 @@ export const StyledHeader = styled.header`
     list-style: none;
     position: absolute;
     right: 0;
-    top: 10vh;
-    padding: 1rem 1rem 0;
+    top: 70px;
+    padding-top: 200px;
     transform: translateX(100vw);
     transition: transform 0.7s ease;
     background: rgb(25 29 37);
@@ -55,6 +57,10 @@ export const StyledHeader = styled.header`
     width: 100vw;
     background-color: #10141d;
     text-align: right;
+    display: grid;
+    grid-template-columns: auto;
+    grid-auto-rows: minmax(min-content, max-content);
+    grid-gap: 16px;
   }
   .menu__items.show {
     transform: translateX(0);
@@ -65,6 +71,7 @@ export const StyledHeader = styled.header`
     text-transform: uppercase;
     font-weight: 900;
   }
+
   .menu__item a {
     background-color: rgba(231, 61, 87, 1);
     background-image: linear-gradient(
@@ -79,12 +86,14 @@ export const StyledHeader = styled.header`
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
     transition: 0.25s background;
+    opacity: 0.4;
+    transition: opacity 0.5s ease;
     :hover {
-      color: var(--whitesmoke--light);
+      opacity: 1;
     }
   }
   .menu__item a.active {
-    color: var(--whitesmoke--light);
+    opacity: 1;
   }
 
   @media all and (min-width: 821px) {

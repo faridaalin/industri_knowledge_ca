@@ -53,11 +53,33 @@ a {
     text-decoration: none;
     text-decoration-skip-ink: auto;
     color: inherit;
+    position: relative;
     cursor: pointer;
         &:hover,
         &:focus {
             outline: 0;
         }
 }
-    `
+
+.customLink {
+    :hover, :focus {
+        color:  #10141D;
+    }
+    ::after{
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(243, 80, 105, 1) 0%, rgba(250, 106, 184, 1) 100%);
+    left: 0;
+    bottom: 3px;
+    z-index: -1;
+    transition: height 1s;
+    }
+}
+
+.customLink:hover::after, .customLink:focus::after {
+        height: 75%;
+    }
+ `
 export default GlobalStyle

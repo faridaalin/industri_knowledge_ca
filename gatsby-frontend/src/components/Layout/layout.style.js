@@ -22,7 +22,7 @@ export const StyledLayout = styled.div`
   .main {
     position: relative;
     width: 100vw;
-    padding: 10vh 10% 120px 10%;
+    padding: 70px 10% 120px 10%;
 
     ::after {
       ${({ about }) => about && `${overlayBackground}`}
@@ -36,7 +36,7 @@ export const StyledLayout = styled.div`
 
   .main.home {
     padding-bottom: 0;
-    height: 80vh;
+    height: 100vh;
   }
 
   .main__body {
