@@ -51,6 +51,10 @@ export const StyledContactSection = styled.section`
     font-family: "Montserrat", sans-serif;
   }
 
+  textarea {
+    min-height: 150px;
+  }
+
   .input:focus,
   .isValid input,
   .isValid textarea {
@@ -63,6 +67,7 @@ export const StyledContactSection = styled.section`
   .input-container {
     display: flex;
     flex-direction: column;
+    position: relative;
   }
   .input-container:focus-within label {
     color: ${colors.baseWhite.whitesmokeLightest};
@@ -80,6 +85,8 @@ export const StyledContactSection = styled.section`
     transition: all 0.2s ease;
   }
   .error {
+    position: absolute;
+    right: 0;
     color: #e91e63;
     padding-top: 8px;
     font-size: 14px;
