@@ -48,6 +48,7 @@ export const StyledContactSection = styled.section`
     resize: none;
     border-radius: 0;
     appearance: none;
+    font-family: "Montserrat", sans-serif;
   }
 
   .input:focus,
@@ -89,6 +90,7 @@ export const StyledContactSection = styled.section`
   }
 
   @media all and (min-width: 768px) {
+    padding-top: 86px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 

@@ -5,13 +5,18 @@ import SEO from "../components/seo"
 import SingleProject from "../components/SingleProject"
 
 const ProjectTemplate = props => {
+  const { pathname } = window.location
   const project = props.data && props.data.project
   const next = props.pageContext.next
   const prev = props.pageContext.prev
 
   return (
     <Layout title={project.title}>
-      <SEO title={project.title} />
+      <SEO
+        title={project.title}
+        description={project.description}
+        pathname={pathname}
+      />
       {project && <SingleProject project={project} next={next} prev={prev} />}
     </Layout>
   )
@@ -51,9 +56,8 @@ export const query = graphql`
         alt
         asset {
           url
-          fluid {
+          fluid(maxWidth: 1800) {
             ...GatsbySanityImageFluid
-            src
           }
         }
       }

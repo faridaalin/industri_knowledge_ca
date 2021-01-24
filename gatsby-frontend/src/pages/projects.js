@@ -12,6 +12,7 @@ export const StyledProjectSection = styled.section`
   grid-gap: 16px;
   @media only screen and (min-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
+    padding-top: 86px;
   }
 `
 

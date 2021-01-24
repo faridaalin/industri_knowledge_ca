@@ -104,6 +104,7 @@ const StyledSingleProject = styled.div`
     }
   }
   @media only screen and (min-width: 768px) {
+    padding-top: 86px;
     .project-overlay {
       width: ${({ dynamicWidth }) => dynamicWidth / 2 + "px"};
       background-image: url(${props => props.imgurl});
@@ -129,8 +130,6 @@ function SingleProject({ project, next, prev }) {
   useEffect(() => {
     setWidth(sectionRef.current.clientWidth)
   }, [])
-
-  console.log("PROJECT:", project.projectImage.asset.url)
 
   return (
     <StyledSingleProject
@@ -179,8 +178,8 @@ function SingleProject({ project, next, prev }) {
       </section>
       <section className="project-img-container">
         <div className="project__img">
-          <img
-            src={project.projectImage.asset.url}
+          <Img
+            fluid={project.projectImage.asset.fluid}
             alt={project.projectImage.alt}
           />
         </div>

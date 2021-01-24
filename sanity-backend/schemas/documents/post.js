@@ -32,6 +32,7 @@ export default {
       name: 'description',
       title: 'Description',
       type: 'text',
+      description: 'Important for SEO and accessiblity.',
     },
     {
       name: 'categories',

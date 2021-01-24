@@ -135,5 +135,9 @@ export const StyledLayout = styled.div`
     .main__heading {
       height: 30vh;
     }
+
+    .main__heading {
+      /* padding-bottom: 86px; */
+    }
   }
 `
