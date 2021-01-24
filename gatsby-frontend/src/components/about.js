@@ -1,7 +1,7 @@
 import React from "react"
 import PortableText from "@sanity/block-content-to-react"
 import { Link } from "gatsby"
-import { GitHub, Linkedin, Send } from "react-feather"
+import { GitHub, Linkedin } from "react-feather"
 import Img from "gatsby-image"
 import {
   StyledAbout,

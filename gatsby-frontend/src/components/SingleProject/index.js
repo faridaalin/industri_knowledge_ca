@@ -11,6 +11,11 @@ const StyledSingleProject = styled.div`
     min-height: 50vh;
   }
 
+  .project__img-link {
+    width: 100%;
+    min-height: 200px;
+  }
+
   .project {
     position: relative;
     height: 100vh;
@@ -178,10 +183,18 @@ function SingleProject({ project, next, prev }) {
       </section>
       <section className="project-img-container">
         <div className="project__img">
-          <Img
-            fluid={project.projectImage.asset.fluid}
-            alt={project.projectImage.alt}
-          />
+          <a
+            href={website}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="project__img-link"
+          >
+            <Img
+              style={{ maxHeight: "100%" }}
+              fluid={project.projectImage.asset.fluid}
+              alt={project.projectImage.alt}
+            />
+          </a>
         </div>
         <Pagination next={next} prev={prev} />
       </section>

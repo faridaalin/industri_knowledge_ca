@@ -29,7 +29,7 @@ const About = props => {
   const { pathname } = window.location
 
   return (
-    <Layout title={data.page.title} about about="about">
+    <Layout title={data.page.title} about="about">
       <SEO
         title={data.page.title}
         description={page.description}

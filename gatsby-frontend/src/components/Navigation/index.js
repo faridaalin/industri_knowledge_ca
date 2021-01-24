@@ -48,26 +48,6 @@ const Navigation = ({ home }) => {
             <ul className={`menu__items ${showMenu ? "show" : ""}`}>
               <li className="menu__item">
                 <Link
-                  to="/projects"
-                  activeClassName="active"
-                  partiallyActive={true}
-                  aria-label="projects"
-                >
-                  Projects
-                </Link>
-              </li>
-              <li className="menu__item">
-                <Link
-                  to="/blog"
-                  activeClassName="active"
-                  partiallyActive={true}
-                  aria-label="blog"
-                >
-                  Blog
-                </Link>
-              </li>
-              <li className="menu__item">
-                <Link
                   to="/about"
                   className="activeClassName"
                   activeClassName="active"
@@ -76,6 +56,27 @@ const Navigation = ({ home }) => {
                   About
                 </Link>
               </li>
+              <li className="menu__item">
+                <Link
+                  to="/projects"
+                  activeClassName="active"
+                  partiallyActive={true}
+                  aria-label="projects"
+                >
+                  Projects
+                </Link>
+              </li>
+              {/* <li className="menu__item">
+                <Link
+                  to="/blog"
+                  activeClassName="active"
+                  partiallyActive={true}
+                  aria-label="blog"
+                >
+                  Blog
+                </Link>
+              </li> */}
+
               <li className="menu__item">
                 <Link
                   to="/contact"
