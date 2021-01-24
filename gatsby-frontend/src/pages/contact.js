@@ -5,6 +5,7 @@ import Layout from "../components/Layout"
 import { ButtonOutline } from "../components/Buttons"
 import { emailjsUser } from "../components/../config"
 import { StyledContactSection } from "../components/Contact-form/contact-form.style"
+import SEO from "../components/seo"
 
 const Contact = () => {
   const [inputNameLength, setInputNameLength] = useState(0)
@@ -48,6 +49,7 @@ const Contact = () => {
 
   return (
     <Layout title="Contact" contact>
+      <SEO title="Contact" pathname={window.location.pathname} />
       <StyledContactSection className="small-section">
         <div className="contact-intro">
           <h2>Let's get in touch</h2>

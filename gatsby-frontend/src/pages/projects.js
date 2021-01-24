@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import { StyledLink } from "../components/ProjectPreview/ProjectPreview.style"
 import { ButtonOutline } from "../components/Buttons"
 import { ChevronRight } from "react-feather"
+import SEO from "../components/seo"
 
 import styled from "styled-components/macro"
 
@@ -17,12 +18,14 @@ export const StyledProjectSection = styled.section`
 `
 
 const Projects = ({ data }) => {
+  const { pathname } = window.location
   const projects = data.allSanityProject.nodes.sort(
     (a, b) => +new Date(b.date) - +new Date(a.date)
   )
 
   return (
     <Layout title="Projects">
+      <SEO title="Projects" description="..." pathname={pathname} />
       <StyledProjectSection className="small-section">
         {projects.map(project => (
           <StyledLink
