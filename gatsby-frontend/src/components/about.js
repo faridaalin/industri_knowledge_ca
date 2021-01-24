@@ -76,7 +76,7 @@ function Aboutpage(props) {
       </div>
       <div className="about__content">
         <PortableText blocks={blocks} serializers={serializers} />
-        <div className="social-media">
+        <div className="social-media social-media-home">
           <a
             href="https://github.com/faridaalin"
             target="_blank"

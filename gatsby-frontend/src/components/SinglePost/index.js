@@ -5,7 +5,7 @@ import SEO from "../seo"
 
 function SinglePost(props) {
   const { _rawBody, categories, publishedAt } = props.post
-  const { pathname } = window.location
+  const pathname = props.pathname
 
   return (
     <>

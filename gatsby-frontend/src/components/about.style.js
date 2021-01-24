@@ -18,11 +18,6 @@ export const StyledAbout = styled.section`
     }
   }
 
-  /* .social-media {
-    display: flex;
-    grid-gap: 16px;
-  } */
-
   @media all and (min-width: 768px) {
     padding-top: 86px;
     display: flex;

@@ -7,7 +7,7 @@ module.exports = {
     description: `Frontend developer based in Oslo, Norway. Love creating and building design-focused websites.`,
     author: `Farida Alin`,
     siteUrl: `https:///www.faridaalin.com`,
-    image: "/initials.png",
+    image: "/mini_logo.png",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -29,7 +29,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/mini_logo.png`, // This path is relative to the root of the site.
       },
     },
     {

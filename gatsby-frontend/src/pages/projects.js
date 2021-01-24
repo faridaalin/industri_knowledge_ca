@@ -18,14 +18,18 @@ export const StyledProjectSection = styled.section`
 `
 
 const Projects = ({ data }) => {
-  const { pathname } = window.location
+  const pathname = "/projects"
   const projects = data.allSanityProject.nodes.sort(
     (a, b) => +new Date(b.date) - +new Date(a.date)
   )
 
   return (
     <Layout title="Projects">
-      <SEO title="Projects" description="..." pathname={pathname} />
+      <SEO
+        title="Projects"
+        pathname={pathname}
+        description="Projects I have worked on either as schoold assignments or client projects"
+      />
       <StyledProjectSection className="small-section">
         {projects.map(project => (
           <StyledLink

@@ -26,7 +26,7 @@ export const query = graphql`
 const About = props => {
   const { data, errors } = props
   const page = data && data.page
-  const { pathname } = window.location
+  const pathname = props.pathname
 
   return (
     <Layout title={data.page.title} about="about">

@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 import SingleProject from "../components/SingleProject"
 
 const ProjectTemplate = props => {
-  const { pathname } = window.location
+  const pathname = props.pathname
   const project = props.data && props.data.project
   const next = props.pageContext.next
   const prev = props.pageContext.prev
@@ -29,6 +29,7 @@ export const query = graphql`
     project: sanityProject(id: { eq: $id }) {
       id
       title
+      description
       githubLink
       websiteLink
       projectOrigin

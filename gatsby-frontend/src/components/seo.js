@@ -1,16 +1,19 @@
-/**
- * SEO component that queries for data with
- *  Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
-
 import React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, title, pathname }) {
+function SEO({
+  description,
+  lang,
+  meta,
+  title,
+  pathname,
+  image,
+  author,
+  keywords,
+  url,
+}) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -20,6 +23,7 @@ function SEO({ description, lang, meta, title, pathname }) {
             description
             author
             siteUrl
+            image
           }
         }
       }
@@ -27,7 +31,16 @@ function SEO({ description, lang, meta, title, pathname }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
-  const defaultTitle = site.siteMetadata?.title
+  const metaAuthor = author || site.siteMetadata.author
+  const metaImage = image || site.siteMetadata.image
+  const metaUrl = url || site.siteMetadata.siteUrl
+  const metaKeywords = keywords || [
+    "Frontend Developer",
+    "Javascript",
+    "React",
+    "Portfolio",
+  ]
+  const metaTitle = site.siteMetadata?.title
   const canonical = pathname ? `${site.siteMetadata.siteUrl}${pathname}` : null
 
   return (
@@ -36,7 +49,7 @@ function SEO({ description, lang, meta, title, pathname }) {
         lang,
       }}
       title={title}
-      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
+      titleTemplate={metaTitle ? `%s | ${metaTitle}` : null}
       link={canonical ? [{ rel: "canonical", href: canonical }] : []}
       meta={[
         {
@@ -45,7 +58,7 @@ function SEO({ description, lang, meta, title, pathname }) {
         },
         {
           property: `og:title`,
-          content: title,
+          content: metaTitle,
         },
         {
           property: `og:description`,
@@ -56,22 +69,42 @@ function SEO({ description, lang, meta, title, pathname }) {
           content: `website`,
         },
         {
+          property: `og:image`,
+          content: metaImage,
+        },
+        {
+          property: `og:url`,
+          content: metaUrl,
+        },
+        {
           name: `twitter:card`,
-          content: `summary`,
+          content: `summary_large_image`,
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata?.author || ``,
+          content: metaAuthor,
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: metaTitle,
         },
         {
           name: `twitter:description`,
           content: metaDescription,
         },
-      ].concat(meta)}
+        {
+          name: `twitter:image`,
+          content: metaImage,
+        },
+      ].concat(
+        meta,
+        metaKeywords && metaKeywords.length > 0
+          ? {
+              name: `keywords`,
+              content: metaKeywords.join(", "),
+            }
+          : []
+      )}
     >
       <link rel="preconnect" href="https://fonts.gstatic.com" />
       <link
