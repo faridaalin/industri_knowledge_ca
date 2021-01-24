@@ -1,6 +1,7 @@
 import React from "react"
 import PortableText from "@sanity/block-content-to-react"
 import { Link } from "gatsby"
+import { GitHub, Linkedin, Send } from "react-feather"
 import Img from "gatsby-image"
 import {
   StyledAbout,
@@ -75,6 +76,22 @@ function Aboutpage(props) {
       </div>
       <div className="about__content">
         <PortableText blocks={blocks} serializers={serializers} />
+        <div className="social-media">
+          <a
+            href="https://github.com/faridaalin"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <GitHub />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/farida-a-"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Linkedin />
+          </a>
+        </div>
       </div>
     </StyledAbout>
   )

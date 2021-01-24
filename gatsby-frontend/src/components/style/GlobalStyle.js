@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components/macro"
-
+import { colors } from "../style/base/variables"
 const GlobalStyle = createGlobalStyle`
 
 * {
@@ -81,6 +81,25 @@ a {
 .customLink:hover::after, .customLink:focus::after {
         height: 75%;
     }
+
+    .social-media {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 16px;
+  }
+  svg {
+    display: grid;
+    align-items: center;
+    color: ${colors.baseWhite.whitesmokeDark};
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    :hover {
+      stroke: url(#pink-gradient);
+      transform: scale(1.2);
+    }
+  }
 
  `
 export default GlobalStyle

@@ -11,7 +11,7 @@ const Footer = () => (
         <stop stopColor="#FA6AB8" offset="100%" />
       </linearGradient>
     </svg>
-    <div>
+    <div className="social-media">
       <a
         href="https://github.com/faridaalin"
         target="_blank"
