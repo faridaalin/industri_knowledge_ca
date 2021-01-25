@@ -1,5 +1,5 @@
 # Course assignment in Industry Knowledge
 
-[Link to demo:](https://farida-portfolio.netlify.app/)
+[Demo:](https://farida-portfolio.netlify.app/)
 
 
