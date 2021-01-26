@@ -82,7 +82,7 @@ export const StyledLayout = styled.div`
       width: 100%;
       height: auto;
       min-height: 100%;
-      font-size: clamp(5vh, 10rem, 14vw);
+      font-size: clamp(5vh, 10rem, 12vw);
       display: flex;
       flex-direction: row;
       align-items: center;

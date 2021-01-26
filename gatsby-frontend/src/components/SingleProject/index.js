@@ -156,10 +156,10 @@ function SingleProject({ project, next, prev }) {
         </svg>
         <div className="project-intro" ref={sectionRef}>
           <div className="project__links">
-            <a href={website}>
+            <a target="blank" rel="noopener noreferer" href={website}>
               Website <ExternalLink />
             </a>
-            <a href={githubSrc}>
+            <a target="blank" rel="noopener noreferer" href={githubSrc}>
               Github <GitHub />
             </a>
 
