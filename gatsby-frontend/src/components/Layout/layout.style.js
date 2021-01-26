@@ -88,12 +88,12 @@ export const StyledLayout = styled.div`
       z-index: -200;
       text-transform: uppercase;
       width: 100%;
-      height: auto;
+      height: 100%;
       min-height: 100%;
       display: flex;
       flex-direction: row;
       align-items: center;
-      justify-content: end;
+      justify-content: start;
     }
 
     .title {
@@ -140,7 +140,7 @@ export const StyledLayout = styled.div`
   }
   @media only screen and (min-width: 768px) {
     .main__heading {
-      height: 30vh;
+      min-height: 30vh;
     }
   }
 `
