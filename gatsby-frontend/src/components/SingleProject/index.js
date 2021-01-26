@@ -109,7 +109,7 @@ const StyledSingleProject = styled.div`
     }
   }
   @media only screen and (min-width: 768px) {
-    padding-top: 86px;
+    margin-top: 86px;
     .project-overlay {
       width: ${({ dynamicWidth }) => dynamicWidth / 2 + "px"};
       background-image: url(${props => props.imgurl});

@@ -68,7 +68,7 @@ export const StyledLayout = styled.div`
       content: "${props => props.title}";
       position: absolute;
       top: 0;
-      left: 0px;
+      left: -5px;
       font-size: clamp(5vh, 10rem, 12vw);
       background-image: linear-gradient(
         95deg,
@@ -84,7 +84,8 @@ export const StyledLayout = styled.div`
       -webkit-background-clip: text;
       -webkit-text-stroke: 3.5px transparent;
       color: #10141d;
-      opacity: 0.29;
+      filter: opacity(0.1);
+      z-index: -200;
       text-transform: uppercase;
       width: 100%;
       height: auto;

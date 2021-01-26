@@ -19,7 +19,7 @@ export const StyledAbout = styled.section`
   }
 
   @media all and (min-width: 768px) {
-    padding-top: 86px;
+    margin-top: 86px;
     display: flex;
 
     .about__img {

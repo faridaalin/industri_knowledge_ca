@@ -97,7 +97,7 @@ export const StyledContactSection = styled.section`
   }
 
   @media all and (min-width: 768px) {
-    padding-top: 86px;
+    margin-top: 86px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 
