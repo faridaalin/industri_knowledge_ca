@@ -66,17 +66,6 @@ const Navigation = ({ home }) => {
                   Projects
                 </Link>
               </li>
-              {/* <li className="menu__item">
-                <Link
-                  to="/blog"
-                  activeClassName="active"
-                  partiallyActive={true}
-                  aria-label="blog"
-                >
-                  Blog
-                </Link>
-              </li> */}
-
               <li className="menu__item">
                 <Link
                   to="/contact"

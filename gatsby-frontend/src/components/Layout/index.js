@@ -6,8 +6,7 @@ import Footer from "../Footer"
 
 const Layout = props => {
   const { title, children, home, about } = props
-  // { title, children, home, about, contact }
-  //home={home} about={about} contact={contact} title={title}
+
   return (
     <StyledLayout {...props}>
       <GlobalStyle />

@@ -36,7 +36,7 @@ export const StyledContactSection = styled.section`
     -webkit-transition: all 0.2s ease;
     -o-transition: all 0.2s ease;
     transition: all 0.2s ease;
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .input {
@@ -60,23 +60,28 @@ export const StyledContactSection = styled.section`
   .isValid textarea {
     color: ${colors.baseWhite.whitesmokeLightest};
     font-size: 16px;
-    border-bottom-color: ${colors.baseWhite.whitesmokeLightest};
+    border-bottom-color: ${colors.baseGrey.greyLight};
     padding-bottom: 8px;
   }
 
   .input-container {
     display: flex;
     flex-direction: column;
+    padding-bottom: 32px;
     position: relative;
   }
   .input-container:focus-within label {
-    color: ${colors.baseWhite.whitesmokeLightest};
+    color: ${colors.baseGrey.greyLight};
     margin-bottom: 0px;
     padding-bottom: 16px;
     font-size: 14px;
     transition: all 0.2s ease;
   }
+  .input-container:focus-within .input {
+    border-bottom-color: ${colors.baseGrey.greyLight};
+  }
   .isValid label {
+    color: ${colors.baseGrey.greyLight};
     padding-bottom: 16px;
     margin-bottom: 0px;
     font-size: 14px;

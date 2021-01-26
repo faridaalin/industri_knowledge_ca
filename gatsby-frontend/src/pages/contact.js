@@ -24,7 +24,6 @@ const Contact = props => {
   }
 
   const onSubmit = (data, e) => {
-    console.dir(e.target)
     const templateParams = {
       name: data.name,
       email: data.email,
@@ -85,7 +84,7 @@ const Contact = props => {
                 required: true,
                 minLength: 2,
               })}
-              onBlur={nameHandler}
+              onChange={nameHandler}
             />
             {errors.name && errors.name.type === "required" && (
               <p className="error">Required</p>

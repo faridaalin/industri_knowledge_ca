@@ -40,4 +40,20 @@ export const StyledHomeNav = styled.nav`
       color: transparent;
     }
   }
+
+  .page-enter {
+    opacity: 0;
+    transition: opacity 400ms;
+    transition-delay: 600ms;
+  }
+  .page-enter-active {
+    opacity: 1;
+  }
+  .page-exit {
+    opacity: 1;
+  }
+  .page-exit-active {
+    opacity: 0;
+    transition: opacity 400ms;
+  }
 `
