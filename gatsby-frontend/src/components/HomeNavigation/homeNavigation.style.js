@@ -1,37 +1,43 @@
 import styled from "styled-components/macro"
-import { colors } from "../style/base/variables"
 
-export const StyledHomeNav = styled.h1`
+export const StyledHomeNav = styled.nav`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;
-  text-transform: uppercase;
-  font-size: clamp(1.3rem, 9vw, 4rem);
   width: 100%;
+  font-weight: 900;
 
-  a,
-  span {
-    width: 100%;
+  ul {
+    list-style: none;
   }
 
   a {
+    font-size: clamp(1.3rem, 9vw, 4rem);
+    text-transform: uppercase;
     padding: 0.8rem 0;
-    background-image: linear-gradient(${colors.basePink.pinkGradient});
-    background-image: -webkit-linear-gradient(${colors.basePink.pinkGradient});
+    text-align: center;
+    width: 100%;
+    letter-spacing: 6px;
+
+    background-image: linear-gradient(
+      95deg,
+      rgba(243, 80, 105, 1) 0%,
+      rgba(250, 106, 184, 1) 100%
+    );
+    background: -webkit-linear-gradient(
+      95deg,
+      rgba(243, 80, 105, 1) 0%,
+      rgba(250, 106, 184, 1) 20%
+    );
     -webkit-background-clip: text;
     -webkit-text-stroke: 3.5px transparent;
     color: #10141d;
-    text-transform: uppercase;
-    text-align: center;
-    letter-spacing: 4px;
-    background-size: 200% 200%;
-    transition: color 0.5s ease;
+    transition: color 0.4s ease;
 
     :hover {
       color: transparent;
-      transition: color 0.5s ease;
     }
   }
 `

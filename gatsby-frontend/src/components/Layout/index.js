@@ -4,9 +4,12 @@ import { StyledLayout } from "./layout.style"
 import Navigation from "../Navigation/"
 import Footer from "../Footer"
 
-const Layout = ({ title, children, home, about, contact }) => {
+const Layout = props => {
+  const { title, children, home, about } = props
+  // { title, children, home, about, contact }
+  //home={home} about={about} contact={contact} title={title}
   return (
-    <StyledLayout home={home} about={about} contact={contact}>
+    <StyledLayout {...props}>
       <GlobalStyle />
       <Navigation home={home} />
       <main className={home ? "main home" : "main"}>

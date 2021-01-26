@@ -29,7 +29,6 @@ export const StyledHeader = styled.header`
   }
 
   .logo {
-    /* grid-row: 1 / 1; */
     width: 60px;
   }
 

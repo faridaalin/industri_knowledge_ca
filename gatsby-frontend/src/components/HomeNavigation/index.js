@@ -1,22 +1,29 @@
 import React from "react"
 import { Link } from "gatsby"
 import { StyledHomeNav } from "./homeNavigation.style"
+import SEO from "../seo"
 
 const HomeNavigation = () => {
   return (
     <StyledHomeNav>
-      <Link to="/about" aria-label="about">
-        <span>About</span>
-      </Link>
-      <Link to="/projects" aria-label="projects">
-        <span>Projects</span>
-      </Link>
-      {/* <Link to="/blog" aria-label="blog">
-        <span>Writing</span>
-      </Link> */}
-      <Link to="/contact" aria-label="projects">
-        <span>Contact</span>
-      </Link>
+      <SEO title="Home" />
+      <ul>
+        <li>
+          <Link to="/about" aria-label="about">
+            About
+          </Link>
+        </li>
+        <li>
+          <Link to="/projects" aria-label="projects">
+            Projects
+          </Link>
+        </li>
+        <li>
+          <Link to="/contact" aria-label="projects">
+            Contact
+          </Link>
+        </li>
+      </ul>
     </StyledHomeNav>
   )
 }

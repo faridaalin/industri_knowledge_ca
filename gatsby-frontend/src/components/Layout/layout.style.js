@@ -65,24 +65,30 @@ export const StyledLayout = styled.div`
     height: 20vh;
 
     ::after {
-      content: attr(data-title);
+      content: "${props => props.title}";
       position: absolute;
       top: 0;
-      left: -5px;
+      left: 0px;
+      font-size: clamp(5vh, 10rem, 12vw);
+      background-image: linear-gradient(
+        95deg,
+        rgba(243, 80, 105, 1) 0%,
+        rgba(250, 106, 184, 1) 100%
+      );
       background: -webkit-linear-gradient(
         95deg,
         rgba(243, 80, 105, 1) 0%,
         rgba(250, 106, 184, 1) 20%
       );
+      background-clip: border-box;
       -webkit-background-clip: text;
       -webkit-text-stroke: 3.5px transparent;
       color: #10141d;
+      opacity: 0.29;
       text-transform: uppercase;
-      opacity: 0.08;
       width: 100%;
       height: auto;
       min-height: 100%;
-      font-size: clamp(5vh, 10rem, 12vw);
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -134,10 +140,6 @@ export const StyledLayout = styled.div`
   @media only screen and (min-width: 768px) {
     .main__heading {
       height: 30vh;
-    }
-
-    .main__heading {
-      /* padding-bottom: 86px; */
     }
   }
 `
