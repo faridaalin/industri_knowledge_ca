@@ -15,13 +15,13 @@ export const StyledPageHeader = styled.header`
       font-size: clamp(5vh, 10rem, 12vw);
       background-image: linear-gradient(
         95deg,
-        rgba(243, 80, 105, 1) 0%,
-        rgba(250, 106, 184, 1) 100%
+        rgb(253 53 84) 0%,
+        rgb(220 115 172) 100%
       );
-      background: -webkit-linear-gradient(
-        95deg,
-        rgba(243, 80, 105, 1) 0%,
-        rgba(250, 106, 184, 1) 20%
+      background-image: -o-linear-gradient(
+        355deg,
+        rgb(253 53 84) 0%,
+        rgb(220 115 172) 100%
       );
       background-clip: border-box;
       -webkit-background-clip: text;
@@ -40,7 +40,7 @@ export const StyledPageHeader = styled.header`
     }
 
     .title {
-      font-size: 32px;
+      /* font-size: 32px;
       font-weight: 900;
       text-transform: uppercase;
       display: flex;
@@ -50,8 +50,13 @@ export const StyledPageHeader = styled.header`
       background-color: rgba(231, 61, 87, 1);
       background-image: linear-gradient(
         95deg,
-        rgba(243, 80, 105, 1) 0%,
-        rgba(250, 106, 184, 1) 20%
+        rgb(253 53 84) 0%,
+        rgb(220 115 172) 100%
+      );
+      background-image: -o-linear-gradient(
+        355deg,
+        rgb(253 53 84) 0%,
+        rgb(220 115 172) 100%
       );
       background-size: 100%;
       background-repeat: repeat;
@@ -59,7 +64,7 @@ export const StyledPageHeader = styled.header`
       -webkit-text-fill-color: transparent;
       -moz-background-clip: text;
       -moz-text-fill-color: transparent;
-      text-shadow: 2px 2px 10px rgb(0 0 0 / 0.16);
+      text-shadow: 2px 2px 10px rgb(0 0 0 / 0.16); */
     }
 
     .title-overlay {

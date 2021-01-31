@@ -1,6 +1,8 @@
 import styled from "styled-components/macro"
 
 const overlayBackground = `content: "";
+background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, rgba(29, 36, 52, 0)), to(#1d2434));
+background: -o-linear-gradient(top, rgba(29, 36, 52, 0) 30%, #1d2434 100%);
 background: linear-gradient(180deg, rgba(29, 36, 52, 0) 30%, #1d2434 100%);
 width: 100%;
 height: 100%;
@@ -14,8 +16,11 @@ export const StyledLayout = styled.div`
   height: 100%;
   min-height: 100vh;
   margin: 0 auto;
+  display: -ms-grid;
   display: grid;
+  -ms-grid-rows: auto 1fr auto;
   grid-template-rows: auto 1fr auto;
+  -ms-grid-columns: 100%;
   grid-template-columns: 100%;
   overflow-x: hidden;
 
@@ -59,7 +64,6 @@ export const StyledLayout = styled.div`
   }
 
   .main__heading {
-    grid-row: 1 / 2;
     position: relative;
     font-weight: 900;
     height: 20vh;
@@ -70,29 +74,41 @@ export const StyledLayout = styled.div`
       top: 0;
       left: -5px;
       font-size: clamp(5vh, 10rem, 12vw);
+
       background-image: linear-gradient(
         95deg,
         rgba(243, 80, 105, 1) 0%,
         rgba(250, 106, 184, 1) 100%
       );
-      background: -webkit-linear-gradient(
-        95deg,
+      background-image: -o-linear-gradient(
+        355deg,
         rgba(243, 80, 105, 1) 0%,
-        rgba(250, 106, 184, 1) 20%
+        rgba(250, 106, 184, 1) 100%
       );
-      background-clip: border-box;
+
+      background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-stroke: 3.5px transparent;
       color: #10141d;
+      -webkit-filter: opacity(0.1);
       filter: opacity(0.1);
       z-index: -200;
       text-transform: uppercase;
       width: 100%;
       height: 100%;
       min-height: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
       flex-direction: row;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
       justify-content: start;
     }
 
@@ -100,22 +116,46 @@ export const StyledLayout = styled.div`
       font-size: 32px;
       font-weight: 900;
       text-transform: uppercase;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
       flex-direction: row;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
       height: 100%;
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content;
       background-color: rgba(231, 61, 87, 1);
       background-image: linear-gradient(
         95deg,
         rgba(243, 80, 105, 1) 0%,
-        rgba(250, 106, 184, 1) 20%
+        rgba(250, 106, 184, 1) 100%
       );
+      background-image: -o-linear-gradient(
+        355deg,
+        rgba(243, 80, 105, 1) 0%,
+        rgba(250, 106, 184, 1) 100%
+      );
+      background: -webkit-linear-gradient(
+        95deg,
+        rgba(243, 80, 105, 1) 0%,
+        rgba(250, 106, 184, 1) 100%
+      );
+
       background-size: 100%;
       background-repeat: repeat;
+      background-clip: text;
+      background-size: cover;
+      background-clip: text;
       -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
       -moz-background-clip: text;
       -moz-text-fill-color: transparent;
+      -webkit-text-fill-color: transparent;
       text-shadow: 2px 2px 10px rgb(0 0 0 / 0.16);
     }
 

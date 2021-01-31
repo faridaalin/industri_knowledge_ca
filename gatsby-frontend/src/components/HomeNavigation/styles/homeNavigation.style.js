@@ -20,7 +20,6 @@ export const StyledHomeNav = styled.nav`
     text-align: center;
     width: 100%;
     letter-spacing: 6px;
-
     background-image: linear-gradient(
       95deg,
       rgba(243, 80, 105, 1) 0%,
@@ -29,11 +28,20 @@ export const StyledHomeNav = styled.nav`
     background: -webkit-linear-gradient(
       95deg,
       rgba(243, 80, 105, 1) 0%,
-      rgba(250, 106, 184, 1) 20%
+      rgba(250, 106, 184, 1) 100%
     );
+    background-image: -o-linear-gradient(
+      355deg,
+      rgba(243, 80, 105, 1) 0%,
+      rgba(250, 106, 184, 1) 100%
+    );
+
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-stroke: 3.5px transparent;
     color: #10141d;
+    -webkit-transition: color 0.4s ease;
+    -o-transition: color 0.4s ease;
     transition: color 0.4s ease;
 
     :hover {

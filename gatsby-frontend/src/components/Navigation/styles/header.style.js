@@ -18,14 +18,19 @@ export const StyledHeader = styled.header`
 
   a,
   nav {
+    /* display: -ms-grid;
     display: grid;
     grid-auto-flow: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     height: 100%;
     width: 100%;
     grid-gap: 2rem;
-    gap: 2rem;
+    gap: 2rem; */
   }
 
   .logo {
@@ -60,6 +65,12 @@ export const StyledHeader = styled.header`
     grid-template-columns: auto;
     grid-auto-rows: minmax(min-content, max-content);
     grid-gap: 16px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
   .menu__items.show {
     transform: translateX(0);
@@ -72,11 +83,24 @@ export const StyledHeader = styled.header`
   }
 
   .menu__item a {
+    width: 100%;
+    text-align: center;
     background-image: linear-gradient(
       95deg,
       rgba(243, 80, 105, 1) 0%,
       rgba(250, 106, 184, 1) 100%
     );
+    background-image: -o-linear-gradient(
+      355deg,
+      rgba(243, 80, 105, 1) 0%,
+      rgba(250, 106, 184, 1) 100%
+    );
+    background: -webkit-linear-gradient(
+      95deg,
+      rgba(243, 80, 105, 1) 0%,
+      rgba(250, 106, 184, 1) 100%
+    );
+
     background-clip: text;
     color: transparent;
     background-repeat: repeat;
@@ -85,7 +109,12 @@ export const StyledHeader = styled.header`
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
+    -webkit-transition: 0.25s background;
+    -o-transition: 0.25s background;
     transition: 0.25s background;
+    -webkit-transition: opacity 0.5s ease;
+    -o-transition: opacity 0.5s ease;
+
     opacity: 0.4;
     transition: opacity 0.5s ease;
     :hover {
