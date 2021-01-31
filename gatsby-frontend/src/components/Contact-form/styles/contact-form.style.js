@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { colors } from "../style/base/variables"
+import { colors } from "../../style/base/variables"
 
 export const StyledContactSection = styled.section`
   .contact-intro {

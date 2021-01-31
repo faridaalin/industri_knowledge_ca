@@ -1,5 +1,5 @@
 import styled from "styled-components/macro"
-import { colors } from "../style/base/variables"
+import { colors } from "../../style/base/variables"
 
 const defaultButtonStyle = `
 padding: 8px 16px;

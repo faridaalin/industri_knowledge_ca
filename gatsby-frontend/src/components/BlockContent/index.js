@@ -3,7 +3,7 @@ import PortableText from "@sanity/block-content-to-react"
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
 import { xonokai } from "react-syntax-highlighter/dist/esm/styles/prism"
 import Figure from "../Figure/Figure"
-import { H2, H3, H4, P } from "./typography.style"
+import { H2, H3, H4, P } from "./styles/typography.style"
 
 const serializers = {
   types: {

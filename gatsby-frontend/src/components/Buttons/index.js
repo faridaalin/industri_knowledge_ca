@@ -1,6 +1,9 @@
 import React from "react"
 import { Link } from "gatsby"
-import { StyledButtonOutline, StyledButtonDefault } from "./Buttons.style"
+import {
+  StyledButtonOutline,
+  StyledButtonDefault,
+} from "./styles/Buttons.style"
 import { ChevronRight, ChevronLeft } from "react-feather"
 
 export const ButtonOutline = ({ children, type }) => {
