@@ -1,6 +1,6 @@
 import React from "react"
 import GlobalStyle from "../style/GlobalStyle"
-import { StyledLayout } from "./layout.style"
+import { StyledLayout } from "./styles/layout.style"
 import Navigation from "../Navigation/"
 import Footer from "../Footer"
 

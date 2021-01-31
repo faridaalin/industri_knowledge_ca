@@ -1,6 +1,6 @@
 import React from "react"
 import { ButtonDefault } from "../Buttons/index"
-import { StyledPagination } from "./Pagination.style"
+import { StyledPagination } from "./styles/Pagination.style"
 
 const Pagination = (...props) => {
   const [{ next }] = props

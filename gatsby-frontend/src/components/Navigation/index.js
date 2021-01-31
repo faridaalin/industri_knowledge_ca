@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
-import { StyledHeader } from "./header.style"
+import { StyledHeader } from "./styles/header.style"
 import Logo from "../../images/logo4.svg"
 
 const Navigation = ({ home }) => {

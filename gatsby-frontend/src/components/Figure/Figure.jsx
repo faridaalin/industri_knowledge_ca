@@ -1,7 +1,7 @@
 import React from "react"
 import Img from "gatsby-image"
 import { getFluidGatsbyImage } from "gatsby-source-sanity"
-import { StyledFigure } from "./figure.style"
+import { StyledFigure } from "./styles/figure.style"
 
 function Figure(props) {
   const sanityConfig = { projectId: "9wdbtffm", dataset: "production" }

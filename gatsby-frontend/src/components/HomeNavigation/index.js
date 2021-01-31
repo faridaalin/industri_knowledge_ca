@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react"
 import { Link } from "gatsby"
 import { gsap } from "gsap"
-import { StyledHomeNav } from "./homeNavigation.style"
+import { StyledHomeNav } from "./styles/homeNavigation.style"
 import SEO from "../seo"
 
 const HomeNavigation = () => {

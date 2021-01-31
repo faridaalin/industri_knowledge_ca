@@ -8,7 +8,7 @@ import {
   AboutHeading,
   AboutSubHeading,
   AboutParagraph,
-} from "./about.style"
+} from "./styles/about.style"
 
 const serializers = {
   marks: {

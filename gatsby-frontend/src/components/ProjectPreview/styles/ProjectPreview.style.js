@@ -1,6 +1,6 @@
 import styled from "styled-components/macro"
 import { Link as GatsbyLink } from "gatsby"
-import { colors } from "../style/base/variables"
+import { colors } from "../../style/base/variables"
 
 export const StyledLink = styled(GatsbyLink)`
   background-image: url(${props => props.imgurl});

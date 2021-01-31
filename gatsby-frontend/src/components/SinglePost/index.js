@@ -1,6 +1,6 @@
 import React from "react"
 import BlockContent from "../BlockContent"
-import { DetailSection } from "./DetailSection.style"
+import { DetailSection } from "./styles/DetailSection.style"
 import SEO from "../seo"
 
 function SinglePost(props) {

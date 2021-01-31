@@ -1,21 +1,13 @@
 import React from "react"
 import Layout from "../components/Layout"
 import { graphql } from "gatsby"
-import { StyledLink } from "../components/ProjectPreview/ProjectPreview.style"
+import {
+  StyledLink,
+  StyledProjectSection,
+} from "../components/ProjectPreview/styles"
 import { ButtonOutline } from "../components/Buttons"
 import { ChevronRight } from "react-feather"
 import SEO from "../components/seo"
-
-import styled from "styled-components/macro"
-
-export const StyledProjectSection = styled.section`
-  display: grid;
-  grid-gap: 16px;
-  @media only screen and (min-width: 768px) {
-    grid-template-columns: repeat(2, 1fr);
-    margin-top: 86px;
-  }
-`
 
 const Projects = ({ data }) => {
   const pathname = "/projects"

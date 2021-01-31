@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import { StyledFooter } from "./footer.style"
+import { StyledFooter } from "./styles/footer.style"
 import { GitHub, Linkedin, Send } from "react-feather"
 
 const Footer = () => (

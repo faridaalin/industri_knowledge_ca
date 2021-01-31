@@ -1,5 +1,5 @@
 import React from "react"
-import { StyledPageHeader } from "./StyledPageHeader.style"
+import { StyledPageHeader } from "./styles/StyledPageHeader.style"
 
 const PageHeader = ({ title }) => {
   return (
