@@ -37,7 +37,14 @@ function SingleProject({ project, next, prev }) {
             <stop stopColor="#FA6AB8" offset="100%" />
           </linearGradient>
         </svg>
-        <div className="project-intro" ref={sectionRef}>
+        <div
+          className="project-intro"
+          ref={sectionRef}
+          data-sal-duration="1400"
+          data-sal="slide-up"
+          data-sal-delay="600"
+          data-sal-easing="ease-out-bounce"
+        >
           <div className="project__links">
             <a target="blank" rel="noopener noreferer" href={website}>
               Website <ExternalLink />
@@ -64,7 +71,13 @@ function SingleProject({ project, next, prev }) {
           <div className="project-overlay"></div>
         </div>
       </section>
-      <section className="project-img-container">
+      <section
+        className="project-img-container"
+        data-sal-duration="300"
+        data-sal="slide-up"
+        // data-sal-delay="100"
+        data-sal-easing="ease-out-bounce"
+      >
         <div className="project__img">
           <a
             href={website}

@@ -13,7 +13,7 @@ export const StyledSingleProject = styled.div`
 
   .project {
     position: relative;
-    height: 100vh;
+    height: 80vh;
   }
   .project-overlay {
     position: absolute;
