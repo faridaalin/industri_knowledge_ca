@@ -10,8 +10,9 @@ const HomeNavigation = () => {
   let linkRef3 = useRef(null)
 
   useEffect(() => {
-    gsap.from([linkRef1.current, linkRef2.current, linkRef3.current], 0.8, {
+    gsap.from([linkRef1.current, linkRef2.current, linkRef3.current], {
       delay: 0.2,
+      duration: 0.8,
       ease: "power.out",
       y: 64,
       stagger: {

@@ -71,10 +71,22 @@ function Aboutpage(props) {
   const img = props.page.mainImage.asset.fluid
   return (
     <StyledAbout>
-      <div className="about__img">
+      <div
+        className="about__img"
+        data-sal-duration="800"
+        data-sal="slide-up"
+        data-sal-delay="300"
+        data-sal-easing="ease-out-bounce"
+      >
         <Img fluid={img} alt="Farida Alin" />
       </div>
-      <div className="about__content">
+      <div
+        className="about__content"
+        data-sal-duration="1200"
+        data-sal="slide-up"
+        data-sal-delay="600"
+        data-sal-easing="ease-out-bounce"
+      >
         <PortableText blocks={blocks} serializers={serializers} />
         <div className="social-media social-media-home">
           <a

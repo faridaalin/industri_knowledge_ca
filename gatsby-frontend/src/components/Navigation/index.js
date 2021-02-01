@@ -52,6 +52,10 @@ const Navigation = ({ home }) => {
                   className="activeClassName"
                   activeClassName="active"
                   aria-label="about"
+                  data-sal-duration="1200"
+                  data-sal="slide-down"
+                  data-sal-delay="300"
+                  data-sal-easing="ease-out-bounce"
                 >
                   About
                 </Link>
@@ -62,6 +66,10 @@ const Navigation = ({ home }) => {
                   activeClassName="active"
                   partiallyActive={true}
                   aria-label="projects"
+                  data-sal-duration="1200"
+                  data-sal="slide-down"
+                  data-sal-delay="600"
+                  data-sal-easing="ease-out-bounce"
                 >
                   Projects
                 </Link>
@@ -72,6 +80,10 @@ const Navigation = ({ home }) => {
                   activeClassName="active"
                   className="activeClassName"
                   aria-label="contact"
+                  data-sal-duration="1200"
+                  data-sal="slide-down"
+                  data-sal-delay="1200"
+                  data-sal-easing="ease-out-bounce"
                 >
                   Contact
                 </Link>

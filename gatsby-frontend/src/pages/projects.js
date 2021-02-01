@@ -28,6 +28,10 @@ const Projects = ({ data }) => {
             to={project.slug.current}
             key={project._id}
             imgurl={project.mainImage.asset.url}
+            data-sal-duration="1200"
+            data-sal="slide-up"
+            data-sal-delay="1200"
+            data-sal-easing="ease-out-bounce"
           >
             <div className="project">
               <p className="project__title">{project.title}</p>

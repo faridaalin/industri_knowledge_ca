@@ -18,6 +18,7 @@ export const StyledContactSection = styled.section`
     font-size: 16px;
     padding-top: 16px;
     padding-bottom: 16px;
+    width: 100%;
   }
 
   .contact-form {

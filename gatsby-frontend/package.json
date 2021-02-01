@@ -38,6 +38,7 @@
     "react-hook-form": "^6.14.2",
     "react-syntax-highlighter": "^15.4.3",
     "react-transition-group": "^4.4.1",
+    "sal.js": "^0.8.2",
     "styled-components": "^5.2.1"
   },
   "devDependencies": {
