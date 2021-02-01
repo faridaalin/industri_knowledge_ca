@@ -22,16 +22,18 @@ const Projects = ({ data }) => {
         pathname={pathname}
         description="Projects I have worked on either as schoold assignments or client projects"
       />
-      <StyledProjectSection className="small-section">
+      <StyledProjectSection
+        className="small-section"
+        data-sal-duration="1400"
+        data-sal="slide-up"
+        data-sal-delay="600"
+        data-sal-easing="ease-out-bounce"
+      >
         {projects.map(project => (
           <StyledLink
             to={project.slug.current}
             key={project._id}
             imgurl={project.mainImage.asset.url}
-            data-sal-duration="1200"
-            data-sal="slide-up"
-            data-sal-delay="1200"
-            data-sal-easing="ease-out-bounce"
           >
             <div className="project">
               <p className="project__title">{project.title}</p>

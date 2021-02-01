@@ -38,10 +38,12 @@ const ContactForm = () => {
       )
       .then(
         response => {
-          setformSuccess(true)
-          e.target.reset()
+          if (response) {
+            setformSuccess(true)
+            e.target.reset()
+          }
         },
-        error => setformSuccess(false)
+        error => error && setformSuccess(false)
       )
   }
 
@@ -49,7 +51,7 @@ const ContactForm = () => {
     <StyledContactSection className="small-section">
       <div
         className="contact-intro"
-        data-sal-duration="1200"
+        data-sal-duration="1400"
         data-sal="slide-right"
         data-sal-delay="300"
         data-sal-easing="ease-out-bounce"
@@ -73,8 +75,7 @@ const ContactForm = () => {
       <form
         className="contact-form"
         onSubmit={handleSubmit(onSubmit)}
-        className="contact-intro"
-        data-sal-duration="1200"
+        data-sal-duration="1600"
         data-sal="slide-left"
         data-sal-delay="600"
         data-sal-easing="ease-out-bounce"
