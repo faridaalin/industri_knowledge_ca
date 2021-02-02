@@ -8,7 +8,9 @@ import "../../../node_modules/sal.js/dist/sal.css"
 
 const Layout = props => {
   const { title, children, home, about } = props
-  useEffect(sal, [])
+  useEffect(() => {
+    sal({ threshold: 0.2 })
+  }, [])
 
   return (
     <StyledLayout {...props}>
