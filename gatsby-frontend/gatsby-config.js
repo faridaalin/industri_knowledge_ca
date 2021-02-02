@@ -7,7 +7,8 @@ module.exports = {
     description: `Frontend developer based in Oslo, Norway. Love creating and building design-focused websites.`,
     author: `Farida Alin`,
     siteUrl: `https://www.faridaalin.com`,
-    image: "src/images/mini_logo.png",
+    image:
+      "https://res.cloudinary.com/djey7uz4e/image/upload/v1612274626/mini_logo_qz25mw.png",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
