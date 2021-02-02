@@ -71,13 +71,7 @@ function SingleProject({ project, next, prev }) {
           <div className="project-overlay"></div>
         </div>
       </section>
-      <section
-        className="project-img-container"
-        data-sal-duration="300"
-        data-sal="slide-up"
-        // data-sal-delay="100"
-        data-sal-easing="ease-out-bounce"
-      >
+      <section className="project-img-container">
         <div className="project__img">
           <a
             href={website}
