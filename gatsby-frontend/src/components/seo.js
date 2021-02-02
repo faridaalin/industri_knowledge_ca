@@ -33,7 +33,6 @@ function SEO({
   const metaDescription = description || site.siteMetadata.description
   const metaAuthor = author || site.siteMetadata.author
   const metaImage = image || site.siteMetadata.image
-  console.log(metaImage)
   const metaUrl = url || site.siteMetadata.siteUrl
   const metaKeywords = keywords || [
     "Frontend Developer",
