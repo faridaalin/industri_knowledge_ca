@@ -95,6 +95,7 @@ export const StyledSingleProject = styled.div`
     display: flex;
     flex-wrap: wrap;
     grid-gap: 16px;
+    font-size: 12px;
 
     .category {
       padding: 8px 16px;
