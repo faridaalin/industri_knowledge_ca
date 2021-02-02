@@ -49,7 +49,7 @@ function SEO({
         lang,
       }}
       title={title}
-      titleTemplate={metaTitle ? `%s | ${metaTitle}` : null}
+      titleTemplate={metaTitle ? `${metaTitle} | %s ` : null}
       link={canonical ? [{ rel: "canonical", href: canonical }] : []}
       meta={[
         {

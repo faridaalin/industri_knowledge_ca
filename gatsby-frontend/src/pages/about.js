@@ -29,9 +29,9 @@ const About = props => {
   const pathname = props.pathname
 
   return (
-    <Layout title={data.page.title} about="about">
+    <Layout title={page.title} about="about">
       <SEO
-        title={data.page.title}
+        title={page.title}
         description={page.description}
         pathname={pathname}
       />

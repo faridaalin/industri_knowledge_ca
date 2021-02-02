@@ -2,8 +2,8 @@ require("dotenv").config()
 
 module.exports = {
   siteMetadata: {
-    title: `Portfolio site`,
-    titleTemplate: "%s · The Real Hero",
+    title: `Farida Alin`,
+    titleTemplate: "%s · Portfolio",
     description: `Frontend developer based in Oslo, Norway. Love creating and building design-focused websites.`,
     author: `Farida Alin`,
     siteUrl: `https://www.faridaalin.com`,
