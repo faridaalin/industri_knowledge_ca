@@ -2,7 +2,6 @@ import React, { useState } from "react"
 import { useForm } from "react-hook-form"
 import emailjs from "emailjs-com"
 import { ButtonOutline } from "../Buttons"
-import { emailjsUser } from "../../config"
 import { StyledContactSection } from "./styles/contact-form.style"
 
 const ContactForm = () => {
@@ -34,7 +33,7 @@ const ContactForm = () => {
         "gmail",
         "contact_form_portfolio_site",
         templateParams,
-        emailjsUser.id
+        process.env.GATSBY_EMAIL_ID
       )
       .then(
         response => {
@@ -51,7 +50,7 @@ const ContactForm = () => {
     <StyledContactSection className="small-section">
       <div
         className="contact-intro"
-        data-sal-duration="1400"
+        data-sal-duration="1200"
         data-sal="slide-right"
         data-sal-delay="300"
         data-sal-easing="ease-out-bounce"
@@ -68,16 +67,16 @@ const ContactForm = () => {
         ) : (
           <p>
             Whether you have questions regarding some of my projects or just
-            want to get in touch with me. I´m only an inbox away.
+            want to get in touch with me. I'm only an inbox away.
           </p>
         )}
       </div>
       <form
         className="contact-form"
         onSubmit={handleSubmit(onSubmit)}
-        data-sal-duration="1600"
+        data-sal-duration="1400"
         data-sal="slide-left"
-        data-sal-delay="600"
+        data-sal-delay="300"
         data-sal-easing="ease-out-bounce"
       >
         <div className={`input-container ${inputNameLength > 0 && "isValid"}`}>

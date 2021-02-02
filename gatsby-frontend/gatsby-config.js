@@ -6,8 +6,8 @@ module.exports = {
     titleTemplate: "%s · The Real Hero",
     description: `Frontend developer based in Oslo, Norway. Love creating and building design-focused websites.`,
     author: `Farida Alin`,
-    siteUrl: `https:///www.faridaalin.com`,
-    image: "/mini_logo.png",
+    siteUrl: `https://www.faridaalin.com`,
+    image: "src/images/mini_logo.png",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

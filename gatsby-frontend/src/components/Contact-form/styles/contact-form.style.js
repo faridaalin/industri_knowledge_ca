@@ -100,6 +100,16 @@ export const StyledContactSection = styled.section`
 
   .success-message {
     font-style: italic;
+    animation: slideIn 3s ease forwards;
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateX(-48px);
+    }
+    to {
+      transform: translateX(0);
+    }
   }
 
   @media all and (min-width: 768px) {
