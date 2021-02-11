@@ -15,6 +15,7 @@ const HomeNavigation = () => {
       duration: 0.8,
       ease: "power.out",
       y: 64,
+      opacity: 0,
       stagger: {
         amount: 0.15,
       },
