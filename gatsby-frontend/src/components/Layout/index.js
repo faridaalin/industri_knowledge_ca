@@ -1,15 +1,21 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useRef } from "react"
 import sal from "sal.js"
 import GlobalStyle from "../style/GlobalStyle"
 import { StyledLayout } from "./styles/layout.style"
 import Navigation from "../Navigation/"
 import Footer from "../Footer"
+import { TimelineLite, Power3 } from "gsap"
 import "../../../node_modules/sal.js/dist/sal.css"
 
 const Layout = props => {
   const { title, children, home, about } = props
+  let titleRef = useRef(null)
+
+  let tl = new TimelineLite();
+
   useEffect(() => {
-    sal({ threshold: 0.2 })
+  
+    tl.from(titleRef.current, 2, {x:200, opacity: 0, ease: Power3.easeInOut})
   }, [])
 
   return (
@@ -21,9 +27,10 @@ const Layout = props => {
           {title && (
             <header
               className="main__heading small-section"
+              ref={titleRef}
            
             >
-              <h1 className="title">{title}</h1>
+              <h1 className="title" >{title}</h1>
               <span className="decorative-title">{title}</span>
             </header>
           )}

@@ -11,7 +11,7 @@ export const StyledLink = styled(GatsbyLink)`
   position: relative;
   width: 100%;
   padding-top: 75%;
-  opacity: 0;
+
 
   .project {
     position: absolute;

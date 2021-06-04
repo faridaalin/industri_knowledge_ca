@@ -16,7 +16,8 @@ const HomeNavigation = () => {
       y: -64,
       ease: Power3.easeOut
     }, 0.4)
-  }, [linkRef1, linkRef2, linkRef3])
+  }, [linkRef1, linkRef2, linkRef3]);
+
   return (
     <StyledHomeNav>
       <SEO title="Home" />

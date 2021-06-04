@@ -5,7 +5,6 @@ import {
   StyledLink,
   StyledProjectSection,
 } from "../components/ProjectPreview/styles"
-// import { TweenMax, Power3 } from "gsap"
 import { gsap, TweenMax, Power3 } from 'gsap'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ButtonOutline } from "../components/Buttons"
@@ -21,24 +20,26 @@ const Projects = ({ data }) => {
   )
 
   let projectsRef = useRef({ key: [] })
+  let timeline = gsap.timeline({delay: 5});
+  
 
   useEffect(() => {
 
     projectsRef.current.key.forEach((element) => {
-      gsap.to(element, {
-        duration: 2,
-        opacity: 1,
-        y: -60,
-        stagger: {
-          each: .9
-        },
-      ease: Power3.easeOut,
-        scrollTrigger:
-        {
-          trigger: element,
-          toggleActions: 'play none none resume',
-        }
-      },  2)
+      timeline.from(element, {
+        y: 100,
+        opacity: 0,
+        duration: 400,
+
+      scrollTrigger: {
+        trigger: element,
+        start: "top center+=100px",
+        end: "top center",
+        scrub: 1,
+        animation: timeline,
+      }
+
+      }, "+=1")
     });
 
    

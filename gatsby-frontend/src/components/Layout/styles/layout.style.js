@@ -70,6 +70,7 @@ export const StyledLayout = styled.div`
     justify-content: flex-start;
     font-weight: 900;
     height: 20vh;
+   
 
     .title {
       position: absolute;
