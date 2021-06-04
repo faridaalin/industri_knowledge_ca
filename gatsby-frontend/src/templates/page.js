@@ -1,7 +1,6 @@
 import React from "react"
-import { graphql } from "gatsby"
 import Layout from "../components/Layout"
-import aboutpage from "../components/aboutpage"
+
 
 const PageTemplate = props => {
   const { data, errors } = props

@@ -73,7 +73,6 @@ export const StyledLayout = styled.div`
 
     .title {
       position: absolute;
-
       font-size: 32px;
       font-weight: 900;
       text-transform: uppercase;

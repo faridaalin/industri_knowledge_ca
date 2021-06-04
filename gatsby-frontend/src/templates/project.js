@@ -29,6 +29,8 @@ export const query = graphql`
     project: sanityProject(id: { eq: $id }) {
       id
       title
+      designer
+      developer
       description
       githubLink
       websiteLink

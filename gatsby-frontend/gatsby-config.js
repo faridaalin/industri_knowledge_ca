@@ -52,6 +52,7 @@ module.exports = {
       options: {
         projectId: `9wdbtffm`,
         dataset: `production`,
+        apiVersion: '2021-03-25',
         watchMode: true,
         token: process.env.SANITY_TOKEN,
         graphqlTag: "default",

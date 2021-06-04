@@ -6,6 +6,7 @@ import Pagination from "../Pagination"
 import { StyledSingleProject } from "./styles/StyledSingleProject"
 
 function SingleProject({ project, next, prev }) {
+ 
   const [width, setWidth] = useState(null)
   const sectionRef = useRef()
   const githubSrc = project.githubLink
@@ -45,7 +46,10 @@ function SingleProject({ project, next, prev }) {
           data-sal-delay="600"
           data-sal-easing="ease-out-bounce"
         >
-          <div className="project__links">
+          <div className="project__content">
+            <h3>Goal</h3>
+            <BlockContent blocks={project._rawBody} />
+            <div className="project__links">
             <a target="blank" rel="noopener noreferer" href={website}>
               Website <ExternalLink />
             </a>
@@ -56,10 +60,13 @@ function SingleProject({ project, next, prev }) {
             <p>
               Year: <span>{project.date.split(" ")[2]}</span>
             </p>
+            <p>
+              Designer: <span>{project.designer}</span>
+            </p>
+            <p>
+              Developer: <span>{project.developer}</span>
+            </p>
           </div>
-          <div className="project__content">
-            <h3>Goal</h3>
-            <BlockContent blocks={project._rawBody} />
             <div className="categories">
               {project.categories.map(category => (
                 <span key={category.title} className="category">

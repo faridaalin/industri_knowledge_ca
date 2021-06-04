@@ -34,7 +34,9 @@ export const StyledSingleProject = styled.div`
       grid-gap: 8px;
       color: ${colors.baseGrey.greyLightest};
       font-weight: 700;
-      text-transform: uppercase;
+      align-items: center;
+      justify-content: flex-start;
+      margin: 32px 0;
 
       a,
       p {
@@ -46,6 +48,7 @@ export const StyledSingleProject = styled.div`
       span {
         font-size: 14px;
         font-weight: 400;
+        color: rgb(161 168 177);
       }
 
       svg {
@@ -56,6 +59,7 @@ export const StyledSingleProject = styled.div`
 
     .project__content {
       max-width: 60ch;
+      
     }
 
     a {
@@ -82,7 +86,7 @@ export const StyledSingleProject = styled.div`
   }
 
   .project__content {
-    padding-top: 32px;
+  
 
     h3 {
       font-weight: 700;
@@ -105,7 +109,7 @@ export const StyledSingleProject = styled.div`
     }
   }
   @media only screen and (min-width: 768px) {
-    margin-top: 86px;
+    margin-top: 48px;
     .project-overlay {
       width: ${({ dynamicWidth }) => dynamicWidth / 2 + "px"};
       background-image: url(${props => props.imgurl});

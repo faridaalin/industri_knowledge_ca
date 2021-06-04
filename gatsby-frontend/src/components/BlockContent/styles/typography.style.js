@@ -17,4 +17,5 @@ export const P = styled.p`
   font-weight: 100;
   font-size: 1rem;
   padding: 1rem 0;
+  color: rgb(161 168 177);
 `
