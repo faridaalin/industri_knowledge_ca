@@ -10,13 +10,11 @@ const HomeNavigation = () => {
   let linkRef3 = useRef(null)
 
   useEffect(() => {
-    TweenMax.to([linkRef1.current, linkRef2.current, linkRef3.current], {
+    TweenMax.staggerTo([linkRef1.current, linkRef2.current, linkRef3.current],.8, {
       opacity:1,
-      duration:2,
-      delay: 0.8, 
       y: -64,
-      stagger: 0.4
-    })
+      ease: Power3.easeOut
+    }, 0.4)
   }, [linkRef1, linkRef2, linkRef3])
   return (
     <StyledHomeNav>
