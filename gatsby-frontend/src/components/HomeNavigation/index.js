@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react"
 import { Link } from "gatsby"
-import { gsap } from "gsap"
+import { TweenMax, Power3 } from "gsap"
 import { StyledHomeNav } from "./styles/homeNavigation.style"
 import SEO from "../seo"
 
@@ -10,15 +10,12 @@ const HomeNavigation = () => {
   let linkRef3 = useRef(null)
 
   useEffect(() => {
-    gsap.from([linkRef1.current, linkRef2.current, linkRef3.current], {
-      delay: 0.2,
-      duration: 0.8,
-      ease: "power.out",
-      y: 64,
-      opacity: 0,
-      stagger: {
-        amount: 0.15,
-      },
+    TweenMax.to([linkRef1.current, linkRef2.current, linkRef3.current], {
+      opacity:1,
+      duration:2,
+      delay: 0.8, 
+      y: -64,
+      stagger: 0.4
     })
   }, [linkRef1, linkRef2, linkRef3])
   return (

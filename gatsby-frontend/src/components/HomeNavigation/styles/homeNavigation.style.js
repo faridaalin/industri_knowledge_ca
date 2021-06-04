@@ -13,6 +13,10 @@ export const StyledHomeNav = styled.nav`
     list-style: none;
   }
 
+  li {
+    opacity: 0;
+  }
+
   a {
     font-size: clamp(1.3rem, 9vw, 4rem);
     text-transform: uppercase;
