@@ -75,6 +75,16 @@ export default {
       title: 'Body',
       type: 'blockContent',
     },
+    {
+      title: 'Designer',
+      name: 'designer',
+      type: 'string',
+    },
+    {
+      title: 'Developer',
+      name: 'developer',
+      type: 'string',
+    },
   ],
   preview: {
     select: {
