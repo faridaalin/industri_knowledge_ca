@@ -24,25 +24,21 @@ const Projects = ({ data }) => {
 
   useEffect(() => {
 
-    projectsRef.current.key.forEach((element, index) => {
+    projectsRef.current.key.forEach((element) => {
       gsap.to(element, {
         duration: 2,
         opacity: 1,
-        y: -30,
+        y: -60,
         stagger: {
           each: .9
         },
       ease: Power3.easeOut,
-
         scrollTrigger:
         {
-    
           trigger: element,
-      
-          markers: true,
           toggleActions: 'play none none resume',
         }
-      },  0.4)
+      },  2)
     });
 
    
@@ -59,13 +55,7 @@ const Projects = ({ data }) => {
         pathname={pathname}
         description="Projects I have worked on either as schoold assignments or client projects"
       />
-      <StyledProjectSection ref={(el) => el = projectsRef}
-      // className="small-section"
-      // data-sal-duration="1400"
-      // data-sal="slide-up"
-      // data-sal-delay="600"
-      // data-sal-easing="ease-out-bounce"
-      >
+      <StyledProjectSection>
         {projects.map((project, index) => (
           <StyledLink
             to={project.slug.current}
