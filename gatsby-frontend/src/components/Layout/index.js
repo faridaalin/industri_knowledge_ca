@@ -21,10 +21,7 @@ const Layout = props => {
           {title && (
             <header
               className="main__heading small-section"
-              data-sal-duration="1200"
-              data-sal="slide-left"
-              data-sal-delay="300"
-              data-sal-easing="ease-out-bounce"
+           
             >
               <h1 className="title">{title}</h1>
               <span className="decorative-title">{title}</span>

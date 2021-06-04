@@ -8,6 +8,7 @@ const HomeNavigation = () => {
   let linkRef1 = useRef(null)
   let linkRef2 = useRef(null)
   let linkRef3 = useRef(null)
+  
 
   useEffect(() => {
     TweenMax.staggerTo([linkRef1.current, linkRef2.current, linkRef3.current],.8, {
