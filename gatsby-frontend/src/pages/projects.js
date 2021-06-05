@@ -20,26 +20,18 @@ const Projects = ({ data }) => {
   )
 
   let projectsRef = useRef({ key: [] })
-  let timeline = gsap.timeline({delay: 5});
-  
 
   useEffect(() => {
 
     projectsRef.current.key.forEach((element) => {
-      timeline.from(element, {
-        y: 100,
-        opacity: 0,
-        duration: 400,
+      gsap.from(element, {
+      scrollTrigger: element,
+      autoAlpha: 0,
+      y: 70,
+      duration: 1.5,
+      stagger: 0.25
 
-      scrollTrigger: {
-        trigger: element,
-        start: "top center+=100px",
-        end: "top center",
-        scrub: 1,
-        animation: timeline,
-      }
-
-      }, "+=1")
+      })
     });
 
    
