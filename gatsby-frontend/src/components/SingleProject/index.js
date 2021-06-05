@@ -41,10 +41,6 @@ function SingleProject({ project, next, prev }) {
         <div
           className="project-intro"
           ref={sectionRef}
-          data-sal-duration="1400"
-          data-sal="slide-up"
-          data-sal-delay="600"
-          data-sal-easing="ease-out-bounce"
         >
           <div className="project__content">
             <h3>Goal</h3>

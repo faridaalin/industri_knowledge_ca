@@ -5,8 +5,9 @@ import HomeNavigation from "../components/HomeNavigation"
 const IndexPage = () => {
   return (
     <Layout home>
-      <HomeNavigation />
+     <HomeNavigation />
     </Layout>
+   
   )
 }
 export default IndexPage

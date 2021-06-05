@@ -46,14 +46,13 @@ const ContactForm = () => {
       )
   }
 
+
+
   return (
     <StyledContactSection className="small-section">
       <div
         className="contact-intro"
-        data-sal-duration="1200"
-        data-sal="slide-right"
-        data-sal-delay="300"
-        data-sal-easing="ease-out-bounce"
+      
       >
         <h2>Let's get in touch</h2>
         {formSuccess ? (
@@ -74,10 +73,7 @@ const ContactForm = () => {
       <form
         className="contact-form"
         onSubmit={handleSubmit(onSubmit)}
-        data-sal-duration="1400"
-        data-sal="slide-left"
-        data-sal-delay="300"
-        data-sal-easing="ease-out-bounce"
+     
       >
         <div className={`input-container ${inputNameLength > 0 && "isValid"}`}>
           <label htmlFor="name">Name</label>

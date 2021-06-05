@@ -5,7 +5,7 @@ import {
   StyledLink,
   StyledProjectSection,
 } from "../components/ProjectPreview/styles"
-import { gsap, TweenMax, Power3 } from 'gsap'
+import { gsap} from 'gsap'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ButtonOutline } from "../components/Buttons"
 import { ChevronRight } from "react-feather"
@@ -33,13 +33,7 @@ const Projects = ({ data }) => {
 
       })
     });
-
-   
-
-
-
-
-  }, [])
+  }, [projectsRef])
 
   return (
     <Layout title="Projects">
