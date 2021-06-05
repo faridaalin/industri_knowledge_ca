@@ -6,7 +6,6 @@ import Pagination from "../Pagination"
 import { StyledSingleProject } from "./styles/StyledSingleProject"
 
 function SingleProject({ project, next, prev }) {
- 
   const [width, setWidth] = useState(null)
   const sectionRef = useRef()
   const githubSrc = project.githubLink
@@ -38,31 +37,34 @@ function SingleProject({ project, next, prev }) {
             <stop stopColor="#FA6AB8" offset="100%" />
           </linearGradient>
         </svg>
-        <div
-          className="project-intro"
-          ref={sectionRef}
-        >
+        <div className="project-intro" ref={sectionRef}>
           <div className="project__content">
             <h3>Goal</h3>
             <BlockContent blocks={project._rawBody} />
             <div className="project__links">
-            <a target="blank" rel="noopener noreferer" href={website}>
-              Website <ExternalLink />
-            </a>
-            <a target="blank" rel="noopener noreferer" href={githubSrc}>
-              Github <GitHub />
-            </a>
+              <a target="blank" rel="noopener noreferer" href={website}>
+                Website <ExternalLink />
+              </a>
+              <a target="blank" rel="noopener noreferer" href={githubSrc}>
+                Github <GitHub />
+              </a>
 
-            <p>
-              Year: <span>{project.date.split(" ")[2]}</span>
-            </p>
-            <p>
-              Designer: <span>{project.designer}</span>
-            </p>
-            <p>
-              Developer: <span>{project.developer}</span>
-            </p>
-          </div>
+              <p>
+                Year: <span>{project.date.split(" ")[2]}</span>
+              </p>
+              <p>
+                Designer:{" "}
+                <span>
+                  {!project.designer ? "Farida Alin" : project.designer}
+                </span>
+              </p>
+              <p>
+                Developer:{" "}
+                <span>
+                  {!project.developer ? "Farida Alin" : project.developer}
+                </span>
+              </p>
+            </div>
             <div className="categories">
               {project.categories.map(category => (
                 <span key={category.title} className="category">

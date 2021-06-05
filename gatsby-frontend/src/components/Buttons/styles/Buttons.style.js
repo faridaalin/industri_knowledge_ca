@@ -11,7 +11,7 @@ font-size: 11px;
 line-height: 22px;
 cursor: pointer;
 box-shadow: 0px 1px 5px #000000ba;
-transition: background 2.5s ease 1s;
+transition: background 2.5s ease;
 `
 const defaultIconStyle = `
 width: 16px;

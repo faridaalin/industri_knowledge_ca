@@ -36,7 +36,6 @@ export const StyledSingleProject = styled.div`
       font-weight: 700;
       align-items: center;
       justify-content: flex-start;
-      margin: 32px 0;
 
       a,
       p {
@@ -59,7 +58,6 @@ export const StyledSingleProject = styled.div`
 
     .project__content {
       max-width: 60ch;
-      
     }
 
     a {
@@ -86,8 +84,6 @@ export const StyledSingleProject = styled.div`
   }
 
   .project__content {
-  
-
     h3 {
       font-weight: 700;
       font-size: 24px;
