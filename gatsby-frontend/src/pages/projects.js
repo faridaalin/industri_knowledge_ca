@@ -5,13 +5,13 @@ import {
   StyledLink,
   StyledProjectSection,
 } from "../components/ProjectPreview/styles"
-import { gsap} from 'gsap'
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ButtonOutline } from "../components/Buttons"
 import { ChevronRight } from "react-feather"
 import SEO from "../components/seo"
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger)
 
 const Projects = ({ data }) => {
   const pathname = "/projects"
@@ -22,17 +22,15 @@ const Projects = ({ data }) => {
   let projectsRef = useRef({ key: [] })
 
   useEffect(() => {
-
-    projectsRef.current.key.forEach((element) => {
+    projectsRef.current.key.forEach(element => {
       gsap.from(element, {
-      scrollTrigger: element,
-      autoAlpha: 0,
-      y: 70,
-      duration: 1.5,
-      stagger: 0.25
-
+        scrollTrigger: element,
+        autoAlpha: 0,
+        y: 70,
+        duration: 1.5,
+        stagger: 0.25,
       })
-    });
+    })
   }, [projectsRef])
 
   return (
@@ -47,7 +45,9 @@ const Projects = ({ data }) => {
           <StyledLink
             to={project.slug.current}
             key={"key" + index}
-            ref={el => { projectsRef.current.key[index] = el }}
+            ref={el => {
+              projectsRef.current.key[index] = el
+            }}
             imgurl={project.mainImage.asset.url}
           >
             <div className="project">
